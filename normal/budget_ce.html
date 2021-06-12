@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget | Capital Expenditure</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
+      <script>
+      function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+      
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+
+        // Sortable Code
+    var fixHelperModified = function(e, tr) {
+        var $originals = tr.children();
+        var $helper = tr.clone();
+    
+        $helper.children().each(function(index) {
+            $(this).width($originals.eq(index).width())
+        });
+        
+        return $helper;
+    };
+  
+    $(".table-sortable tbody").sortable({
+        helper: fixHelperModified      
+    }).disableSelection();
+
+    $(".table-sortable thead").disableSelection();
+
+
+
+    $("#add_row").trigger("click");
+      </script>
+    
+</head>
+<body>
+    <div class="container">
+      <div class="topnav wow fadeIn" data-wow-duration="9s">
+
+  <!-- Centered link -->
+  <div class="topnav-centered">
+    <a href="#home" class="active"><img src="../images/Jesus-Light-of-the-World.png" height="50" width="100" class="d-none d-md-block"></a>
+  </div>
+  
+  <!-- Left-aligned links (default) -->
+  <a href="#"><strong>YDD</strong></a>
+  <!-- <a href="#contact">Contact</a> -->
+  
+  <!-- Right-aligned links -->
+  <div class="topnav-right">
+    <!-- <a href="#search">Search</a> -->
+    <a href="#about"><strong>2021</strong></a>
+  </div>
+  
+</div>
+
+    </div>
+
+  	<div class="space-200"></div>
+	<div class="main-panel">
+			<div class="container">
+
+
+				<div class="row">
+					<div class="col-md-3 grid-margin stretch-card">
+						<div class="card">
+							<div class="profile-card">
+
+								<div class="profile-header">
+
+									<div class="cover-image">
+										<img src="../images/unnamed.png" class="img img-fluid">
+									</div>
+									<div class="user-image">
+										<img src="../images/avatar.png" class="img ">
+									</div>
+								</div>
+
+								<div class="profile-content">
+                  <div class="profile-name">Oluwafemi Ifesanmi</div>
+                  <div class="profile-designation">User<a href="../profile.html" class="about-item-edit">Edit</a></div>
+                <!--  <p class="profile-description">Just a few notice to what the MOD can do on the application consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p> -->
+                  <ul class="profile-info-list">
+                    <a href="index.html" class="profile-info-list-item"><i class="mdi mdi-eye"></i>Home</a>
+                    <li class="mb-3">
+                      <button style="margin: 10px 0; width: 220px; padding:15px;" class="btn btn-toggle align-items-center rounded collapsed profile-info-list-item active" data-bs-toggle="collapse" data-bs-target="#budget-collapse" aria-expanded="false">
+                        Create Budget
+                      </button>
+                      <div class="collapse" id="budget-collapse"><hr class="divider">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                          <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded">Special Interventions</a></li>
+                          <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded active">Capital Expenditure</a></li>
+                          <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program Expenditure</a></li>
+                          <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operations EXP</a></li>
+                        </ul><hr class="divider">
+                      </div>
+                    </li>
+                    <a href="request.html" class="profile-info-list-item"><i class="mdi mdi-bookmark-check"></i>Make A Request</a>
+                    <a href="reports.html" class="profile-info-list-item"><i class="mdi mdi-movie"></i>See Reports</a>
+                    <a href="requests_status.html" class="profile-info-list-item"><i class="mdi mdi-account"></i>Requests Status</a>
+                  </ul>
+                </div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-9 grid-margin stretch-card">
+						
+            <div class="card">
+              <div class="col p-4">
+              <div class="card myForm">
+                  <h5 class="card-header font-weight-light">Capital Expenditure</h5>
+                  <div class="card-body">
+                        <div class="row clearfix">
+                          <div class="col-md-12 table-responsive miner mb-4">
+                            <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                              <thead>
+                                <tr >
+                                  <th class="text-center">Above The line</th>
+                                  <th class="text-center">Budget Line</th>
+                                    <th class="text-center">Amount</th>
+                                      <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr id='addr0' data-id="0" class="hidden">
+                                <form class="" action="" method="post">
+                                  <td data-name="desc">
+                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="del">
+      
+                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                    </td>
+                                </form>
+                                </tr>
+                                <tr id='addr0' data-id="0" class="hidden">
+                                <form class="" action="" method="post">
+                                  <td data-name="desc">
+                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="del">
+      
+                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                    </td>
+                                </form>
+                                </tr>
+                                <tr id='addr0' data-id="0" class="hidden">
+                                <form class="" action="" method="post">
+                                  <td data-name="desc">
+                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="del">
+      
+                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                    </td>
+                                </form>
+                                </tr>
+                                <tr id='addr0' data-id="0" class="hidden">
+                                <form class="" action="" method="post">
+                                  <td data-name="desc">
+                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="del">
+      
+                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                    </td>
+                                </form>
+                                </tr>
+                                <tr id='addr0' data-id="0" class="hidden">
+                                <form class="" action="" method="post">
+                                  <td data-name="desc">
+                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="del">
+      
+                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                    </td>
+                                </form>
+                                </tr>
+                                <tr id='addr0' data-id="0" class="hidden">
+                                <form class="" action="" method="post">
+                                  <td data-name="desc">
+                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="del">
+      
+                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                    </td>
+                                </form>
+                                </tr>
+                                <tr id='addr0' data-id="0" class="hidden">
+                                <form class="" action="" method="post">
+                                  <td data-name="desc">
+                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="del">
+      
+                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                    </td>
+                                </form>
+                                </tr>
+                                <tr id='addr0' data-id="0" class="hidden">
+                                <form class="" action="" method="post">
+                                  <td data-name="desc">
+                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="desc">
+                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                  </td>
+                                  <td data-name="del">
+      
+                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                    </td>
+                                </form>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                           <table id="tab_logic" class="mb-4">
+                             <tfoot>
+                               <tr >
+                                  <th class="text-center">Total</th>
+                                  <th class="text-center"></th>
+                                  <th class="text-center"></th>
+                                  <th class="text-center"></th>
+                                    <th class="text-center"></th>
+                                      <th class="text-center" style="width: 230px;">
+                                        <input type="number" name="amount" placeholder="" class="form-control"/>
+                                      </th>
+                                </tr>
+                             </tfoot>
+                           </table>
+  
+                        <h5 class="card-header font-weight-light">
+                          <i class="fa fa-list" aria-hidden="true"></i> Edit Details
+                        </h5>
+                        <div class="card-body">
+                            <div class="margin-t-md">
+                              <div class="customer-form">
+                                <form action="" method="post" role="form" autocomplete="off">
+                                  <div id="main-container" class="row">
+                                    <div class="panel card container-item">
+                                          <div class="row mt-3">
+                                            <!-- <div class="col-md-4">
+                                              <div class="form-group">
+                                                <h5 style=" color: #495057 !important; text-align: center;"> Above The Line </h5>
+                                                <select class="form-control major selectFilter" name ="abovetheline" data-target="sub">
+                                                  <option value="Select One"> Select One</option>
+                                                  <option value="Income" data-ref="inc">Income</option>
+                                                  <option value="Special Interventions" data-ref="spint">Special Interventions</option>
+                                                  <option value="Capital Expenditure" data-ref="capex">Capital Expenditure</option>
+                                                  <option value="PROGRAMME EXPENDITURE" data-ref="pex">PROGRAMME EXPENDITURE</option>
+                                                  <option value="OPERATIONS (RECURRENT) EXP" data-ref="ore">OPERATIONS (RECURRENT) EXP</option>
+                                                </select>
+                                              </div>
+                                            </div> -->
+                                            <div class="col-md-4">
+                                              <div class="form-group">
+                                                <h5 style=" color: #495057 !important; text-align: center;">Directorate</h5>
+                                                <select class="form-control major selectFilter" name ="directorate" data-target="sub">
+                                                  <option value="Select One"> YDD</option>
+                                                  <option value="FDD" data-belong="ore">FDD</option>
+                                                  <option value="YDD" data-belong="ore">YDD</option>
+                                                  <option value="DS" data-belong="ore">DS</option>
+                                                  <option value="CIPD" data-belong="ore">CIPD</option>
+                                                  <option value="Directors Office" data-belong="ore">Directors Office</option>
+                                                  <option value="Mission" data-belong="ore">Mission</option>
+                                                  <option value="Worship" data-belong="ore">Worship</option>
+                                                  <option value="Anthony Budget" data-belong="ore">Anthony Budget</option>
+                                                  <option value="Infrastructure" data-belong="ore">Infrastructure</option>
+                                                  <option value="Publishing" data-belong="ore">Publishing</option>
+                                                  <option value="Treasury" data-belong="ore">Treasury</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          
+                                            <div class="col-md-4">
+                                              <div class="form-group">
+                                                <h5 style=" color: #495057 !important;  text-align: center; ">  Budget Line</h5>
+                                                <select class="form-control sub selectFilter"  name="subject" data-target="minor">
+                                                  <option value="Select One"> Select One</option>
+                                                  <!-- <option value="Tithes & Offering" data-belong="inc">Tithes & Offering</option>
+                                                  <option value="Other Offerings" data-belong="inc">Other Offerings</option>
+                                                  <option value="OTHER RECEIPTS"data-belong="inc">OTHER RECEIPTS</option>
+                                                  <option value="DONATIONS" data-belong="inc">DONATIONS</option>
+                                                  <option value="IGBESA CONTRIBUTION" data-belong="inc">IGBESA CONTRIBUTION</option>
+                                                  <option value="OTHER CONTRIBUTIONS" data-belong="inc">OTHER CONTRIBUTIONS</option>
+                                                  <option value="AUDIO/VIDEO CDS" data-belong="inc">AUDIO/VIDEO CDS</option>
+                                                  <option value="CALENDAR SALES" data-belong="inc">CALENDAR SALES</option>
+                                                  <option value="CGS" data-belong="inc">CGS</option>
+                                                  <option value="MUSICAL INSTRUMENTS SALES" data-belong="inc">MUSICAL INSTRUMENTS SALES</option>
+                                                  <option value="PICTURE ROLLS" data-belong="inc">PICTURE ROLLS</option>
+                                                  <option value="WATCH AND PRAY"  data-belong="inc">WATCH AND PRAY</option>
+                                                  <option value="DIESEL" data-belong="inc">DIESEL</option>
+                                                  <option value=">KEROSINE" data-belong="inc">KEROSINE</option>
+                                                  <option value="LUBRICANTS"data-ref="art" data-belong="inc">LUBRICANTS</option>
+                                                  <option value="PMS" data-belong="inc">PMS</option>
+                                                  <option value="LIVE STOCK SALES" data-belong="inc">LIVE STOCK SALES</option>
+                                                  <option value="FARM PRODUCE SALES" data-belong="inc">FARM PRODUCE SALES</option>
+                                                  <option value="KITCHEN SALES"data-ref="tl" data-belong="inc">KITCHEN SALES</option>
+                                                  <option value="OTHERS (SPECIFIC CONTRIBUTION)" data-belong="inc">OTHERS (SPECIFIC CONTRIBUTION)</option>
+                                                  <option value="MISSIONARY FUND- DISTRICT" data-belong="inc">MISSIONARY FUND- DISTRICT</option>
+                                                  <option value="MISSIONARY FUND- BRANCH"  data-belong="inc">MISSIONARY FUND- BRANCH</option>
+                                                  <option value="INTERVENTIONS FOREIGN MISSION" data-belong="spint">INTERVENTIONS FOREIGN MISSION</option>
+                                                  <option value="INTERVENTION - REGION"  data-belong="spint">INTERVENTION - REGION</option>
+                                                  <option value="INTERVENTION - DISTRICT" data-belong="spint"> INTERVENTION - DISTRICT</option>
+                                                  <option value="INTERVENTION - OTHERS" data-belong="spint">INTERVENTION - OTHERS</option>
+                                                  <option value="STAFF LOANS" data-belong="spint">STAFF LOANS </option>
+                                                  <option value="LOANS OTHERS" data-belong="spint" >LOANS OTHERS</option> -->
+                                                  <option value="LAND" data-belong="capex">LAND</option>
+                                                  <option value="FREEHOLD LAND" data-belong="capex">FREEHOLD LAND</option>
+                                                  <option value="LEASEHOLD LAND" data-belong="capex">LEASEHOLD LAND</option>
+                                                  <option value="BUILDINGS" data-belong="capex">BUILDINGS</option>
+                                                  <option value="CHURCH FURNITURE & FITTINGS" data-belong="capex">CHURCH FURNITURE & FITTINGS</option>
+                                                  <option value="OFFICE FURNITURE & FITTINGS" data-belong="capex">OFFICE FURNITURE & FITTINGS</option>
+                                                  <option value="MOTOR CARS" data-belong="capex">MOTOR CARS</option>
+                                                  <option value="BUSES" data-belong="capex">BUSES</option>
+                                                  <option value="MOTOR LORRIES" data-belong="capex">MOTOR LORRIES</option>
+                                                  <option value="MOTOR CRANE" data-belong="capex">MOTOR CRANE</option>
+                                                  <option value="TRACTORS" data-belong="capex">TRACTORS</option>
+                                                  <option value="FISH PONDS" data-belong="capex">FISH PONDS</option>
+                                                  <option value="FISH HATCHERY" data-belong="capex">FISH HATCHERY</option>
+                                                  <option value="GENERATORS" data-belong="capex">GENERATORS</option>
+                                                  <option value="PLANT & MACHINERY" data-belong="capex">PLANT & MACHINERY</option>
+                                                  <option value="AIRCONDITIONERS" data-belong="capex">AIRCONDITIONERS</option>
+                                                  <option value="INVERTERS" data-belong="capex">INVERTERS</option>
+                                                  <option value="FRIDGES" data-belong="capex">FRIDGES</option>
+                                                  <option value="DESKTOPS" data-belong="capex">DESKTOPS</option>
+                                                  <option value="LAPTOPS" data-belong="capex">LAPTOPS</option>
+                                                  <option value="PRINTERS" data-belong="capex">PRINTERS</option>
+                                                  <option value="COMPUTER SOFTWARES" data-belong="capex">COMPUTER SOFTWARES</option>
+                                                  <option value="MUSICAL INSTRUMENTS-WORSHIP" data-belong="capex">MUSICAL INSTRUMENTS-WORSHIP</option>
+                                                  <option value="ELECTRONICS GADGETS" data-belong="capex">ELECTRONICS GADGETS</option>
+                                                  <option value="ICT EQUIPMENT-MISSION" data-belong="capex">ICT EQUIPMENT-MISSION</option>
+                                                  <option value="INVESTMENT - PROPERTY" data-belong="capex">INVESTMENT - PROPERTY</option>
+                                                  <!-- <option value="SPECIAL DAYS PROGRAMMES" data-belong="pex">SPECIAL DAYS PROGRAMMES</option>
+                                                  <option value="AVS PROGRAM EXPENSES " data-belong="pex">AVS PROGRAM EXPENSES </option>
+                                                  <option value="REVIVAL& A.V.S RETREAT"data-belong="pex">REVIVAL& A.V.S RETREAT</option>
+                                                  <option value="BOARD MEETINGS - MAIN" data-belong="pex">BOARD MEETINGS - MAIN</option>
+                                                  <option value="BOARD MEETINGS-MCMC" data-belong="pex">BOARD MEETINGS-MCMC</option>
+                                                  <option value="BOARD MEETINGS- MCOC" data-belong="pex">BOARD MEETINGS- MCOC</option>
+                                                  <option value="BOARD MEETINGS- FIC" data-belong="pex">BOARD MEETINGS- FIC</option>
+                                                  <option value="CAMP MEETING -GENERAL EXPENSES" data-belong="pex">CAMP MEETING -GENERAL EXPENSES</option>
+                                                  <option value="HOME MISSION CAMP MEETINGS" data-belong="pex">HOME MISSION CAMP MEETINGS</option>
+                                                  <option value="OTHER C/MEETING EXP" data-belong="pex">OTHER C/MEETING EXP</option>
+                                                  <option value="WELFARE PACKAGE FOR CAMP MEETING" data-belong="pex">WELFARE PACKAGE FOR CAMP MEETING</option>
+                                                  <option value="CHRISTMAS DECORATION"  data-belong="pex">CHRISTMAS DECORATION</option>
+                                                  <option value="FOREIGN LEADERS TRAINING " data-belong="pex">FOREIGN LEADERS TRAINING </option>
+                                                  <option value=">EMPOWERMENT EXPENSES" data-belong="pex">EMPOWERMENT EXPENSES</option>
+                                                  <option value="CONCERT EXPENSES" data-belong="pex">CONCERT EXPENSES</option>
+                                                  <option value="OUTREACHES" data-belong="pex">OUTREACHES</option>
+                                                  <option value="REVIVALS" data-belong="pex">REVIVALS</option>
+                                                  <option value="YDD - CAPACITY BUILDING PROGRAMME" data-belong="pex">YDD - CAPACITY BUILDING PROGRAMME</option>
+                                                  <option value="YOUNG PROFESSIONAL PROGRAM EXPENSES" data-belong="pex">YOUNG PROFESSIONAL PROGRAM EXPENSES</option>
+                                                  <option value="YOUTH LEADERS CAPACITY BUILDING" data-belong="pex">YOUTH LEADERS CAPACITY BUILDING</option>
+                                                  <option value="INTERNATIONAL YOUTH CAMP- IYC" data-belong="pex">INTERNATIONAL YOUTH CAMP- IYC</option>
+                                                  <option value="NCWC - NATIONAL CENTRAL WORKING COMMITTEE "  data-belong="pex">NCWC - NATIONAL CENTRAL WORKING COMMITTEE </option>
+                                                  <option value="AFCF - APOSTOLIC FAITH CAMPUS FELLOWSHIP " data-belong="pex">AFCF - APOSTOLIC FAITH CAMPUS FELLOWSHIP </option>
+                                                  <option value="OTHER YOUTH PROGRAMS"  data-belong="pex">OTHER YOUTH PROGRAMS</option>
+                                                  <option value="PURCHASE OF MUSICAL INSTRUMENTS" data-belong="ore"> PURCHASE OF MUSICAL INSTRUMENTS</option>
+                                                  <option value="FUEL & LUBRICANTS  (DIESEL)" data-belong="ore">FUEL & LUBRICANTS  (DIESEL)</option>
+                                                  <option value="FUEL & LUBRICANTS  (PMS)" data-belong="ore">FUEL & LUBRICANTS  (PMS) </option>
+                                                  <option value="FUEL & LUBRICANTS  (LUBRICANTS)" data-belong="ore" >FUEL & LUBRICANTS  (LUBRICANTS)</option>
+                                                  <option value="FUEL & LUBRICANTS  (KEROSINE)" data-belong="ore">FUEL & LUBRICANTS  (KEROSINE)</option>
+                                                  <option value="PRINTING OF CALENDARS" data-belong="ore">PRINTING OF CALENDARS</option>
+                                                  <option value="PRINTING OF CGS" data-belong="ore">PRINTING OF CGS</option>
+                                                  <option value="PRODUCTION OF AUDIO VISUALS" data-belong="ore">PRODUCTION OF AUDIO VISUALS</option>
+                                                  <option value="KIOSK EXPENSES" data-belong="ore">KIOSK EXPENSES</option>
+                                                  <option value="FARM EXPENSES" data-belong="ore">FARM EXPENSES</option>
+                                                  <option value="HOTEL & SUSTENANCE EXPENSES" data-belong="ore">HOTEL & SUSTENANCE EXPENSES</option>
+                                                  <option value="ADVERTS & PUBLICITY EXPENSES" data-belong="ore">ADVERTS & PUBLICITY EXPENSES</option>
+                                                  <option value="TREASURY MONITORING EXPENSES" data-belong="ore">TREASURY MONITORING EXPENSES</option>
+                                                  <option value="EXTERNAL AUDIT EXPENSES" data-belong="ore">EXTERNAL AUDIT EXPENSES</option>
+                                                  <option value="INTERNAL AUDIT EXPENSES" data-belong="ore">INTERNAL AUDIT EXPENSES</option>
+                                                  <option value="NEWSPAPERS AND PERIODICALS" data-belong="ore">NEWSPAPERS AND PERIODICALS</option>
+                                                  <option value="BOOKS & JOURNALS" data-belong="ore">BOOKS & JOURNALS</option>
+                                                  <option value="STATIONERIES" data-belong="ore">STATIONERIES</option>
+                                                  <option value="CORPORATE SOCIAL RESPONSIBILITY" data-belong="ore">CORPORATE SOCIAL RESPONSIBILITY</option>
+                                                  <option value="DELEGATES EXPENSES" data-belong="ore">DELEGATES EXPENSES</option>
+                                                  <option value="US DELEGATES EXPENSES" data-belong="ore">US DELEGATES EXPENSES</option>
+                                                  <option value="IGBESA CONTRIB UTION" data-belong="ore">IGBESA CONTRIB UTION</option>
+                                                  <option value="CRAWFORD/AFSS CONTRIBUTION" data-belong="ore">CRAWFORD/AFSS CONTRIBUTION</option>
+                                                  <option value="CHILDREN EDUCATION" data-belong="ore">CHILDREN EDUCATION</option>
+                                                  <option value="FARM EXPENSES" data-belong="ore">FARM EXPENSES</option>
+                                                  <option value="FEEDING OF WORKERS" data-belong="ore">FEEDING OF WORKERS</option>
+                                                  <option value="CANTEEN WEEKLY MAINT" data-belong="ore">CANTEEN WEEKLY MAINT</option>
+                                                  <option value="KITCHEN EXPENSES" data-belong="ore">KITCHEN EXPENSES</option>
+                                                  <option value="CAFETARIA EXPENSES" data-belong="ore">CAFETARIA EXPENSES</option>
+                                                  <option value="KITCHEN GAS " data-belong="ore">KITCHEN GAS </option>
+                                                  <option value="COT / BANK CHARGES" data-belong="ore"> COT / BANK CHARGES</option>
+                                                  <option value="FOREIGN EXCHANGE DIFFERENTIAL" data-belong="ore">FOREIGN EXCHANGE DIFFERENTIAL</option>
+                                                  <option value="INTEREST ON LOANS" data-belong="ore">INTEREST ON LOANS </option>
+                                                  <option value="FIRST AID EXPENSES" data-belong="ore" >FIRST AID EXPENSES</option>
+                                                  <option value="FOREIGN CHURCH RUNNING COST" data-belong="ore">FOREIGN CHURCH RUNNING COST</option>
+                                                  <option value="FOREIGN MISSION CHILDREN EDUCATION SUPPORT" data-belong="ore">FOREIGN MISSION CHILDREN EDUCATION SUPPORT</option>
+                                                  <option value="FOREIGN MISSION  FAMILY HOME SUPPORT" data-belong="ore">FOREIGN MISSION  FAMILY HOME SUPPORT</option>
+                                                  <option value="FOREIGN MISSION STIPENDS" data-belong="ore">FOREIGN MISSION STIPENDS</option>
+                                                  <option value="FOREIGN LEADERS TRAINING " data-belong="ore">FOREIGN LEADERS TRAINING </option>
+                                                  <option value="FOREIGN MISSION VISITS/TRIPS " data-belong="ore">FOREIGN MISSION VISITS/TRIPS </option>
+                                                  <option value="FOREIGN MISSIONS CAMP MEETINGS" data-belong="ore">FOREIGN MISSIONS CAMP MEETINGS</option>
+                                                  <option value="FOREIGN MISSIONS-OTHER EXPENSES " data-belong="ore">FOREIGN MISSIONS-OTHER EXPENSES </option>
+                                                  <option value="FOREIGN MISSION PROJECTS = MISSIONS" data-belong="ore">FOREIGN MISSION PROJECTS = MISSIONS</option>
+                                                  <option value="FRSC EXPENSES" data-belong="ore">FRSC EXPENSES</option>
+                                                  <option value="FUEL & LUBRICANTS  (DIESEL)" data-belong="ore">FUEL & LUBRICANTS  (DIESEL)</option>
+                                                  <option value="FUEL & LUBRICANTS (PMS)" data-belong="ore">FUEL & LUBRICANTS (PMS)</option>
+                                                  <option value="FUEL & LUBRICANTS (LUBRICANTS) " data-belong="ore">FUEL & LUBRICANTS (LUBRICANTS) </option>
+                                                  <option value="FUEL & LUBRICANTS  (KEROSINE)" data-belong="ore">FUEL & LUBRICANTS  (KEROSINE)</option>
+                                                  <option value="FUNERAL EXPENSES" data-belong="ore">FUNERAL EXPENSES</option>
+                                                  <option value="FUNERAL EXP-FEEDING" data-belong="ore">FUNERAL EXP-FEEDING</option>
+                                                  <option value="FUNERAL EXP-OTHERS" data-belong="ore">FUNERAL EXP-OTHERS</option>
+                                                  <option value=" POSTAGE & COURIER S" data-belong="ore"> POSTAGE & COURIER S</option>
+                                                  <option value="TELEPHONE EXPENSES" data-belong="ore">TELEPHONE EXPENSES</option>
+                                                  <option value="INTERNET & ACCESORIES EXPS" data-belong="ore">INTERNET & ACCESORIES EXPS</option>
+                                                  <option value="MOTOR VEHICLE LICENCING & DOCUMENT RENEWALS" data-belong="ore">MOTOR VEHICLE LICENCING & DOCUMENT RENEWALS</option>
+                                                  <option value="RENEWAL OF DRIVING LICENCES" data-belong="ore">RENEWAL OF DRIVING LICENCES</option>
+                                                  <option value="LICENCES & PERMITS - OTHERS" data-belong="ore">LICENCES & PERMITS - OTHERS</option>
+                                                  <option value="MISSION HOUSE EXPENSES" data-belong="ore">MISSION HOUSE EXPENSES</option>
+                                                  <option value="MUSIC TEST EXPENSES" data-belong="ore">MUSIC TEST EXPENSES</option>
+                                                  <option value="MUSICAL INSTRUMENTS" data-belong="ore">MUSICAL INSTRUMENTS</option>
+                                                  <option value="STATIONERIES" data-belong="ore"> STATIONERIES</option>
+                                                  <option value="OFFICE EXP" data-belong="ore">OFFICE EXP</option>
+                                                  <option value="OUTREACHES" data-belong="ore">OUTREACHES </option>
+                                                  <option value="REVIVALS" data-belong="ore" >REVIVALS</option>
+                                                  <option value="FULL TIME ALLOWANCES" data-belong="ore">FULL TIME ALLOWANCES</option>
+                                                  <option value="RETIREMENT/DISENGAGEMENT EXP" data-belong="ore">RETIREMENT/DISENGAGEMENT EXP</option>
+                                                  <option value="STIPENDS" data-belong="ore">STIPENDS</option>
+                                                  <option value="SALARIES AND WAGES" data-belong="ore">SALARIES AND WAGES</option>
+                                                  <option value="CORPERS & IT ALLOWCES" data-belong="ore">CORPERS & IT ALLOWCES</option>
+                                                  <option value="PRINTING" data-belong="ore">PRINTING</option>
+                                                  <option value="PRINTING OF APOSTOLIC FAITH MAGAZINE " data-belong="ore">PRINTING OF APOSTOLIC FAITH MAGAZINE </option>
+                                                  <option value="PRINTING OF ADULT/INTERMEDIATE SUNDAY SCHOOL BOOKS" data-belong="ore">PRINTING OF ADULT/INTERMEDIATE SUNDAY SCHOOL BOOKS</option>
+                                                  <option value="PRINTING OF ELEMENTARY SUNDAY SCHOOL BOOKS" data-belong="ore">PRINTING OF ELEMENTARY SUNDAY SCHOOL BOOKS</option>
+                                                  <option value="PRINTING OF GOSPEL NEWS IN AFRICA  " data-belong="ore">PRINTING OF GOSPEL NEWS IN AFRICA  </option>
+                                                  <option value="PRINTING OF IMOLE IRETI  " data-belong="ore">PRINTING OF IMOLE IRETI  </option>
+                                                  <option value="PRINTING OF TRACTS" data-belong="ore">PRINTING OF TRACTS</option>
+                                                  <option value="PRINTING- ART AND DESIGN " data-belong="ore">PRINTING- ART AND DESIGN </option>
+                                                  <option value="PRINTING - CORE EXPENSES " data-belong="ore">PRINTING - CORE EXPENSES </option>
+                                                  <option value="PRINTING- PHOTOGRAPHY EXPENSES " data-belong="ore">PRINTING- PHOTOGRAPHY EXPENSES </option>
+                                                  <option value="PRINTING- INVITATION CARDS & SURVENAIR " data-belong="ore">PRINTING- INVITATION CARDS & SURVENAIR </option>
+                                                  <option value="LEGAL & PROFESSIONAL EXPENSES" data-belong="ore">LEGAL & PROFESSIONAL EXPENSES</option>
+                                                  <option value="DESIGN & CONSTRUCTION MANAGEMENT COST" data-belong="ore">DESIGN & CONSTRUCTION MANAGEMENT COST</option>
+                                                  <option value="PROJECT INSPECTION COST" data-belong="ore">PROJECT INSPECTION COST</option>
+                                                  <option value="TOWN PLANNING EXPENSES" data-belong="ore">TOWN PLANNING EXPENSES</option>
+                                                  <option value="PROJECT MANAGEMENT" data-belong="ore">PROJECT MANAGEMENT</option>
+                                                  <option value="FACILITY MANAGEMENT" data-belong="ore">FACILITY MANAGEMENT</option>
+                                                  <option value="PUBLIC RELATION & COMM" data-belong="ore">PUBLIC RELATION & COMM</option>
+                                                  <option value="MISSIONARY FUND CONT" data-belong="ore">MISSIONARY FUND CONT</option>
+                                                  <option value="OTHER STATE CONT." data-belong="ore">OTHER STATE CONT.</option>
+                                                  <option value="RENT & RATES" data-belong="ore">RENT & RATES</option>
+                                                  <option value="REPAIRS-GENERATORS" data-belong="ore"> REPAIRS-GENERATORS</option>
+                                                  <option value="REPAIRS-PLANT & MACHINERY" data-belong="ore">REPAIRS-PLANT & MACHINERY</option>
+                                                  <option value="REPAIRS - CAMPGROUND CABINS" data-belong="ore">REPAIRS - CAMPGROUND CABINS </option>
+                                                  <option value="REPAIRS - GUEST HOUSES" data-belong="ore" >REPAIRS - GUEST HOUSES</option>
+                                                  <option value="REPAIRS - ELECTRICALS" data-belong="ore">REPAIRS - ELECTRICALS</option>
+                                                  <option value="REPAIRS-MUSICAL INSTRUMENTS" data-belong="ore">REPAIRS-MUSICAL INSTRUMENTS</option>
+                                                  <option value="R & M - MOTOR VECHICLES" data-belong="ore">R & M - MOTOR VECHICLES</option>
+                                                  <option value="REPAIRS-BUILDINGS" data-belong="ore">REPAIRS-BUILDINGS</option>
+                                                  <option value="REPAIRS-FURN. & FITT." data-belong="ore">REPAIRS-FURN. & FITT.</option>
+                                                  <option value="REPAIRS-ELECTRONICS" data-belong="ore">REPAIRS-ELECTRONICS</option>
+                                                  <option value="REPAIRS-GENERAL" data-belong="ore">REPAIRS-GENERAL</option>
+                                                  <option value="LIBRARY MAINTENANCE EXPENSES" data-belong="ore">LIBRARY MAINTENANCE EXPENSES</option>
+                                                  <option value="CEMETERY MAINTENANCE" data-belong="ore">CEMETERY MAINTENANCE</option>
+                                                  <option value="CLEANING & SANITATION" data-belong="ore">CLEANING & SANITATION</option>
+                                                  <option value="SECURITY EQUIPMENT" data-belong="ore">SECURITY EQUIPMENT</option>
+                                                  <option value="SECURITY EXPENSES" data-belong="ore">SECURITY EXPENSES</option>
+                                                  <option value="CLEARING EXPENSES" data-belong="ore">CLEARING EXPENSES</option>
+                                                  <option value="SHIPPING EXPENSES" data-belong="ore">SHIPPING EXPENSES</option>
+                                                  <option value="C.A.N CONTRIBUTION" data-belong="ore">C.A.N CONTRIBUTION</option>
+                                                  <option value="INTERNET SUBSCRIPTIONS" data-belong="ore">INTERNET SUBSCRIPTIONS</option>
+                                                  <option value="MTN MIFI INTERNET SERVICES" data-belong="ore">MTN MIFI INTERNET SERVICES</option>
+                                                  <option value="ACCOUNTING SOFTWARE & SUBSCRIPTIONS " data-belong="ore">ACCOUNTING SOFTWARE & SUBSCRIPTIONS </option>
+                                                  <option value="SUNDRY EXPENSES" data-belong="ore">SUNDRY EXPENSES</option>
+                                                  <option value="HONORARIUM FOR FACILITATORS" data-belong="ore">HONORARIUM FOR FACILITATORS</option>
+                                                  <option value="TRAINING AND WORKSHOP EXPENSES" data-belong="ore">TRAINING AND WORKSHOP EXPENSES</option>
+                                                  <option value="TRAVELING EXPENSES - LOCAL" data-belong="ore">TRAVELING EXPENSES - LOCAL</option>
+                                                  <option value="TRAVELING EXPENSES - FOREIGN" data-belong="ore">TRAVELING EXPENSES - FOREIGN</option>
+                                                  <option value="ELECTRICITY" data-belong="ore">ELECTRICITY</option>
+                                                  <option value="WASTE MANAGEMENT" data-belong="ore">WASTE MANAGEMENT</option>
+                                                  <option value="OTHER WELFARE PACKAGES" data-belong="ore">OTHER WELFARE PACKAGES</option>
+                                                  <option value="WORKERS WELFARE" data-belong="ore">WORKERS WELFARE</option>
+                                                  <option value="WELFARE - WEDDINGS" data-belong="ore">WELFARE - WEDDINGS</option>
+                                                  <option value="ENTERTAINMENT" data-belong="ore">ENTERTAINMENT</option>
+                                                  <option value="CHARITY" data-belong="ore">CHARITY</option>
+                                                  <option value="HOUSE KEEPING EXPENSES" data-belong="ore">HOUSE KEEPING EXPENSES</option> -->
+                                                </select>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                              <div class="form-group">
+                                                <h5 style="color: #495057 !important; text-align: center;">Amount</h5>
+                                                <input type="number" id="customer-last_name" class="form-control total"
+                                                  name="amount" maxlength="64" aria-required="true" placeholder="0.00"/>
+                                              </div>
+                                            </div>
+                                          </div>
+                                            <div class="col-md-4 mt-4 mb-3">
+                                              <div>
+                                                <input type="submit" class="remove-item btn btn-sm btn-success remove-social-media" name="save" value="Save" >
+                                              </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                                <div>
+                                  <input type="submit" class="remove-item btn btn-sm btn-primary mt-3 remove-social-media" name="save" value="Continue" >
+                                </div>
+                            </div>
+                        </div>
+  
+  
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+			<!-- content-wrapper ends -->
+			
+		</div>
+		<!-- main-panel ends -->
+    <script>
+      $('.form-group').on('input','.prc',function(){
+        let totalSum = 0;
+        $('.form-group .prc').each(function(){
+          let inputVal = $(this).val();
+          if($.isNumeric(inputVal)){
+            totalSum += parseFloat(inputVal);
+          }
+        });
+        $('#result').text(totalSum);
+      });
+    </script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/selectFilter.min.js"></script>
+		<script src="../thirdparties/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>

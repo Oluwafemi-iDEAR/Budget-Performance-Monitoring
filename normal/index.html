@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
+      <script>
+      function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+      
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+
+        // Sortable Code
+    var fixHelperModified = function(e, tr) {
+        var $originals = tr.children();
+        var $helper = tr.clone();
+    
+        $helper.children().each(function(index) {
+            $(this).width($originals.eq(index).width())
+        });
+        
+        return $helper;
+    };
+  
+    $(".table-sortable tbody").sortable({
+        helper: fixHelperModified      
+    }).disableSelection();
+
+    $(".table-sortable thead").disableSelection();
+
+
+
+    $("#add_row").trigger("click");
+      </script>
+
+<script>
+  wow = new WOW(
+{
+ animateClass: 'animated',
+ offset:       100,
+ callback:     function(box) {
+   console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+ }
+}
+);
+wow.init();
+document.getElementById('moar').onclick = function() {
+var section = document.createElement('section');
+section.className = 'section--purple wow fadeInDown';
+this.parentNode.insertBefore(section, this);
+};
+</script>
+<style>
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+      <div class="topnav wow fadeIn" data-wow-duration="9s">
+
+  <!-- Centered link -->
+  <div class="topnav-centered">
+    <a href="#home" class="active"><img src="../images/Jesus-Light-of-the-World.png" height="50" width="100" class="d-none d-md-block"></a>
+  </div>
+  
+  <!-- Left-aligned links (default) -->
+  <a href="#"><strong>YDD</strong></a>
+  <!-- <a href="#contact">Contact</a> -->
+  
+  <!-- Right-aligned links -->
+  <div class="topnav-right">
+    <!-- <a href="#search">Search</a> -->
+    <a href="#about"><strong>2021</strong></a>
+  </div>
+  
+</div>
+
+    </div>
+
+  	<div class="space-200"></div>
+	<div class="main-panel">
+			<div class="container">
+
+
+				<div class="row">
+					<div class="col-md-3 grid-margin stretch-card">
+						<div class="card">
+							<div class="profile-card">
+
+								<div class="profile-header">
+
+									<div class="cover-image">
+										<img src="../images/unnamed.png" class="img img-fluid">
+									</div>
+									<div class="user-image">
+										<img src="../images/avatar.png" class="img ">
+									</div>
+								</div>
+
+								<div class="profile-content">
+									<div class="profile-name">Oluwafemi Ifesanmi</div>
+									<div class="profile-designation">User<a href="../profile.html" class="about-item-edit">Edit</a></div>
+									<ul class="profile-info-list">
+										<a href="index.html" class="profile-info-list-item active"><i class="mdi mdi-eye"></i>Home</a>
+                    <li class="mb-1">
+                      <button style="margin: 10px 0; width: 220px; padding:15px;" class="btn btn-toggle align-items-center rounded collapsed profile-info-list-item" data-bs-toggle="collapse" data-bs-target="#budget-collapse" aria-expanded="false">
+                        Create Budget
+                      </button>
+                      <div class="collapse" id="budget-collapse"><hr class="divider">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                          <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded">Special Interventions</a></li>
+                          <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital Expenditure</a></li>
+                          <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program Expenditure</a></li>
+                          <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operations EXP</a></li>
+                        </ul><hr class="divider">
+                      </div>
+                    </li>
+                    
+										<a href="request.html" class="profile-info-list-item"><i class="mdi mdi-bookmark-check"></i>Make A Request</a>
+										<a href="reports.html" class="profile-info-list-item"><i class="mdi mdi-movie"></i>See Reports</a>
+										<a href="requests_status.html" class="profile-info-list-item"><i class="mdi mdi-account"></i>Requests Status</a>
+                   
+      
+                  </ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-9 grid-margin stretch-card">
+						
+            <div class="card">
+              <div class="col p-4">
+              <div class="card myForm">
+                  <h5 class="card-header font-weight-light"><i class="fa fa-file" aria-hidden="true"></i> View Details</h5>
+                  <div class="card-body">
+                        <div class="row clearfix">
+                                <div class="row g-3">
+        <div class="col-md-6 mb-5">
+      <div class="card text-dark bg ">
+        <div class="card-header hero"><i class="fa fa-th-list" aria-hidden="true"></i> Total Projects</div>
+        <table class="table table-light table-borderless">
+          <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Current Balance</th>
+            <th scope="col">Available Balance</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td>0.00</td>
+            <td>0.00</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+      <div class="col-md-6 mb-5">
+      <div class="card text-dark bg">
+        <div class="card-header hero"><i class="fa fa-th-list" aria-hidden="true"></i> Allocation Balance</div>
+        <table class="table table-light table-borderless">
+          <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Current Balance</th>
+            <th scope="col">Available Balance</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td>0.00</td>
+            <td>0.00</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+                        
+  
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+			<!-- content-wrapper ends -->
+			
+		</div>
+		<!-- main-panel ends -->
+		<script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/selectFilter.min.js"></script>
+		<script src="../thirdparties/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
