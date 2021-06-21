@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity Log</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
-      <script>
-      function myFunction() {
-        // Declare variables
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-      
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Log</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
           }
         }
       }
+    }
 
-        // Sortable Code
-    var fixHelperModified = function(e, tr) {
-        var $originals = tr.children();
-        var $helper = tr.clone();
-    
-        $helper.children().each(function(index) {
-            $(this).width($originals.eq(index).width())
-        });
-        
-        return $helper;
+    // Sortable Code
+    var fixHelperModified = function (e, tr) {
+      var $originals = tr.children();
+      var $helper = tr.clone();
+
+      $helper.children().each(function (index) {
+        $(this).width($originals.eq(index).width())
+      });
+
+      return $helper;
     };
-  
+
     $(".table-sortable tbody").sortable({
-        helper: fixHelperModified      
+      helper: fixHelperModified
     }).disableSelection();
 
     $(".table-sortable thead").disableSelection();
@@ -53,128 +54,143 @@
 
 
     $("#add_row").trigger("click");
-      </script>
-    
+  </script>
+
 </head>
+
 <body>
 
-    <div class="container">
-      <div class="topnav wow fadeIn" data-wow-duration="9s">
+  <div class="container">
+    <div class="topnav wow fadeIn" data-wow-duration="9s">
 
-  <!-- Centered link -->
-  <div class="topnav-centered">
-    <a href="#home" class="active"><img src="../images/Jesus-Light-of-the-World.png" height="50" width="100" class="d-none d-md-block"></a>
-  </div>
-  
-  <!-- Left-aligned links (default) -->
-  <a href="#"><strong>YDD</strong></a>
-  <!-- <a href="#contact">Contact</a> -->
-  
-  <!-- Right-aligned links -->
-  <div class="topnav-right">
-    <!-- <a href="#search">Search</a> -->
-    <a href="#about"><strong>2021</strong></a>
-  </div>
-  
-</div>
+      <!-- Centered link -->
+      <div class="topnav-centered">
+        <a href="#home" class="active"><img src="../images/Jesus-Light-of-the-World.png" height="50" width="100"
+            class="d-none d-md-block"></a>
+      </div>
+
+      <!-- Left-aligned links (default) -->
+      <a href="#"><strong>YDD</strong></a>
+      <!-- <a href="#contact">Contact</a> -->
+
+      <!-- Right-aligned links -->
+      <div class="topnav-right">
+        <!-- <a href="#search">Search</a> -->
+        <a href="#about"><strong>2021</strong></a>
+      </div>
 
     </div>
 
-  	<div class="space-200"></div>
-	<div class="main-panel">
-			<div class="container">
+  </div>
+
+  <div class="space-200"></div>
+  <div class="main-panel">
+    <div class="container">
 
 
-				<div class="row">
-					<div class="col-md-3 grid-margin stretch-card">
-						<div class="card">
-							<div class="profile-card">
+      <div class="row">
+        <div class="col-md-3 grid-margin stretch-card">
+          <div class="card">
+            <div class="profile-card">
 
-								<div class="profile-header">
+              <div class="profile-header">
 
-									<div class="cover-image">
-										<img src="../images/unnamed.png" class="img img-fluid">
-									</div>
-									<div class="user-image">
-										<img src="../images/avatar.png" class="img ">
-									</div>
-								</div>
-
-								<div class="profile-content">
-									<div class="profile-name">Oluwafemi Ifesanmi</div>
-									<div class="profile-designation">User<a href="../profile.html" class="about-item-edit">Edit</a></div>
-								<!-- 	<p class="profile-description">Just a few notice to what the MOD can do on the application consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p> -->
-									<ul class="profile-info-list">
-										<a href="index.html" class="profile-info-list-item"><i class="mdi mdi-eye"></i>Home</a><li class="mb-1">
-                      <button style="margin: 10px 0; width: 220px; padding:15px;" class="btn btn-toggle align-items-center rounded collapsed profile-info-list-item" data-bs-toggle="collapse" data-bs-target="#budget-collapse" aria-expanded="false">
-                        Create Budget
-                      </button>
-                      <div class="collapse" id="budget-collapse"><hr class="divider">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                          <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded">Special Interventions</a></li>
-                          <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital Expenditure</a></li>
-                          <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program Expenditure</a></li>
-                          <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operations EXP</a></li>
-                        </ul><hr class="divider">
-                      </div>
-                    </li>
-										<a href="#" class="profile-info-list-item active"><i class="mdi mdi-bookmark-check"></i>Make A Request</a>
-										<a href="reports.html" class="profile-info-list-item"><i class="mdi mdi-movie"></i>See Reports</a>
-										<a href="requests_status.html" class="profile-info-list-item"><i class="mdi mdi-account"></i>Requests Status</a>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-9 grid-margin stretch-card">
-						
-            <div class="card">
-              <div class="col p-4">
-              <div class="card myForm">
-                  <h5 class="card-header font-weight-light"><i class="fa fa-list" aria-hidden="true"></i> Make Your Request</h5>
-                  <div class="card-body">
-                        <div class="row clearfix">
-                          <div class="col-md-12 mb-4">
-                            
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group mb-4">
-                        <label for="project_name">Date</label>
-                        <input readonly type="date" name="moment" placeholder="" class="form-control"/>
-                      </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group mb-4">
-                          <label for="project_name">Directorate</label>
-                          <input readonly type="text" name="moment" placeholder="Directors Office" class="form-control"/>
-                        </div>
-                        </div>
-                      
-                  </div>
-                  <div class="row mb-4">
-                  <div class="col-md-6">
-                  <div class="form-group mb-4">
-                    <label class="control-label" for="period">Description</label>
-                              <div class="controls">
-                                  <textarea class="form-control" rows="6" name="description"></textarea>
-                              </div> <!-- /controls -->
-                  </div>
-                  </div>
-                  <div class="col-md-6">
-                  <div class="control-group">
-                    <label class="control-label" for="period">Drop or Click to add Invoice</label>
-                    <div class="controls">
-                            <form method="post" action="#" id="#">
-                                <div class="form-group files color">
-                                    <input type="file" class="form-control" multiple="">
-                                </div>
-                            </form>
-                    </div>
+                <div class="cover-image">
+                  <img src="../images/unnamed.png" class="img img-fluid">
+                </div>
+                <div class="user-image">
+                  <img src="../images/avatar.png" class="img ">
                 </div>
               </div>
+
+              <div class="profile-content">
+                <div class="profile-name">Oluwafemi Ifesanmi</div>
+                <div class="profile-designation">User<a href="../profile.html" class="about-item-edit">Edit</a></div>
+                <!-- 	<p class="profile-description">Just a few notice to what the MOD can do on the application consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p> -->
+                <ul class="profile-info-list">
+                  <a href="index.html" class="profile-info-list-item"><i class="mdi mdi-eye"></i>Home</a>
+                  <li class="mb-1">
+                    <button style="margin: 10px 0; width: 220px; padding:15px;"
+                      class="btn btn-toggle align-items-center rounded collapsed profile-info-list-item"
+                      data-bs-toggle="collapse" data-bs-target="#budget-collapse" aria-expanded="false">
+                      Create Budget
+                    </button>
+                    <div class="collapse" id="budget-collapse">
+                      <hr class="divider">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded">Special
+                            Interventions</a></li>
+                        <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital
+                            Expenditure</a></li>
+                        <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program
+                            Expenditure</a></li>
+                        <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operations EXP</a>
+                        </li>
+                      </ul>
+                      <hr class="divider">
+                    </div>
+                  </li>
+                  <a href="#" class="profile-info-list-item active"><i class="mdi mdi-bookmark-check"></i>Make A
+                    Request</a>
+                  <a href="reports.html" class="profile-info-list-item"><i class="mdi mdi-movie"></i>See Reports</a>
+                  <a href="requests_status.html" class="profile-info-list-item"><i class="mdi mdi-account"></i>Requests
+                    Status</a>
+                </ul>
+              </div>
             </div>
-            <!-- <div class="col-md-4">
+          </div>
+        </div>
+
+        <div class="col-md-9 grid-margin stretch-card">
+
+          <div class="card">
+            <div class="col p-4">
+              <div class="card myForm">
+                <h5 class="card-header font-weight-light"><i class="fa fa-list" aria-hidden="true"></i> Make Your
+                  Request</h5>
+                <div class="card-body">
+                  <div class="row clearfix">
+                    <div class="col-md-12 mb-4">
+
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group mb-4">
+                            <label for="project_name">Date</label>
+                            <input readonly type="date" name="moment" placeholder="" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group mb-4">
+                            <label for="project_name">Directorate</label>
+                            <input readonly type="text" name="moment" placeholder="Directors Office"
+                              class="form-control" />
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="row mb-4">
+                        <div class="col-md-6">
+                          <div class="form-group mb-4">
+                            <label class="control-label" for="period">Description</label>
+                            <div class="controls">
+                              <textarea class="form-control" rows="6" name="description"></textarea>
+                            </div> <!-- /controls -->
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="control-group">
+                            <label class="control-label" for="period">Drop or Click to add Invoice</label>
+                            <div class="controls">
+                              <form method="post" action="#" id="#">
+                                <div class="form-group files color">
+                                  <input type="file" class="form-control" multiple="">
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-4">
             <div class="form-group mb-4">
               <label for="directorate">Directorate</label>
               <select name="prod_acc" id="prod_acc" class="form-control">
@@ -206,740 +222,729 @@
                                 </select>
             </div>
           </div> -->
-          <h5 class="card-header font-weight-light">
-            <i class="fa fa-list" aria-hidden="true"></i> Edit Details
-          </h5>
-          <div class="card-body">
-              <div class="margin-t-md mb-4">
-                <div class="customer-form">
-                  <form action="" method="post" role="form" autocomplete="off">
-                    <div id="main-container" class="row">
-                      <div class="panel card container-item">
-                            <div class="row mt-3 mb-4">
-                              <div class="col-md-4">
-                                <div class="form-group">
-                                  <h5 style=" color: #495057 !important; text-align: center;"> Above The Line </h5>
-                                  <select class="form-control major selectFilter" name ="abovetheline" data-target="sub">
-                                    <option value="Select One"> Select One</option>
-                                    <!-- <option value="Income" data-ref="inc">Income</option> -->
-                                    <option value="Special Interventions" data-ref="spint">Special Interventions</option>
-                                    <option value="Capital Expenditure" data-ref="capex">Capital Expenditure</option>
-                                    <option value="PROGRAMME EXPENDITURE" data-ref="pex">PROGRAMME EXPENDITURE</option>
-                                    <option value="OPERATIONS (RECURRENT) EXP" data-ref="ore">OPERATIONS (RECURRENT) EXP</option>
-                                  </select>
-                                </div>
-                              </div>
-                            
-                              <div class="col-md-4">
-                                <div class="form-group">
-                                  <h5 style=" color: #495057 !important;  text-align: center; ">  Budget Line</h5>
-                                  <select class="form-control sub selectFilter"  name="subject" data-target="minor">
-                                    <option value="Select One"> Select One</option>
-                                    <option value="Tithes & Offering" data-ref="tiof" data-belong="inc">Tithes & Offering</option>
-                                    <option value="Other Offerings" data-ref="otof" data-belong="inc">Other Offerings</option>
-                                    <option value="OTHER RECEIPTS" data-ref="otre" data-belong="inc">OTHER RECEIPTS</option>
-                                    <option value="DONATIONS" data-ref="dona" data-belong="inc">DONATIONS</option>
-                                    <option value="IGBESA CONTRIBUTION" data-ref="igdo" data-belong="inc">IGBESA CONTRIBUTION</option>
-                                    <option value="OTHER CONTRIBUTIONS" data-ref="otco" data-belong="inc">OTHER CONTRIBUTIONS</option>
-                                    <option value="AUDIO/VIDEO CDS" data-ref="auvi" data-belong="inc">AUDIO/VIDEO CDS</option>
-                                    <option value="CALENDAR SALES" data-ref="casa" data-belong="inc">CALENDAR SALES</option>
-                                    <option value="CGS" data-ref="cgs" data-belong="inc">CGS</option>
-                                    <option value="MUSICAL INSTRUMENTS SALES" data-ref="muinsa" data-belong="inc">MUSICAL INSTRUMENTS SALES</option>
-                                    <option value="PICTURE ROLLS" data-ref="piro" data-belong="inc">PICTURE ROLLS</option>
-                                    <option value="WATCH AND PRAY"  data-ref="waap" data-belong="inc">WATCH AND PRAY</option>
-                                    <option value="DIESEL" data-ref="diesel" data-belong="inc">DIESEL</option>
-                                    <option value="KEROSINE" data-ref="kero" data-belong="inc">KEROSINE</option>
-                                    <option value="LUBRICANTS" data-ref="lubr" data-belong="inc">LUBRICANTS</option>
-                                    <option value="PMS" data-ref="pms" data-belong="inc">PMS</option>
-                                    <option value="LIVE STOCK SALES" data-ref="listsa" data-belong="inc">LIVE STOCK SALES</option>
-                                    <option value="FARM PRODUCE SALES" data-ref="faprsa" data-belong="inc">FARM PRODUCE SALES</option>
-                                    <option value="KITCHEN SALES" data-ref="kisa" data-belong="inc">KITCHEN SALES</option>
-                                    <option value="OTHERS (SPECIFIC CONTRIBUTION)" data-ref="otsc" data-belong="inc">OTHERS (SPECIFIC CONTRIBUTION)</option>
-                                    <option value="MISSIONARY FUND- DISTRICT" data-ref="mifudi" data-belong="inc">MISSIONARY FUND- DISTRICT</option>
-                                    <option value="MISSIONARY FUND- BRANCH"  data-ref="mifubr" data-belong="inc">MISSIONARY FUND- BRANCH</option>
-                                    <option value="INTERVENTIONS FOREIGN MISSION" data-ref="infomi" data-belong="spint">INTERVENTIONS FOREIGN MISSION</option>
-                                    <option value="INTERVENTION - REGION"  data-ref="inre" data-belong="spint">INTERVENTION - REGION</option>
-                                    <option value="INTERVENTION - DISTRICT" data-ref="indi" data-belong="spint"> INTERVENTION - DISTRICT</option>
-                                    <option value="INTERVENTION - OTHERS" data-ref="inot" data-belong="spint">INTERVENTION - OTHERS</option>
-                                    <option value="STAFF LOANS" data-ref="stlo" data-belong="spint">STAFF LOANS </option>
-                                    <option value="LOANS OTHERS" data-ref="loot" data-belong="spint" >LOANS OTHERS</option>
-                                    <option value="LAND" data-ref="land" data-belong="capex">LAND</option>
-                                    <option value="FREEHOLD LAND" data-ref="frla" data-belong="capex">FREEHOLD LAND</option>
-                                    <option value="LEASEHOLD LAND" data-ref="lela" data-belong="capex">LEASEHOLD LAND</option>
-                                    <option value="BUILDINGS" data-ref="build" data-belong="capex">BUILDINGS</option>
-                                    <option value="CHURCH FURNITURE & FITTINGS" data-ref="chfufi" data-belong="capex">CHURCH FURNITURE & FITTINGS</option>
-                                    <option value="OFFICE FURNITURE & FITTINGS" data-ref="offufi" data-belong="capex">OFFICE FURNITURE & FITTINGS</option>
-                                    <option value="MOTOR CARS" data-ref="moca" data-belong="capex">MOTOR CARS</option>
-                                    <option value="BUSES" data-ref="buses" data-belong="capex">BUSES</option>
-                                    <option value="MOTOR LORRIES" data-ref="molo" data-belong="capex">MOTOR LORRIES</option>
-                                    <option value="MOTOR CRANE" data-ref="mocr" data-belong="capex">MOTOR CRANE</option>
-                                    <option value="TRACTORS" data-ref="trac" data-belong="capex">TRACTORS</option>
-                                    <option value="FISH PONDS" data-ref="fipo" data-belong="capex">FISH PONDS</option>
-                                    <option value="FISH HATCHERY" data-ref="fiha" data-belong="capex">FISH HATCHERY</option>
-                                    <option value="GENERATORS" data-ref="gener" data-belong="capex">GENERATORS</option>
-                                    <option value="PLANT & MACHINERY" data-ref="plma" data-belong="capex">PLANT & MACHINERY</option>
-                                    <option value="AIRCONDITIONERS" data-ref="aircon" data-belong="capex">AIRCONDITIONERS</option>
-                                    <option value="INVERTERS" data-ref="inver" data-belong="capex">INVERTERS</option>
-                                    <option value="FRIDGES" data-ref="frid" data-belong="capex">FRIDGES</option>
-                                    <option value="DESKTOPS" data-ref="desk" data-belong="capex">DESKTOPS</option>
-                                    <option value="LAPTOPS" data-ref="lapt" data-belong="capex">LAPTOPS</option>
-                                    <option value="PRINTERS" data-ref="print" data-belong="capex">PRINTERS</option>
-                                    <option value="COMPUTER SOFTWARES" data-ref="comso" data-belong="capex">COMPUTER SOFTWARES</option>
-                                    <option value="MUSICAL INSTRUMENTS-WORSHIP" data-ref="muinwo" data-belong="capex">MUSICAL INSTRUMENTS-WORSHIP</option>
-                                    <option value="ELECTRONICS GADGETS" data-ref="elga" data-belong="capex">ELECTRONICS GADGETS</option>
-                                    <option value="ICT EQUIPMENT-MISSION" data-ref="iceqmi" data-belong="capex">ICT EQUIPMENT-MISSION</option>
-                                    <option value="INVESTMENT - PROPERTY" data-ref="inpr" data-belong="capex">INVESTMENT - PROPERTY</option>
-                                    <option value="SPECIAL DAYS PROGRAMMES" data-ref="spdapr" data-belong="pex">SPECIAL DAYS PROGRAMMES</option>
-                                    <option value="AVS PROGRAM EXPENSES " data-ref="avprex" data-belong="pex">AVS PROGRAM EXPENSES </option>
-                                    <option value="REVIVAL& A.V.S RETREAT" data-ref="rear" data-belong="pex">REVIVAL& A.V.S RETREAT</option>
-                                    <option value="BOARD MEETINGS - MAIN" data-ref="bomema" data-belong="pex">BOARD MEETINGS - MAIN</option>
-                                    <option value="BOARD MEETINGS-MCMC" data-ref="bomemc" data-belong="pex">BOARD MEETINGS-MCMC</option>
-                                    <option value="BOARD MEETINGS- MCOC" data-ref="bome-mc" data-belong="pex">BOARD MEETINGS- MCOC</option>
-                                    <option value="BOARD MEETINGS- FIC" data-ref="bomefi" data-belong="pex">BOARD MEETINGS- FIC</option>
-                                    <option value="CAMP MEETING -GENERAL EXPENSES" data-ref="camegeex" data-belong="pex">CAMP MEETING -GENERAL EXPENSES</option>
-                                    <option value="HOME MISSION CAMP MEETINGS" data-ref="homicame" data-belong="pex">HOME MISSION CAMP MEETINGS</option>
-                                    <option value="OTHER C/MEETING EXP" data-ref="otcmex" data-belong="pex">OTHER C/MEETING EXP</option>
-                                    <option value="WELFARE PACKAGE FOR CAMP MEETING" data-ref="wepafo" data-belong="pex">WELFARE PACKAGE FOR CAMP MEETING</option>
-                                    <option value="CHRISTMAS DECORATION"  data-ref="chde" data-belong="pex">CHRISTMAS DECORATION</option>
-                                    <option value="FOREIGN LEADERS TRAINING " data-ref="foletr" data-belong="pex">FOREIGN LEADERS TRAINING </option>
-                                    <option value="EMPOWERMENT EXPENSES" data-ref="emex" data-belong="pex">EMPOWERMENT EXPENSES</option>
-                                    <option value="CONCERT EXPENSES" data-ref="coex" data-belong="pex">CONCERT EXPENSES</option>
-                                    <option value="OUTREACHES" data-ref="outr" data-belong="pex">OUTREACHES</option>
-                                    <option value="REVIVALS" data-ref="reviv" data-belong="pex">REVIVALS</option>
-                                    <option value="YDD - CAPACITY BUILDING PROGRAMME" data-ref="yddcap" data-belong="pex">YDD - CAPACITY BUILDING PROGRAMME</option>
-                                    <option value="YOUNG PROFESSIONAL PROGRAM EXPENSES" data-ref="yppe" data-belong="pex">YOUNG PROFESSIONAL PROGRAM EXPENSES</option>
-                                    <option value="YOUTH LEADERS CAPACITY BUILDING" data-ref="ylcb" data-belong="pex">YOUTH LEADERS CAPACITY BUILDING</option>
-                                    <option value="INTERNATIONAL YOUTH CAMP- IYC" data-ref="iyc" data-belong="pex">INTERNATIONAL YOUTH CAMP- IYC</option>
-                                    <option value="NCWC - NATIONAL CENTRAL WORKING COMMITTEE "  data-ref="ncwc" data-belong="pex">NCWC - NATIONAL CENTRAL WORKING COMMITTEE </option>
-                                    <option value="AFCF - APOSTOLIC FAITH CAMPUS FELLOWSHIP " data-ref="afcf" data-belong="pex">AFCF - APOSTOLIC FAITH CAMPUS FELLOWSHIP </option>
-                                    <option value="OTHER YOUTH PROGRAMS"  data-ref="oyp" data-belong="pex">OTHER YOUTH PROGRAMS</option>
-                                    <option value="PURCHASE OF MUSICAL INSTRUMENTS" data-ref="pomi" data-belong="ore"> PURCHASE OF MUSICAL INSTRUMENTS</option>
-                                    <option value="FUEL & LUBRICANTS  (DIESEL)" data-ref="fuludi" data-belong="ore">FUEL & LUBRICANTS  (DIESEL)</option>
-                                    <option value="FUEL & LUBRICANTS  (PMS)" data-ref="fulupm" data-belong="ore">FUEL & LUBRICANTS  (PMS) </option>
-                                    <option value="FUEL & LUBRICANTS  (LUBRICANTS)" data-ref="fululu" data-belong="ore" >FUEL & LUBRICANTS  (LUBRICANTS)</option>
-                                    <option value="FUEL & LUBRICANTS  (KEROSINE)" data-ref="fuluke" data-belong="ore">FUEL & LUBRICANTS  (KEROSINE)</option>
-                                    <option value="PRINTING OF CALENDARS" data-ref="proc" data-belong="ore">PRINTING OF CALENDARS</option>
-                                    <option value="PRINTING OF CGS" data-ref="procg" data-belong="ore">PRINTING OF CGS</option>
-                                    <option value="PRODUCTION OF AUDIO VISUALS" data-ref="proavi" data-belong="ore">PRODUCTION OF AUDIO VISUALS</option>
-                                    <option value="KIOSK EXPENSES" data-ref="kiex" data-belong="ore">KIOSK EXPENSES</option>
-                                    <option value="FARM EXPENSES" data-ref="faex" data-belong="ore">FARM EXPENSES</option>
-                                    <option value="HOTEL & SUSTENANCE EXPENSES" data-ref="hosuex" data-belong="ore">HOTEL & SUSTENANCE EXPENSES</option>
-                                    <option value="ADVERTS & PUBLICITY EXPENSES" data-ref="adpuex" data-belong="ore">ADVERTS & PUBLICITY EXPENSES</option>
-                                    <option value="TREASURY MONITORING EXPENSES" data-ref="trmoex" data-belong="ore">TREASURY MONITORING EXPENSES</option>
-                                    <option value="EXTERNAL AUDIT EXPENSES" data-ref="exauex" data-belong="ore">EXTERNAL AUDIT EXPENSES</option>
-                                    <option value="INTERNAL AUDIT EXPENSES" data-ref="inauex" data-belong="ore">INTERNAL AUDIT EXPENSES</option>
-                                    <option value="NEWSPAPERS AND PERIODICALS" data-ref="neap" data-belong="ore">NEWSPAPERS AND PERIODICALS</option>
-                                    <option value="BOOKS & JOURNALS" data-ref="bojo" data-belong="ore">BOOKS & JOURNALS</option>
-                                    <option value="STATIONERIES" data-ref="stat" data-belong="ore">STATIONERIES</option>
-                                    <option value="CORPORATE SOCIAL RESPONSIBILITY" data-ref="cosore" data-belong="ore">CORPORATE SOCIAL RESPONSIBILITY</option>
-                                    <option value="DELEGATES EXPENSES" data-ref="deex" data-belong="ore">DELEGATES EXPENSES</option>
-                                    <option value="US DELEGATES EXPENSES" data-ref="usdeex" data-belong="ore">US DELEGATES EXPENSES</option>
-                                    <option value="IGBESA CONTRIBUTION" data-ref="igco" data-belong="ore">IGBESA CONTRIB UTION</option>
-                                    <option value="CRAWFORD/AFSS CONTRIBUTION" data-ref="crco" data-belong="ore">CRAWFORD/AFSS CONTRIBUTION</option>
-                                    <option value="CHILDREN EDUCATION" data-ref="ched" data-belong="ore">CHILDREN EDUCATION</option>
-                                    <option value="FARM EXPENSES" data-ref="" data-belong="ore">FARM EXPENSES</option>
-                                    <option value="FEEDING OF WORKERS" data-ref="feofwo" data-belong="ore">FEEDING OF WORKERS</option>
-                                    <option value="CANTEEN WEEKLY MAINT" data-ref="cawema" data-belong="ore">CANTEEN WEEKLY MAINT</option>
-                                    <option value="KITCHEN EXPENSES" data-ref="kitex" data-belong="ore">KITCHEN EXPENSES</option>
-                                    <option value="CAFETARIA EXPENSES" data-ref="caex" data-belong="ore">CAFETARIA EXPENSES</option>
-                                    <option value="KITCHEN GAS" data-ref="kiga" data-belong="ore">KITCHEN GAS </option>
-                                    <option value="COT / BANK CHARGES" data-ref="cobc" data-belong="ore"> COT / BANK CHARGES</option>
-                                    <option value="FOREIGN EXCHANGE DIFFERENTIAL" data-ref="foexdi" data-belong="ore">FOREIGN EXCHANGE DIFFERENTIAL</option>
-                                    <option value="INTEREST ON LOANS" data-ref="inol" data-belong="ore">INTEREST ON LOANS </option>
-                                    <option value="FIRST AID EXPENSES" data-ref="fiae" data-belong="ore" >FIRST AID EXPENSES</option>
-                                    <option value="FOREIGN CHURCH RUNNING COST" data-ref="fcrc" data-belong="ore">FOREIGN CHURCH RUNNING COST</option>
-                                    <option value="FOREIGN MISSION CHILDREN EDUCATION SUPPORT" data-ref="fmces" data-belong="ore">FOREIGN MISSION CHILDREN EDUCATION SUPPORT</option>
-                                    <option value="FOREIGN MISSION  FAMILY HOME SUPPORT" data-ref="fmfhs" data-belong="ore">FOREIGN MISSION  FAMILY HOME SUPPORT</option>
-                                    <option value="FOREIGN MISSION STIPENDS" data-ref="foms" data-belong="ore">FOREIGN MISSION STIPENDS</option>
-                                    <option value="FOREIGN LEADERS TRAINING " data-ref="" data-belong="ore">FOREIGN LEADERS TRAINING </option>
-                                    <option value="FOREIGN MISSION VISITS/TRIPS " data-ref="fomivt" data-belong="ore">FOREIGN MISSION VISITS/TRIPS </option>
-                                    <option value="FOREIGN MISSIONS CAMP MEETINGS" data-ref="fomicm" data-belong="ore">FOREIGN MISSIONS CAMP MEETINGS</option>
-                                    <option value="FOREIGN MISSIONS-OTHER EXPENSES " data-ref="fomioe" data-belong="ore">FOREIGN MISSIONS-OTHER EXPENSES </option>
-                                    <option value="FOREIGN MISSION PROJECTS = MISSIONS" data-ref="fomipm" data-belong="ore">FOREIGN MISSION PROJECTS = MISSIONS</option>
-                                    <option value="FRSC EXPENSES" data-ref="frex" data-belong="ore">FRSC EXPENSES</option>
-                                    <option value="FUEL & LUBRICANTS  (DIESEL)" data-ref="" data-belong="ore">FUEL & LUBRICANTS  (DIESEL)</option>
-                                    <option value="FUEL & LUBRICANTS (PMS)" data-ref="" data-belong="ore">FUEL & LUBRICANTS (PMS)</option>
-                                    <option value="FUEL & LUBRICANTS (LUBRICANTS) " data-ref="" data-belong="ore">FUEL & LUBRICANTS (LUBRICANTS) </option>
-                                    <option value="FUEL & LUBRICANTS  (KEROSINE)" data-ref="fuluke" data-belong="ore">FUEL & LUBRICANTS  (KEROSINE)</option>
-                                    <option value="FUNERAL EXPENSES" data-ref="fuex" data-belong="ore">FUNERAL EXPENSES</option>
-                                    <option value="FUNERAL EXP-FEEDING" data-ref="fuexfe" data-belong="ore">FUNERAL EXP-FEEDING</option>
-                                    <option value="FUNERAL EXP-OTHERS" data-ref="fuexot" data-belong="ore">FUNERAL EXP-OTHERS</option>
-                                    <option value=" POSTAGE & COURIER S" data-ref="pocos" data-belong="ore"> POSTAGE & COURIER S</option>
-                                    <option value="TELEPHONE EXPENSES" data-ref="teex" data-belong="ore">TELEPHONE EXPENSES</option>
-                                    <option value="INTERNET & ACCESORIES EXPS" data-ref="inacex" data-belong="ore">INTERNET & ACCESORIES EXPS</option>
-                                    <option value="MOTOR VEHICLE LICENCING & DOCUMENT RENEWALS" data-ref="moveli" data-belong="ore">MOTOR VEHICLE LICENCING & DOCUMENT RENEWALS</option>
-                                    <option value="RENEWAL OF DRIVING LICENCES" data-ref="reod" data-belong="ore">RENEWAL OF DRIVING LICENCES</option>
-                                    <option value="LICENCES & PERMITS - OTHERS" data-ref="lipeot" data-belong="ore">LICENCES & PERMITS - OTHERS</option>
-                                    <option value="MISSION HOUSE EXPENSES" data-ref="mihoex" data-belong="ore">MISSION HOUSE EXPENSES</option>
-                                    <option value="MUSIC TEST EXPENSES" data-ref="mute" data-belong="ore">MUSIC TEST EXPENSES</option>
-                                    <option value="MUSICAL INSTRUMENTS" data-ref="muin" data-belong="ore">MUSICAL INSTRUMENTS</option>
-                                    <option value="STATIONERIES" data-ref="" data-belong="ore"> STATIONERIES</option>
-                                    <option value="OFFICE EXP" data-ref="ofex" data-belong="ore">OFFICE EXP</option>
-                                    <option value="OUTREACHES" data-ref="" data-belong="ore">OUTREACHES </option>
-                                    <option value="REVIVALS" data-ref="" data-belong="ore" >REVIVALS</option>
-                                    <option value="FULL TIME ALLOWANCES" data-ref="futial" data-belong="ore">FULL TIME ALLOWANCES</option>
-                                    <option value="RETIREMENT/DISENGAGEMENT EXP" data-ref="rediex" data-belong="ore">RETIREMENT/DISENGAGEMENT EXP</option>
-                                    <option value="STIPENDS" data-ref="stip" data-belong="ore">STIPENDS</option>
-                                    <option value="SALARIES AND WAGES" data-ref="saaw" data-belong="ore">SALARIES AND WAGES</option>
-                                    <option value="CORPERS & IT ALLOWCES" data-ref="coia" data-belong="ore">CORPERS & IT ALLOWCES</option>
-                                    <option value="PRINTING" data-ref="prin" data-belong="ore">PRINTING</option>
-                                    <option value="PRINTING OF APOSTOLIC FAITH MAGAZINE " data-ref="proaf" data-belong="ore">PRINTING OF APOSTOLIC FAITH MAGAZINE </option>
-                                    <option value="PRINTING OF ADULT/INTERMEDIATE SUNDAY SCHOOL BOOKS" data-ref="poais" data-belong="ore">PRINTING OF ADULT/INTERMEDIATE SUNDAY SCHOOL BOOKS</option>
-                                    <option value="PRINTING OF ELEMENTARY SUNDAY SCHOOL BOOKS" data-ref="poess" data-belong="ore">PRINTING OF ELEMENTARY SUNDAY SCHOOL BOOKS</option>
-                                    <option value="PRINTING OF GOSPEL NEWS IN AFRICA  " data-ref="pognia" data-belong="ore">PRINTING OF GOSPEL NEWS IN AFRICA  </option>
-                                    <option value="PRINTING OF IMOLE IRETI  " data-ref="poii" data-belong="ore">PRINTING OF IMOLE IRETI  </option>
-                                    <option value="PRINTING OF TRACTS" data-ref="prot" data-belong="ore">PRINTING OF TRACTS</option>
-                                    <option value="PRINTING- ART AND DESIGN " data-ref="praad" data-belong="ore">PRINTING- ART AND DESIGN </option>
-                                    <option value="PRINTING - CORE EXPENSES " data-ref="prce" data-belong="ore">PRINTING - CORE EXPENSES </option>
-                                    <option value="PRINTING- PHOTOGRAPHY EXPENSES " data-ref="prphe" data-belong="ore">PRINTING- PHOTOGRAPHY EXPENSES </option>
-                                    <option value="PRINTING- INVITATION CARDS & SURVENAIR " data-ref="princ" data-belong="ore">PRINTING- INVITATION CARDS & SURVENAIR </option>
-                                    <option value="LEGAL & PROFESSIONAL EXPENSES" data-ref="leprex" data-belong="ore">LEGAL & PROFESSIONAL EXPENSES</option>
-                                    <option value="DESIGN & CONSTRUCTION MANAGEMENT COST" data-ref="decm" data-belong="ore">DESIGN & CONSTRUCTION MANAGEMENT COST</option>
-                                    <option value="PROJECT INSPECTION COST" data-ref="princo" data-belong="ore">PROJECT INSPECTION COST</option>
-                                    <option value="TOWN PLANNING EXPENSES" data-ref="tpex" data-belong="ore">TOWN PLANNING EXPENSES</option>
-                                    <option value="PROJECT MANAGEMENT" data-ref="prma" data-belong="ore">PROJECT MANAGEMENT</option>
-                                    <option value="FACILITY MANAGEMENT" data-ref="fama" data-belong="ore">FACILITY MANAGEMENT</option>
-                                    <option value="PUBLIC RELATION & COMM" data-ref="pure" data-belong="ore">PUBLIC RELATION & COMM</option>
-                                    <option value="MISSIONARY FUND CONT" data-ref="mifuco" data-belong="ore">MISSIONARY FUND CONT</option>
-                                    <option value="OTHER STATE CONT." data-ref="otstco" data-belong="ore">OTHER STATE CONT.</option>
-                                    <option value="RENT & RATES" data-ref="rera" data-belong="ore">RENT & RATES</option>
-                                    <option value="REPAIRS-GENERATORS" data-ref="gener" data-belong="ore"> REPAIRS-GENERATORS</option>
-                                    <option value="REPAIRS-PLANT & MACHINERY" data-ref="replm" data-belong="ore">REPAIRS-PLANT & MACHINERY</option>
-                                    <option value="REPAIRS - CAMPGROUND CABINS" data-ref="recaca" data-belong="ore">REPAIRS - CAMPGROUND CABINS </option>
-                                    <option value="REPAIRS - GUEST HOUSES" data-ref="reguh" data-belong="ore" >REPAIRS - GUEST HOUSES</option>
-                                    <option value="REPAIRS - ELECTRICALS" data-ref="reel" data-belong="ore">REPAIRS - ELECTRICALS</option>
-                                    <option value="REPAIRS-MUSICAL INSTRUMENTS" data-ref="remuin" data-belong="ore">REPAIRS-MUSICAL INSTRUMENTS</option>
-                                    <option value="R & M - MOTOR VECHICLES" data-ref="rmv" data-belong="ore">R & M - MOTOR VECHICLES</option>
-                                    <option value="REPAIRS-BUILDINGS" data-ref="rebu" data-belong="ore">REPAIRS-BUILDINGS</option>
-                                    <option value="REPAIRS-FURN. & FITT." data-ref="refu" data-belong="ore">REPAIRS-FURN. & FITT.</option>
-                                    <option value="REPAIRS-ELECTRONICS" data-ref="relect" data-belong="ore">REPAIRS-ELECTRONICS</option>
-                                    <option value="REPAIRS-GENERAL" data-ref="rege" data-belong="ore">REPAIRS-GENERAL</option>
-                                    <option value="LIBRARY MAINTENANCE EXPENSES" data-ref="limaex" data-belong="ore">LIBRARY MAINTENANCE EXPENSES</option>
-                                    <option value="CEMETERY MAINTENANCE" data-ref="cema" data-belong="ore">CEMETERY MAINTENANCE</option>
-                                    <option value="CLEANING & SANITATION" data-ref="clsa" data-belong="ore">CLEANING & SANITATION</option>
-                                    <option value="SECURITY EQUIPMENT" data-ref="seeq" data-belong="ore">SECURITY EQUIPMENT</option>
-                                    <option value="SECURITY EXPENSES" data-ref="seex" data-belong="ore">SECURITY EXPENSES</option>
-                                    <option value="CLEARING EXPENSES" data-ref="clex" data-belong="ore">CLEARING EXPENSES</option>
-                                    <option value="SHIPPING EXPENSES" data-ref="shex" data-belong="ore">SHIPPING EXPENSES</option>
-                                    <option value="C.A.N CONTRIBUTION" data-ref="canc" data-belong="ore">C.A.N CONTRIBUTION</option>
-                                    <option value="INTERNET SUBSCRIPTIONS" data-ref="insu" data-belong="ore">INTERNET SUBSCRIPTIONS</option>
-                                    <option value="MTN MIFI INTERNET SERVICES" data-ref="mmis" data-belong="ore">MTN MIFI INTERNET SERVICES</option>
-                                    <option value="ACCOUNTING SOFTWARE & SUBSCRIPTIONS " data-ref="acss" data-belong="ore">ACCOUNTING SOFTWARE & SUBSCRIPTIONS </option>
-                                    <option value="SUNDRY EXPENSES" data-ref="suex" data-belong="ore">SUNDRY EXPENSES</option>
-                                    <option value="HONORARIUM FOR FACILITATORS" data-ref="hoff" data-belong="ore">HONORARIUM FOR FACILITATORS</option>
-                                    <option value="TRAINING AND WORKSHOP EXPENSES" data-ref="tawe" data-belong="ore">TRAINING AND WORKSHOP EXPENSES</option>
-                                    <option value="TRAVELING EXPENSES - LOCAL" data-ref="trexlo" data-belong="ore">TRAVELING EXPENSES - LOCAL</option>
-                                    <option value="TRAVELING EXPENSES - FOREIGN" data-ref="trexfo" data-belong="ore">TRAVELING EXPENSES - FOREIGN</option>
-                                    <option value="ELECTRICITY" data-ref="elect" data-belong="ore">ELECTRICITY</option>
-                                    <option value="WASTE MANAGEMENT" data-ref="wama" data-belong="ore">WASTE MANAGEMENT</option>
-                                    <option value="OTHER WELFARE PACKAGES" data-ref="owp" data-belong="ore">OTHER WELFARE PACKAGES</option>
-                                    <option value="WORKERS WELFARE" data-ref="wowe" data-belong="ore">WORKERS WELFARE</option>
-                                    <option value="WELFARE - WEDDINGS" data-ref="wewe" data-belong="ore">WELFARE - WEDDINGS</option>
-                                    <option value="ENTERTAINMENT" data-ref="entr" data-belong="ore">ENTERTAINMENT</option>
-                                    <option value="CHARITY" data-ref="char" data-belong="ore">CHARITY</option>
-                                    <option value="HOUSE KEEPING EXPENSES" data-ref="hokeex" data-belong="ore">HOUSE KEEPING EXPENSES</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="col-md-2"> 
-                                <div class="form-group">
-                                  <h5 style=" color: #495057 !important; text-align: center;"> Code </h5>
-                                  <select class="form-control minor selectFilter"  name="subject">
-                                    <option value="Select One"> Select Code</option>
-                                    <option value="5011001" data-belong="tiof">5011001</option>
-                                    <option value="5011002" data-belong="otof">5011002</option>
-                                    <option value="5011201" data-belong="otre">5011201</option>
-                                    <option value="5011301" data-belong="dona">5011301</option>
-                                    <option value="5011401" data-belong="igdo">5011401</option>
-                                    <option value="5011402" data-belong="otco">5011402</option>
-                                    <option value="5011501" data-belong="auvi">5011501</option>
-                                    <option value="5011502" data-belong="casa">5011502</option>
-                                    <option value="5011503" data-belong="cgs">5011503</option>
-                                    <option value="5011504" data-belong="muinsa">5011504</option>
-                                    <option value="5011505" data-belong="piro">5011505</option>
-                                    <option value="5011506" data-belong="waap">5011506</option>
-                                    <option value="5011601" data-belong="diesel">5011601</option>
-                                    <option value="5011602" data-belong="kero">5011602</option>
-                                    <option value="5011603" data-belong="lubr">5011603</option>
-                                    <option value="5011604" data-belong="pms">5011604</option>
-                                    <option value="5011701" data-belong="listsa">5011701</option>
-                                    <option value="5011702" data-belong="faprsa">5011702</option>
-                                    <option value="5011801" data-belong="kisa">5011801</option>
-                                    <option value="5011901" data-belong="otsc">5011901</option>
-                                    <option value="2011013" data-belong="mifudi">2011013</option>
-                                    <option value="2011016" data-belong="mifubr">2011016</option>
-                                    <option value="1130703" data-belong="infomi">1130703</option>
-                                    <option value="1130701" data-belong="inre">1130701</option>
-                                    <option value="1130702" data-belong="indi"> 1130702</option>
-                                    <option value="1130704" data-belong="inot">1130704</option>
-                                    <option value="1130201" data-belong="stlo">1130201 </option>
-                                    <option value="1130204" data-belong="loot" >1130204</option>
-                                    <option value="1110101" data-belong="land">1110101</option>
-                                    <option value="1110102" data-belong="frla">1110102</option>
-                                    <option value="1110103" data-belong="lela">1110103</option>
-                                    <option value="1110104" data-belong="build">1110104</option>
-                                    <option value="1110201" data-belong="chfufi">1110201</option>
-                                    <option value="1110202" data-belong="offufi">1110202</option>
-                                    <option value="1110301" data-belong="moca">1110301</option>
-                                    <option value="1110302" data-belong="buses">1110302</option>
-                                    <option value="1110303" data-belong="molo">1110303</option>
-                                    <option value="1110304" data-belong="mocr">1110304</option>
-                                    <option value="1110305" data-belong="trac">1110305</option>
-                                    <option value="1110401" data-belong="fipo">1110401</option>
-                                    <option value="1110402" data-belong="fiha">1110402</option>
-                                    <option value="1110501" data-belong="gener">1110501</option>
-                                    <option value="1110601" data-belong="plma">1110601</option>
-                                    <option value="1110701" data-belong="aircon">1110701</option>
-                                    <option value="1110702" data-belong="inver">1110702</option>
-                                    <option value="1110703" data-belong="frid">1110703</option>
-                                    <option value="1110801" data-belong="desk">1110801</option>
-                                    <option value="1110802" data-belong="lapt">1110802</option>
-                                    <option value="1110803" data-belong="print">1110803</option>
-                                    <option value="1110804" data-belong="comso">1110804</option>
-                                    <option value="1110901" data-belong="muinwo">1110901</option>
-                                    <option value="1111201" data-belong="elga">1111201</option>
-                                    <option value="1111301" data-belong="iceqmi">1111301</option>
-                                    <option value="1111401" data-belong="inpr">1111401</option>
-                                    <option value="6027001" data-belong="spdapr">6027001</option>
-                                    <option value="6021401" data-belong="avprex">6021401</option>
-                                    <option value="6021402" data-belong="rear">6021402</option>
-                                    <option value="6021501" data-belong="bomema">6021501</option>
-                                    <option value="6021502" data-belong="bomemc">6021502</option>
-                                    <option value="6021503" data-belong="bome-mc">6021503</option>
-                                    <option value="6021504" data-belong="bomefi">6021504</option>
-                                    <option value="6021701" data-belong="camegeex">6021701</option>
-                                    <option value="6021702" data-belong="homicame">6021702</option>
-                                    <option value="6021703" data-belong="otcmex">6021703</option>
-                                    <option value="6021704" data-belong="wepafo">6021704</option>
-                                    <option value="6021801" data-belong="chde">6021801</option>
-                                    <option value="6024805" data-belong="foletr">6024805</option>
-                                    <option value="6027601" data-belong="emex">6027601</option>
-                                    <option value="6025503" data-belong="coex">6025503</option>
-                                    <option value="6025701" data-belong="outr">6025701</option>
-                                    <option value="6025702" data-belong="reviv">6025702</option>
-                                    <option value="6027701" data-belong="yddcap">6027701</option>
-                                    <option value="6027702" data-belong="yppe">6027702</option>
-                                    <option value="6027703" data-belong="ylcb">6027703</option>
-                                    <option value="6027704" data-belong="iyc">6027704</option>
-                                    <option value="6027705" data-belong="ncwc">6027705</option>
-                                    <option value="6027706" data-belong="afcf">6027706</option>
-                                    <option value="6027707" data-belong="oyp">6027707</option>
-                                    <option value="6011001" data-belong="pomi"> 6011001</option>
-                                    <option value="6012001" data-belong="fuludi">6012001</option>
-                                    <option value="6012002" data-belong="fulupm">6012002 </option>
-                                    <option value="6012003" data-belong="fululu" >6012003</option>
-                                    <option value="6012004" data-belong="fuluke">6012004</option>
-                                    <option value="6013001" data-belong="proc">6013001</option>
-                                    <option value="6013002" data-belong="procg">6013002</option>
-                                    <option value="6013003" data-belong="proavi">6013003</option>
-                                    <option value="6013004" data-belong="kiex">6013004</option>
-                                    <option value="60115001" data-belong="faex">60115001</option>
-                                    <option value="6020002" data-belong="hosuex">6020002</option>
-                                    <option value="6021201" data-belong="adpuex">6021201</option>
-                                    <option value="6021301" data-belong="trmoex">6021301</option>
-                                    <option value="6021302" data-belong="exauex">6021302</option>
-                                    <option value="6021303" data-belong="inauex">6021303</option>
-                                    <option value="6021601" data-belong="neap">6021601</option>
-                                    <option value="6021603" data-belong="bojo">6021603</option>
-                                    <option value="6021602" data-belong="stat">6021602</option>
-                                    <option value="6021901" data-belong="cosore">6021901</option>
-                                    <option value="6022001" data-belong="deex">6022001</option>
-                                    <option value="6022002" data-belong="usdeex">6022002</option>
-                                    <option value="6024201" data-belong="igco">6024201</option>
-                                    <option value="6024202" data-belong="crco">6024202</option>
-                                    <option value="6024301" data-belong="ched">6024301</option>
-                                    <option value="6024401" data-belong="">6024401</option>
-                                    <option value="6024501" data-belong="feofwo">6024501</option>
-                                    <option value="6024502" data-belong="cawema">6024502</option>
-                                    <option value="6024503" data-belong="kitex">6024503</option>
-                                    <option value="6024504" data-belong="caex">6024504</option>
-                                    <option value="6024505" data-belong="kiga">6024505 </option>
-                                    <option value="6024601" data-belong="cobc"> 6024601</option>
-                                    <option value="6024602" data-belong="foexdi">6024602</option>
-                                    <option value="6024603" data-belong="inol">6024603 </option>
-                                    <option value="6024701" data-belong="fiae" >6024701</option>
-                                    <option value="6024801" data-belong="fcrc">6024801</option>
-                                    <option value="6024802" data-belong="fmces">6024802</option>
-                                    <option value="6024803" data-belong="fmfhs">6024803</option>
-                                    <option value="6024804" data-belong="foms">6024804</option>
-                                    <option value="FOREIGN LEADERS TRAINING" data-belong="">FOREIGN LEADERS TRAINING </option>
-                                    <option value="6024806" data-belong="fomivt">6024806</option>
-                                    <option value="6024807" data-belong="fomicm">6024807</option>
-                                    <option value="6024808" data-belong="fomioe">6024808</option>
-                                    <option value="6024809" data-belong="fomipm">6024809</option>
-                                    <option value="6024901" data-belong="frex">6024901</option>
-                                    <option value="6025001" data-belong="">6025001</option>
+                      <h5 class="card-header font-weight-light">
+                        <i class="fa fa-list" aria-hidden="true"></i> Edit Details
+                      </h5>
+                      <div class="card-body">
+                        <div class="margin-t-md mb-4">
+                          <div class="customer-form">
+                            <form action="" method="post" role="form" autocomplete="off">
+                              <div id="main-container" class="row">
+                                <div class="panel card container-item">
+                                  <div class="row mt-3 mb-4">
+                                    <div class="col-md-4">
+                                      <div class="form-group">
+                                        <h5 style=" color: #495057 !important; text-align: center;"> Above The Line
+                                        </h5>
+                                        <select class="form-control major selectFilter" name="abovetheline"
+                                          data-target="sub">
+                                          <option value="Select One"> Select One</option>
+                                          <!-- <option value="Income" data-ref="inc">Income</option> -->
+                                          <option value="Special Interventions" data-ref="spint">Special Interventions
+                                          </option>
+                                          <option value="Capital Expenditure" data-ref="capex">Capital Expenditure
+                                          </option>
+                                          <option value="PROGRAMME EXPENDITURE" data-ref="pex">PROGRAMME EXPENDITURE
+                                          </option>
+                                          <option value="OPERATIONS (RECURRENT) EXP" data-ref="ore">OPERATIONS
+                                            (RECURRENT) EXP</option>
+                                        </select>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                      <div class="form-group">
+                                        <h5 style=" color: #495057 !important;  text-align: center; "> Budget Line</h5>
+                                        <select class="form-control sub selectFilter" name="subject"
+                                          data-target="minor">
+                                          <option value="Select One"> Select One</option>
+                                          <option value="Tithes & Offering" data-ref="tiof" data-belong="inc">Tithes &
+                                            Offering</option>
+                                          <option value="Other Offerings" data-ref="otof" data-belong="inc">Other
+                                            Offerings</option>
+                                          <option value="OTHER RECEIPTS" data-ref="otre" data-belong="inc">OTHER
+                                            RECEIPTS</option>
+                                          <option value="DONATIONS" data-ref="dona" data-belong="inc">DONATIONS</option>
+                                          <option value="IGBESA CONTRIBUTION" data-ref="igdo" data-belong="inc">IGBESA
+                                            CONTRIBUTION</option>
+                                          <option value="OTHER CONTRIBUTIONS" data-ref="otco" data-belong="inc">OTHER
+                                            CONTRIBUTIONS</option>
+                                          <option value="AUDIO/VIDEO CDS" data-ref="auvi" data-belong="inc">AUDIO/VIDEO
+                                            CDS</option>
+                                          <option value="CALENDAR SALES" data-ref="casa" data-belong="inc">CALENDAR
+                                            SALES</option>
+                                          <option value="CGS" data-ref="cgs" data-belong="inc">CGS</option>
+                                          <option value="MUSICAL INSTRUMENTS SALES" data-ref="muinsa" data-belong="inc">
+                                            MUSICAL INSTRUMENTS SALES</option>
+                                          <option value="PICTURE ROLLS" data-ref="piro" data-belong="inc">PICTURE ROLLS
+                                          </option>
+                                          <option value="WATCH AND PRAY" data-ref="waap" data-belong="inc">WATCH AND
+                                            PRAY</option>
+                                          <option value="DIESEL" data-ref="diesel" data-belong="inc">DIESEL</option>
+                                          <option value="KEROSINE" data-ref="kero" data-belong="inc">KEROSINE</option>
+                                          <option value="LUBRICANTS" data-ref="lubr" data-belong="inc">LUBRICANTS
+                                          </option>
+                                          <option value="PMS" data-ref="pms" data-belong="inc">PMS</option>
+                                          <option value="LIVE STOCK SALES" data-ref="listsa" data-belong="inc">LIVE
+                                            STOCK SALES</option>
+                                          <option value="FARM PRODUCE SALES" data-ref="faprsa" data-belong="inc">FARM
+                                            PRODUCE SALES</option>
+                                          <option value="KITCHEN SALES" data-ref="kisa" data-belong="inc">KITCHEN SALES
+                                          </option>
+                                          <option value="OTHERS (SPECIFIC CONTRIBUTION)" data-ref="otsc"
+                                            data-belong="inc">OTHERS (SPECIFIC CONTRIBUTION)</option>
+                                          <option value="MISSIONARY FUND- DISTRICT" data-ref="mifudi" data-belong="inc">
+                                            MISSIONARY FUND- DISTRICT</option>
+                                          <option value="MISSIONARY FUND- BRANCH" data-ref="mifubr" data-belong="inc">
+                                            MISSIONARY FUND- BRANCH</option>
+                                          <option value="INTERVENTIONS FOREIGN MISSION" data-ref="infomi"
+                                            data-belong="spint">INTERVENTIONS FOREIGN MISSION</option>
+                                          <option value="INTERVENTION - REGION" data-ref="inre" data-belong="spint">
+                                            INTERVENTION - REGION</option>
+                                          <option value="INTERVENTION - DISTRICT" data-ref="indi" data-belong="spint">
+                                            INTERVENTION - DISTRICT</option>
+                                          <option value="INTERVENTION - OTHERS" data-ref="inot" data-belong="spint">
+                                            INTERVENTION - OTHERS</option>
+                                          <option value="STAFF LOANS" data-ref="stlo" data-belong="spint">STAFF LOANS
+                                          </option>
+                                          <option value="LOANS OTHERS" data-ref="loot" data-belong="spint">LOANS OTHERS
+                                          </option>
+                                          <option value="LAND" data-ref="land" data-belong="capex">LAND</option>
+                                          <option value="FREEHOLD LAND" data-ref="frla" data-belong="capex">FREEHOLD
+                                            LAND</option>
+                                          <option value="LEASEHOLD LAND" data-ref="lela" data-belong="capex">LEASEHOLD
+                                            LAND</option>
+                                          <option value="BUILDINGS" data-ref="build" data-belong="capex">BUILDINGS
+                                          </option>
+                                          <option value="CHURCH FURNITURE & FITTINGS" data-ref="chfufi"
+                                            data-belong="capex">CHURCH FURNITURE & FITTINGS</option>
+                                          <option value="OFFICE FURNITURE & FITTINGS" data-ref="offufi"
+                                            data-belong="capex">OFFICE FURNITURE & FITTINGS</option>
+                                          <option value="MOTOR CARS" data-ref="moca" data-belong="capex">MOTOR CARS
+                                          </option>
+                                          <option value="BUSES" data-ref="buses" data-belong="capex">BUSES</option>
+                                          <option value="MOTOR LORRIES" data-ref="molo" data-belong="capex">MOTOR
+                                            LORRIES</option>
+                                          <option value="MOTOR CRANE" data-ref="mocr" data-belong="capex">MOTOR CRANE
+                                          </option>
+                                          <option value="TRACTORS" data-ref="trac" data-belong="capex">TRACTORS</option>
+                                          <option value="FISH PONDS" data-ref="fipo" data-belong="capex">FISH PONDS
+                                          </option>
+                                          <option value="FISH HATCHERY" data-ref="fiha" data-belong="capex">FISH
+                                            HATCHERY</option>
+                                          <option value="GENERATORS" data-ref="gener" data-belong="capex">GENERATORS
+                                          </option>
+                                          <option value="PLANT & MACHINERY" data-ref="plma" data-belong="capex">PLANT &
+                                            MACHINERY</option>
+                                          <option value="AIRCONDITIONERS" data-ref="aircon" data-belong="capex">
+                                            AIRCONDITIONERS</option>
+                                          <option value="INVERTERS" data-ref="inver" data-belong="capex">INVERTERS
+                                          </option>
+                                          <option value="FRIDGES" data-ref="frid" data-belong="capex">FRIDGES</option>
+                                          <option value="DESKTOPS" data-ref="desk" data-belong="capex">DESKTOPS</option>
+                                          <option value="LAPTOPS" data-ref="lapt" data-belong="capex">LAPTOPS</option>
+                                          <option value="PRINTERS" data-ref="print" data-belong="capex">PRINTERS
+                                          </option>
+                                          <option value="COMPUTER SOFTWARES" data-ref="comso" data-belong="capex">
+                                            COMPUTER SOFTWARES</option>
+                                          <option value="MUSICAL INSTRUMENTS-WORSHIP" data-ref="muinwo"
+                                            data-belong="capex">MUSICAL INSTRUMENTS-WORSHIP</option>
+                                          <option value="ELECTRONICS GADGETS" data-ref="elga" data-belong="capex">
+                                            ELECTRONICS GADGETS</option>
+                                          <option value="ICT EQUIPMENT-MISSION" data-ref="iceqmi" data-belong="capex">
+                                            ICT EQUIPMENT-MISSION</option>
+                                          <option value="INVESTMENT - PROPERTY" data-ref="inpr" data-belong="capex">
+                                            INVESTMENT - PROPERTY</option>
+                                          <option value="SPECIAL DAYS PROGRAMMES" data-ref="spdapr" data-belong="pex">
+                                            SPECIAL DAYS PROGRAMMES</option>
+                                          <option value="AVS PROGRAM EXPENSES " data-ref="avprex" data-belong="pex">AVS
+                                            PROGRAM EXPENSES </option>
+                                          <option value="REVIVAL& A.V.S RETREAT" data-ref="rear" data-belong="pex">
+                                            REVIVAL& A.V.S RETREAT</option>
+                                          <option value="BOARD MEETINGS - MAIN" data-ref="bomema" data-belong="pex">
+                                            BOARD MEETINGS - MAIN</option>
+                                          <option value="BOARD MEETINGS-MCMC" data-ref="bomemc" data-belong="pex">BOARD
+                                            MEETINGS-MCMC</option>
+                                          <option value="BOARD MEETINGS- MCOC" data-ref="bome-mc" data-belong="pex">
+                                            BOARD MEETINGS- MCOC</option>
+                                          <option value="BOARD MEETINGS- FIC" data-ref="bomefi" data-belong="pex">BOARD
+                                            MEETINGS- FIC</option>
+                                          <option value="CAMP MEETING -GENERAL EXPENSES" data-ref="camegeex"
+                                            data-belong="pex">CAMP MEETING -GENERAL EXPENSES</option>
+                                          <option value="HOME MISSION CAMP MEETINGS" data-ref="homicame"
+                                            data-belong="pex">HOME MISSION CAMP MEETINGS</option>
+                                          <option value="OTHER C/MEETING EXP" data-ref="otcmex" data-belong="pex">OTHER
+                                            C/MEETING EXP</option>
+                                          <option value="WELFARE PACKAGE FOR CAMP MEETING" data-ref="wepafo"
+                                            data-belong="pex">WELFARE PACKAGE FOR CAMP MEETING</option>
+                                          <option value="CHRISTMAS DECORATION" data-ref="chde" data-belong="pex">
+                                            CHRISTMAS DECORATION</option>
+                                          <option value="FOREIGN LEADERS TRAINING " data-ref="foletr" data-belong="pex">
+                                            FOREIGN LEADERS TRAINING </option>
+                                          <option value="EMPOWERMENT EXPENSES" data-ref="emex" data-belong="pex">
+                                            EMPOWERMENT EXPENSES</option>
+                                          <option value="CONCERT EXPENSES" data-ref="coex" data-belong="pex">CONCERT
+                                            EXPENSES</option>
+                                          <option value="OUTREACHES" data-ref="outr" data-belong="pex">OUTREACHES
+                                          </option>
+                                          <option value="REVIVALS" data-ref="reviv" data-belong="pex">REVIVALS</option>
+                                          <option value="YDD - CAPACITY BUILDING PROGRAMME" data-ref="yddcap"
+                                            data-belong="pex">YDD - CAPACITY BUILDING PROGRAMME</option>
+                                          <option value="YOUNG PROFESSIONAL PROGRAM EXPENSES" data-ref="yppe"
+                                            data-belong="pex">YOUNG PROFESSIONAL PROGRAM EXPENSES</option>
+                                          <option value="YOUTH LEADERS CAPACITY BUILDING" data-ref="ylcb"
+                                            data-belong="pex">YOUTH LEADERS CAPACITY BUILDING</option>
+                                          <option value="INTERNATIONAL YOUTH CAMP- IYC" data-ref="iyc"
+                                            data-belong="pex">INTERNATIONAL YOUTH CAMP- IYC</option>
+                                          <option value="NCWC - NATIONAL CENTRAL WORKING COMMITTEE " data-ref="ncwc"
+                                            data-belong="pex">NCWC - NATIONAL CENTRAL WORKING COMMITTEE </option>
+                                          <option value="AFCF - APOSTOLIC FAITH CAMPUS FELLOWSHIP " data-ref="afcf"
+                                            data-belong="pex">AFCF - APOSTOLIC FAITH CAMPUS FELLOWSHIP </option>
+                                          <option value="OTHER YOUTH PROGRAMS" data-ref="oyp" data-belong="pex">OTHER
+                                            YOUTH PROGRAMS</option>
+                                          <option value="PURCHASE OF MUSICAL INSTRUMENTS" data-ref="pomi"
+                                            data-belong="ore"> PURCHASE OF MUSICAL INSTRUMENTS</option>
+                                          <option value="PRINTING OF CALENDARS" data-ref="proc" data-belong="ore">
+                                            PRINTING OF CALENDARS</option>
+                                          <option value="PRINTING OF CGS" data-ref="procg" data-belong="ore">PRINTING OF
+                                            CGS</option>
+                                          <option value="PRODUCTION OF AUDIO VISUALS" data-ref="proavi"
+                                            data-belong="ore">PRODUCTION OF AUDIO VISUALS</option>
+                                          <option value="KIOSK EXPENSES" data-ref="kiex" data-belong="ore">KIOSK
+                                            EXPENSES</option>
+                                          <option value="FARM EXPENSES" data-ref="faex" data-belong="ore">FARM EXPENSES
+                                          </option>
+                                          <option value="HOTEL & SUSTENANCE EXPENSES" data-ref="hosuex"
+                                            data-belong="ore">HOTEL & SUSTENANCE EXPENSES</option>
+                                          <option value="ADVERTS & PUBLICITY EXPENSES" data-ref="adpuex"
+                                            data-belong="ore">ADVERTS & PUBLICITY EXPENSES</option>
+                                          <option value="TREASURY MONITORING EXPENSES" data-ref="trmoex"
+                                            data-belong="ore">TREASURY MONITORING EXPENSES</option>
+                                          <option value="EXTERNAL AUDIT EXPENSES" data-ref="exauex" data-belong="ore">
+                                            EXTERNAL AUDIT EXPENSES</option>
+                                          <option value="INTERNAL AUDIT EXPENSES" data-ref="inauex" data-belong="ore">
+                                            INTERNAL AUDIT EXPENSES</option>
+                                          <option value="NEWSPAPERS AND PERIODICALS" data-ref="neap" data-belong="ore">
+                                            NEWSPAPERS AND PERIODICALS</option>
+                                          <option value="BOOKS & JOURNALS" data-ref="bojo" data-belong="ore">BOOKS &
+                                            JOURNALS</option>
+                                          <option value="STATIONERIES" data-ref="stat" data-belong="ore">STATIONERIES
+                                          </option>
+                                          <option value="CORPORATE SOCIAL RESPONSIBILITY" data-ref="cosore"
+                                            data-belong="ore">CORPORATE SOCIAL RESPONSIBILITY</option>
+                                          <option value="DELEGATES EXPENSES" data-ref="deex" data-belong="ore">DELEGATES
+                                            EXPENSES</option>
+                                          <option value="US DELEGATES EXPENSES" data-ref="usdeex" data-belong="ore">US
+                                            DELEGATES EXPENSES</option>
+                                          <option value="IGBESA CONTRIBUTION" data-ref="igco" data-belong="ore">IGBESA
+                                            CONTRIB UTION</option>
+                                          <option value="CRAWFORD/AFSS CONTRIBUTION" data-ref="crco" data-belong="ore">
+                                            CRAWFORD/AFSS CONTRIBUTION</option>
+                                          <option value="CHILDREN EDUCATION" data-ref="ched" data-belong="ore">CHILDREN
+                                            EDUCATION</option>
+                                          <option value="FARM EXPENSES" data-ref="" data-belong="ore">FARM EXPENSES
+                                          </option>
+                                          <option value="FEEDING OF WORKERS" data-ref="feofwo" data-belong="ore">FEEDING
+                                            OF WORKERS</option>
+                                          <option value="CANTEEN WEEKLY MAINT" data-ref="cawema" data-belong="ore">
+                                            CANTEEN WEEKLY MAINT</option>
+                                          <option value="KITCHEN EXPENSES" data-ref="kitex" data-belong="ore">KITCHEN
+                                            EXPENSES</option>
+                                          <option value="CAFETARIA EXPENSES" data-ref="caex" data-belong="ore">CAFETARIA
+                                            EXPENSES</option>
+                                          <option value="KITCHEN GAS" data-ref="kiga" data-belong="ore">KITCHEN GAS
+                                          </option>
+                                          <option value="COT / BANK CHARGES" data-ref="cobc" data-belong="ore"> COT /
+                                            BANK CHARGES</option>
+                                          <option value="FOREIGN EXCHANGE DIFFERENTIAL" data-ref="foexdi"
+                                            data-belong="ore">FOREIGN EXCHANGE DIFFERENTIAL</option>
+                                          <option value="INTEREST ON LOANS" data-ref="inol" data-belong="ore">INTEREST
+                                            ON LOANS </option>
+                                          <option value="FIRST AID EXPENSES" data-ref="fiae" data-belong="ore">FIRST AID
+                                            EXPENSES</option>
+                                          <option value="FOREIGN CHURCH RUNNING COST" data-ref="fcrc" data-belong="ore">
+                                            FOREIGN CHURCH RUNNING COST</option>
+                                          <option value="FOREIGN MISSION CHILDREN EDUCATION SUPPORT" data-ref="fmces"
+                                            data-belong="ore">FOREIGN MISSION CHILDREN EDUCATION SUPPORT</option>
+                                          <option value="FOREIGN MISSION  FAMILY HOME SUPPORT" data-ref="fmfhs"
+                                            data-belong="ore">FOREIGN MISSION FAMILY HOME SUPPORT</option>
+                                          <option value="FOREIGN MISSION STIPENDS" data-ref="foms" data-belong="ore">
+                                            FOREIGN MISSION STIPENDS</option>
+                                          <option value="FOREIGN MISSION VISITS/TRIPS " data-ref="fomivt"
+                                            data-belong="ore">FOREIGN MISSION VISITS/TRIPS </option>
+                                          <option value="FOREIGN MISSIONS CAMP MEETINGS" data-ref="fomicm"
+                                            data-belong="ore">FOREIGN MISSIONS CAMP MEETINGS</option>
+                                          <option value="FOREIGN MISSIONS-OTHER EXPENSES " data-ref="fomioe"
+                                            data-belong="ore">FOREIGN MISSIONS-OTHER EXPENSES </option>
+                                          <option value="FOREIGN MISSION PROJECTS = MISSIONS" data-ref="fomipm"
+                                            data-belong="ore">FOREIGN MISSION PROJECTS = MISSIONS</option>
+                                          <option value="FRSC EXPENSES" data-ref="frex" data-belong="ore">FRSC EXPENSES
+                                          </option>
+                                          <option value="FUEL & LUBRICANTS  (DIESEL)" data-ref="fuludi"
+                                            data-belong="ore">FUEL & LUBRICANTS (DIESEL)</option>
+                                          <option value="FUEL & LUBRICANTS  (PMS)" data-ref="fulupm" data-belong="ore">
+                                            FUEL & LUBRICANTS (PMS) </option>
+                                          <option value="FUEL & LUBRICANTS  (LUBRICANTS)" data-ref="fululu"
+                                            data-belong="ore">FUEL & LUBRICANTS (LUBRICANTS)</option>
+                                          <option value="FUEL & LUBRICANTS  (KEROSINE)" data-ref="fuluke"
+                                            data-belong="ore">FUEL & LUBRICANTS (KEROSINE)</option>
+                                          <!-- <option value="FUNERAL EXPENSES" data-ref="fuex" data-belong="ore">FUNERAL EXPENSES</option> -->
+                                          <option value="FUNERAL EXP-FEEDING" data-ref="fuexfe" data-belong="ore">
+                                            FUNERAL EXP-FEEDING</option>
+                                          <option value="FUNERAL EXP-OTHERS" data-ref="fuexot" data-belong="ore">FUNERAL
+                                            EXP-OTHERS</option>
+                                          <option value=" POSTAGE & COURIER S" data-ref="pocos" data-belong="ore">
+                                            POSTAGE & COURIER S</option>
+                                          <option value="TELEPHONE EXPENSES" data-ref="teex" data-belong="ore">TELEPHONE
+                                            EXPENSES</option>
+                                          <option value="INTERNET & ACCESORIES EXPS" data-ref="inacex"
+                                            data-belong="ore">INTERNET & ACCESORIES EXPS</option>
+                                          <option value="MOTOR VEHICLE LICENCING & DOCUMENT RENEWALS" data-ref="moveli"
+                                            data-belong="ore">MOTOR VEHICLE LICENCING & DOCUMENT RENEWALS</option>
+                                          <option value="RENEWAL OF DRIVING LICENCES" data-ref="reod" data-belong="ore">
+                                            RENEWAL OF DRIVING LICENCES</option>
+                                          <option value="LICENCES & PERMITS - OTHERS" data-ref="lipeot"
+                                            data-belong="ore">LICENCES & PERMITS - OTHERS</option>
+                                          <option value="MISSION HOUSE EXPENSES" data-ref="mihoex" data-belong="ore">
+                                            MISSION HOUSE EXPENSES</option>
+                                          <option value="MUSIC TEST EXPENSES" data-ref="mute" data-belong="ore">MUSIC
+                                            TEST EXPENSES</option>
+                                          <option value="MUSICAL INSTRUMENTS" data-ref="muin" data-belong="ore">MUSICAL
+                                            INSTRUMENTS</option>
+                                          <option value="STATIONERIES" data-ref="" data-belong="ore"> STATIONERIES
+                                          </option>
+                                          <option value="OFFICE EXP" data-ref="ofex" data-belong="ore">OFFICE EXP
+                                          </option>
+                                          <!-- <option value="OUTREACHES" data-ref="" data-belong="ore">OUTREACHES </option>
+                                    <option value="REVIVALS" data-ref="" data-belong="ore" >REVIVALS</option> -->
+                                          <option value="FULL TIME ALLOWANCES" data-ref="futial" data-belong="ore">FULL
+                                            TIME ALLOWANCES</option>
+                                          <option value="RETIREMENT/DISENGAGEMENT EXP" data-ref="rediex"
+                                            data-belong="ore">RETIREMENT/DISENGAGEMENT EXP</option>
+                                          <option value="STIPENDS" data-ref="stip" data-belong="ore">STIPENDS</option>
+                                          <option value="SALARIES AND WAGES" data-ref="saaw" data-belong="ore">SALARIES
+                                            AND WAGES</option>
+                                          <option value="CORPERS & IT ALLOWCES" data-ref="coia" data-belong="ore">
+                                            CORPERS & IT ALLOWCES</option>
+                                          <option value="PRINTING" data-ref="prin" data-belong="ore">PRINTING</option>
+                                          <option value="PRINTING OF APOSTOLIC FAITH MAGAZINE " data-ref="proaf"
+                                            data-belong="ore">PRINTING OF APOSTOLIC FAITH MAGAZINE </option>
+                                          <option value="PRINTING OF ADULT/INTERMEDIATE SUNDAY SCHOOL BOOKS"
+                                            data-ref="poais" data-belong="ore">PRINTING OF ADULT/INTERMEDIATE SUNDAY
+                                            SCHOOL BOOKS</option>
+                                          <option value="PRINTING OF ELEMENTARY SUNDAY SCHOOL BOOKS" data-ref="poess"
+                                            data-belong="ore">PRINTING OF ELEMENTARY SUNDAY SCHOOL BOOKS</option>
+                                          <option value="PRINTING OF GOSPEL NEWS IN AFRICA  " data-ref="pognia"
+                                            data-belong="ore">PRINTING OF GOSPEL NEWS IN AFRICA </option>
+                                          <option value="PRINTING OF IMOLE IRETI  " data-ref="poii" data-belong="ore">
+                                            PRINTING OF IMOLE IRETI </option>
+                                          <option value="PRINTING OF TRACTS" data-ref="prot" data-belong="ore">PRINTING
+                                            OF TRACTS</option>
+                                          <option value="PRINTING- ART AND DESIGN " data-ref="praad" data-belong="ore">
+                                            PRINTING- ART AND DESIGN </option>
+                                          <option value="PRINTING - CORE EXPENSES " data-ref="prce" data-belong="ore">
+                                            PRINTING - CORE EXPENSES </option>
+                                          <option value="PRINTING- PHOTOGRAPHY EXPENSES " data-ref="prphe"
+                                            data-belong="ore">PRINTING- PHOTOGRAPHY EXPENSES </option>
+                                          <option value="PRINTING- INVITATION CARDS & SURVENAIR " data-ref="princ"
+                                            data-belong="ore">PRINTING- INVITATION CARDS & SURVENAIR </option>
+                                          <option value="LEGAL & PROFESSIONAL EXPENSES" data-ref="leprex"
+                                            data-belong="ore">LEGAL & PROFESSIONAL EXPENSES</option>
+                                          <option value="DESIGN & CONSTRUCTION MANAGEMENT COST" data-ref="decm"
+                                            data-belong="ore">DESIGN & CONSTRUCTION MANAGEMENT COST</option>
+                                          <option value="PROJECT INSPECTION COST" data-ref="princo" data-belong="ore">
+                                            PROJECT INSPECTION COST</option>
+                                          <option value="TOWN PLANNING EXPENSES" data-ref="tpex" data-belong="ore">TOWN
+                                            PLANNING EXPENSES</option>
+                                          <option value="PROJECT MANAGEMENT" data-ref="prma" data-belong="ore">PROJECT
+                                            MANAGEMENT</option>
+                                          <option value="FACILITY MANAGEMENT" data-ref="fama" data-belong="ore">FACILITY
+                                            MANAGEMENT</option>
+                                          <option value="PUBLIC RELATION & COMM" data-ref="pure" data-belong="ore">
+                                            PUBLIC RELATION & COMM</option>
+                                          <option value="MISSIONARY FUND CONT" data-ref="mifuco" data-belong="ore">
+                                            MISSIONARY FUND CONT</option>
+                                          <option value="OTHER STATE CONT." data-ref="otstco" data-belong="ore">OTHER
+                                            STATE CONT.</option>
+                                          <option value="RENT & RATES" data-ref="rera" data-belong="ore">RENT & RATES
+                                          </option>
+                                          <option value="REPAIRS-GENERATORS" data-ref="gener" data-belong="ore">
+                                            REPAIRS-GENERATORS</option>
+                                          <option value="REPAIRS-PLANT & MACHINERY" data-ref="replm" data-belong="ore">
+                                            REPAIRS-PLANT & MACHINERY</option>
+                                          <option value="REPAIRS - CAMPGROUND CABINS" data-ref="recaca"
+                                            data-belong="ore">REPAIRS - CAMPGROUND CABINS </option>
+                                          <option value="REPAIRS - GUEST HOUSES" data-ref="reguh" data-belong="ore">
+                                            REPAIRS - GUEST HOUSES</option>
+                                          <option value="REPAIRS - ELECTRICALS" data-ref="reel" data-belong="ore">
+                                            REPAIRS - ELECTRICALS</option>
+                                          <option value="REPAIRS-MUSICAL INSTRUMENTS" data-ref="remuin"
+                                            data-belong="ore">REPAIRS-MUSICAL INSTRUMENTS</option>
+                                          <option value="R & M - MOTOR VECHICLES" data-ref="rmv" data-belong="ore">R & M
+                                            - MOTOR VECHICLES</option>
+                                          <option value="REPAIRS-BUILDINGS" data-ref="rebu" data-belong="ore">
+                                            REPAIRS-BUILDINGS</option>
+                                          <option value="REPAIRS-FURN. & FITT." data-ref="refu" data-belong="ore">
+                                            REPAIRS-FURN. & FITT.</option>
+                                          <option value="REPAIRS-ELECTRONICS" data-ref="relect" data-belong="ore">
+                                            REPAIRS-ELECTRONICS</option>
+                                          <option value="REPAIRS-GENERAL" data-ref="rege" data-belong="ore">
+                                            REPAIRS-GENERAL</option>
+                                          <option value="LIBRARY MAINTENANCE EXPENSES" data-ref="limaex"
+                                            data-belong="ore">LIBRARY MAINTENANCE EXPENSES</option>
+                                          <option value="CEMETERY MAINTENANCE" data-ref="cema" data-belong="ore">
+                                            CEMETERY MAINTENANCE</option>
+                                          <option value="CLEANING & SANITATION" data-ref="clsa" data-belong="ore">
+                                            CLEANING & SANITATION</option>
+                                          <option value="SECURITY EQUIPMENT" data-ref="seeq" data-belong="ore">SECURITY
+                                            EQUIPMENT</option>
+                                          <option value="SECURITY EXPENSES" data-ref="seex" data-belong="ore">SECURITY
+                                            EXPENSES</option>
+                                          <option value="CLEARING EXPENSES" data-ref="clex" data-belong="ore">CLEARING
+                                            EXPENSES</option>
+                                          <option value="SHIPPING EXPENSES" data-ref="shex" data-belong="ore">SHIPPING
+                                            EXPENSES</option>
+                                          <option value="C.A.N CONTRIBUTION" data-ref="canc" data-belong="ore">C.A.N
+                                            CONTRIBUTION</option>
+                                          <option value="INTERNET SUBSCRIPTIONS" data-ref="insu" data-belong="ore">
+                                            INTERNET SUBSCRIPTIONS</option>
+                                          <option value="MTN MIFI INTERNET SERVICES" data-ref="mmis" data-belong="ore">
+                                            MTN MIFI INTERNET SERVICES</option>
+                                          <option value="ACCOUNTING SOFTWARE & SUBSCRIPTIONS " data-ref="acss"
+                                            data-belong="ore">ACCOUNTING SOFTWARE & SUBSCRIPTIONS </option>
+                                          <option value="SUNDRY EXPENSES" data-ref="suex" data-belong="ore">SUNDRY
+                                            EXPENSES</option>
+                                          <option value="HONORARIUM FOR FACILITATORS" data-ref="hoff" data-belong="ore">
+                                            HONORARIUM FOR FACILITATORS</option>
+                                          <option value="TRAINING AND WORKSHOP EXPENSES" data-ref="tawe"
+                                            data-belong="ore">TRAINING AND WORKSHOP EXPENSES</option>
+                                          <option value="TRAVELING EXPENSES - LOCAL" data-ref="trexlo"
+                                            data-belong="ore">TRAVELING EXPENSES - LOCAL</option>
+                                          <option value="TRAVELING EXPENSES - FOREIGN" data-ref="trexfo"
+                                            data-belong="ore">TRAVELING EXPENSES - FOREIGN</option>
+                                          <option value="ELECTRICITY" data-ref="elect" data-belong="ore">ELECTRICITY
+                                          </option>
+                                          <option value="WASTE MANAGEMENT" data-ref="wama" data-belong="ore">WASTE
+                                            MANAGEMENT</option>
+                                          <option value="OTHER WELFARE PACKAGES" data-ref="owp" data-belong="ore">OTHER
+                                            WELFARE PACKAGES</option>
+                                          <option value="WORKERS WELFARE" data-ref="wowe" data-belong="ore">WORKERS
+                                            WELFARE</option>
+                                          <option value="WELFARE - WEDDINGS" data-ref="wewe" data-belong="ore">WELFARE -
+                                            WEDDINGS</option>
+                                          <option value="ENTERTAINMENT" data-ref="entr" data-belong="ore">ENTERTAINMENT
+                                          </option>
+                                          <option value="CHARITY" data-ref="char" data-belong="ore">CHARITY</option>
+                                          <option value="HOUSE KEEPING EXPENSES" data-ref="hokeex" data-belong="ore">
+                                            HOUSE KEEPING EXPENSES</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                      <div class="form-group">
+                                        <h5 style=" color: #495057 !important; text-align: center;"> Code </h5>
+                                        <select class="form-control minor selectFilter" name="subject">
+                                          <option value="Select One"> Select Code</option>
+                                          <option value="5011001" data-belong="tiof">5011001</option>
+                                          <option value="5011002" data-belong="otof">5011002</option>
+                                          <option value="5011201" data-belong="otre">5011201</option>
+                                          <option value="5011301" data-belong="dona">5011301</option>
+                                          <option value="5011401" data-belong="igdo">5011401</option>
+                                          <option value="5011402" data-belong="otco">5011402</option>
+                                          <option value="5011501" data-belong="auvi">5011501</option>
+                                          <option value="5011502" data-belong="casa">5011502</option>
+                                          <option value="5011503" data-belong="cgs">5011503</option>
+                                          <option value="5011504" data-belong="muinsa">5011504</option>
+                                          <option value="5011505" data-belong="piro">5011505</option>
+                                          <option value="5011506" data-belong="waap">5011506</option>
+                                          <option value="5011601" data-belong="diesel">5011601</option>
+                                          <option value="5011602" data-belong="kero">5011602</option>
+                                          <option value="5011603" data-belong="lubr">5011603</option>
+                                          <option value="5011604" data-belong="pms">5011604</option>
+                                          <option value="5011701" data-belong="listsa">5011701</option>
+                                          <option value="5011702" data-belong="faprsa">5011702</option>
+                                          <option value="5011801" data-belong="kisa">5011801</option>
+                                          <option value="5011901" data-belong="otsc">5011901</option>
+                                          <option value="2011013" data-belong="mifudi">2011013</option>
+                                          <option value="2011016" data-belong="mifubr">2011016</option>
+                                          <option value="1130703" data-belong="infomi">1130703</option>
+                                          <option value="1130701" data-belong="inre">1130701</option>
+                                          <option value="1130702" data-belong="indi"> 1130702</option>
+                                          <option value="1130704" data-belong="inot">1130704</option>
+                                          <option value="1130201" data-belong="stlo">1130201 </option>
+                                          <option value="1130204" data-belong="loot">1130204</option>
+                                          <option value="1110101" data-belong="land">1110101</option>
+                                          <option value="1110102" data-belong="frla">1110102</option>
+                                          <option value="1110103" data-belong="lela">1110103</option>
+                                          <option value="1110104" data-belong="build">1110104</option>
+                                          <option value="1110201" data-belong="chfufi">1110201</option>
+                                          <option value="1110202" data-belong="offufi">1110202</option>
+                                          <option value="1110301" data-belong="moca">1110301</option>
+                                          <option value="1110302" data-belong="buses">1110302</option>
+                                          <option value="1110303" data-belong="molo">1110303</option>
+                                          <option value="1110304" data-belong="mocr">1110304</option>
+                                          <option value="1110305" data-belong="trac">1110305</option>
+                                          <option value="1110401" data-belong="fipo">1110401</option>
+                                          <option value="1110402" data-belong="fiha">1110402</option>
+                                          <option value="1110501" data-belong="gener">1110501</option>
+                                          <option value="1110601" data-belong="plma">1110601</option>
+                                          <option value="1110701" data-belong="aircon">1110701</option>
+                                          <option value="1110702" data-belong="inver">1110702</option>
+                                          <option value="1110703" data-belong="frid">1110703</option>
+                                          <option value="1110801" data-belong="desk">1110801</option>
+                                          <option value="1110802" data-belong="lapt">1110802</option>
+                                          <option value="1110803" data-belong="print">1110803</option>
+                                          <option value="1110804" data-belong="comso">1110804</option>
+                                          <option value="1110901" data-belong="muinwo">1110901</option>
+                                          <option value="1111201" data-belong="elga">1111201</option>
+                                          <option value="1111301" data-belong="iceqmi">1111301</option>
+                                          <option value="1111401" data-belong="inpr">1111401</option>
+                                          <option value="6027001" data-belong="spdapr">6027001</option>
+                                          <option value="6021401" data-belong="avprex">6021401</option>
+                                          <option value="6021402" data-belong="rear">6021402</option>
+                                          <option value="6021501" data-belong="bomema">6021501</option>
+                                          <option value="6021502" data-belong="bomemc">6021502</option>
+                                          <option value="6021503" data-belong="bome-mc">6021503</option>
+                                          <option value="6021504" data-belong="bomefi">6021504</option>
+                                          <option value="6021701" data-belong="camegeex">6021701</option>
+                                          <option value="6021702" data-belong="homicame">6021702</option>
+                                          <option value="6021703" data-belong="otcmex">6021703</option>
+                                          <option value="6021704" data-belong="wepafo">6021704</option>
+                                          <option value="6021801" data-belong="chde">6021801</option>
+                                          <option value="6024805" data-belong="foletr">6024805</option>
+                                          <option value="6027601" data-belong="emex">6027601</option>
+                                          <option value="6025503" data-belong="coex">6025503</option>
+                                          <option value="6025701" data-belong="outr">6025701</option>
+                                          <option value="6025702" data-belong="reviv">6025702</option>
+                                          <option value="6027701" data-belong="yddcap">6027701</option>
+                                          <option value="6027702" data-belong="yppe">6027702</option>
+                                          <option value="6027703" data-belong="ylcb">6027703</option>
+                                          <option value="6027704" data-belong="iyc">6027704</option>
+                                          <option value="6027705" data-belong="ncwc">6027705</option>
+                                          <option value="6027706" data-belong="afcf">6027706</option>
+                                          <option value="6027707" data-belong="oyp">6027707</option>
+                                          <option value="6011001" data-belong="pomi"> 6011001</option>
+                                          <option value="6025001" data-belong="fuludi">6025001</option>
+                                          <option value="6025002" data-belong="fulupm">6025002 </option>
+                                          <option value="6025003" data-belong="fululu">6025003</option>
+                                          <option value="6025004" data-belong="fuluke">6025004</option>
+                                          <option value="6013001" data-belong="proc">6013001</option>
+                                          <option value="6013002" data-belong="procg">6013002</option>
+                                          <option value="6013003" data-belong="proavi">6013003</option>
+                                          <option value="6013004" data-belong="kiex">6013004</option>
+                                          <option value="60115001" data-belong="faex">60115001</option>
+                                          <option value="6020002" data-belong="hosuex">6020002</option>
+                                          <option value="6021201" data-belong="adpuex">6021201</option>
+                                          <option value="6021301" data-belong="trmoex">6021301</option>
+                                          <option value="6021302" data-belong="exauex">6021302</option>
+                                          <option value="6021303" data-belong="inauex">6021303</option>
+                                          <option value="6021601" data-belong="neap">6021601</option>
+                                          <option value="6021603" data-belong="bojo">6021603</option>
+                                          <option value="6021602" data-belong="stat">6021602</option>
+                                          <option value="6021901" data-belong="cosore">6021901</option>
+                                          <option value="6022001" data-belong="deex">6022001</option>
+                                          <option value="6022002" data-belong="usdeex">6022002</option>
+                                          <option value="6024201" data-belong="igco">6024201</option>
+                                          <option value="6024202" data-belong="crco">6024202</option>
+                                          <option value="6024301" data-belong="ched">6024301</option>
+                                          <option value="6024401" data-belong="">6024401</option>
+                                          <option value="6024501" data-belong="feofwo">6024501</option>
+                                          <option value="6024502" data-belong="cawema">6024502</option>
+                                          <option value="6024503" data-belong="kitex">6024503</option>
+                                          <option value="6024504" data-belong="caex">6024504</option>
+                                          <option value="6024505" data-belong="kiga">6024505 </option>
+                                          <option value="6024601" data-belong="cobc"> 6024601</option>
+                                          <option value="6024602" data-belong="foexdi">6024602</option>
+                                          <option value="6024603" data-belong="inol">6024603 </option>
+                                          <option value="6024701" data-belong="fiae">6024701</option>
+                                          <option value="6024801" data-belong="fcrc">6024801</option>
+                                          <option value="6024802" data-belong="fmces">6024802</option>
+                                          <option value="6024803" data-belong="fmfhs">6024803</option>
+                                          <option value="6024804" data-belong="foms">6024804</option>
+                                          <option value="6024806" data-belong="fomivt">6024806</option>
+                                          <option value="6024807" data-belong="fomicm">6024807</option>
+                                          <option value="6024808" data-belong="fomioe">6024808</option>
+                                          <option value="6024809" data-belong="fomipm">6024809</option>
+                                          <option value="6024901" data-belong="frex">6024901</option>
+                                          <!-- <option value="6025001" data-belong="">6025001</option>for diesel
                                     <option value="FUEL & LUBRICANTS (PMS)" data-belong="">FUEL & LUBRICANTS (PMS)</option>
                                     <option value="FUEL & LUBRICANTS (LUBRICANTS) " data-belong="">FUEL & LUBRICANTS (LUBRICANTS) </option>
                                     <option value="FUEL & LUBRICANTS  (KEROSINE)" data-belong="fuluke">FUEL & LUBRICANTS  (KEROSINE)</option>
-                                    <option value="FUNERAL EXPENSES" data-belong="fuex">FUNERAL EXPENSES</option>
-                                    <option value="6025101" data-belong="fuexfe">6025101</option>
-                                    <option value="6025102" data-belong="fuexot">6025102</option>
-                                    <option value="6025201" data-belong="pocos">6025201</option>
-                                    <option value="6025202" data-belong="teex">6025202</option>
-                                    <option value="6025203" data-belong="inacex">6025203</option>
-                                    <option value="6025301" data-belong="moveli">6025301</option>
-                                    <option value="6025302" data-belong="reod">6025302</option>
-                                    <option value="6025303" data-belong="lipeot">6025303</option>
-                                    <option value="6025401" data-belong="mihoex">6025401</option>
-                                    <option value="6025501" data-belong="mute">6025501</option>
-                                    <option value="6025502" data-belong="muin">6025502</option>
-                                    <option value="6021602" data-belong=""> 6021602</option>
-                                    <option value="6025601" data-belong="ofex">6025601</option>
-                                    <option value="OUTREACHES" data-belong="">OUTREACHES </option>
-                                    <option value="REVIVALS" data-belong="" >REVIVALS</option>
-                                    <option value="6025801" data-belong="futial">6025801</option>
-                                    <option value="6025802" data-belong="rediex">6025802</option>
-                                    <option value="6025803" data-belong="stip">6025803</option>
-                                    <option value="6025804" data-belong="saaw">6025804</option>
-                                    <option value="6025805" data-belong="coia">6025805</option>
-                                    <option value="6025901" data-belong="prin">6025901</option>
-                                    <option value="6025902" data-belong="proaf">6025902</option>
-                                    <option value="6025903" data-belong="poais">6025903</option>
-                                    <option value="6025904" data-belong="poess">6025904</option>
-                                    <option value="6025905" data-belong="pognia">6025905</option>
-                                    <option value="6025906" data-belong="poii">6025906</option>
-                                    <option value="6025907" data-belong="prot">6025907</option>
-                                    <option value="6025908" data-belong="praad">6025908</option>
-                                    <option value="6025909" data-belong="prce">6025909</option>
-                                    <option value="6025910" data-belong="prphe">6025910</option>
-                                    <option value="6025911" data-belong="princ">6025911</option>
-                                    <option value="6026001" data-belong="leprex">6026001</option>
-                                    <option value="6026101" data-belong="decm">6026101</option>
-                                    <option value="6026102" data-belong="princo">6026102</option>
-                                    <option value="6026103" data-belong="tpex">6026103</option>
-                                    <option value="6026104" data-belong="prma">6026104</option>
-                                    <option value="6026204" data-belong="fama">6026204</option>
-                                    <option value="6026301" data-belong="pure">6026301</option>
-                                    <option value="6026401" data-belong="mifuco">6026401</option>
-                                    <option value="6026402" data-belong="otstco">6026402</option>
-                                    <option value="6026501" data-belong="rera">6026501</option>
-                                    <option value="6026601" data-belong=""> 6026601</option>
-                                    <option value="6026602" data-belong="replm">6026602</option>
-                                    <option value="6026603" data-belong="recaca">6026603 </option>
-                                    <option value="6026604" data-belong="reguh" >6026604</option>
-                                    <option value="6026605" data-belong="reel">6026605</option>
-                                    <option value="6026606" data-belong="remuin">6026606</option>
-                                    <option value="6026607" data-belong="rmv">6026607</option>
-                                    <option value="6026608" data-belong="rebu">6026608</option>
-                                    <option value="6026609" data-belong="refu">6026609</option>
-                                    <option value="6026610" data-belong="relect">6026610</option>
-                                    <option value="6026611" data-belong="rege">6026611</option>
-                                    <option value="6026612" data-belong="limaex">6026612</option>
-                                    <option value="6026613" data-belong="cema">6026613</option>
-                                    <option value="6026701" data-belong="clsa">6026701</option>
-                                    <option value="6026801" data-belong="seeq">6026801</option>
-                                    <option value="6026802" data-belong="seex">6026802</option>
-                                    <option value="6026901" data-belong="clex">6026901</option>
-                                    <option value="6026902" data-belong="shex">6026902</option>
-                                    <option value="6027101" data-belong="canc">6027101</option>
-                                    <option value="6027102" data-belong="insu">6027102</option>
-                                    <option value="6027103" data-belong="mmis">6027103</option>
-                                    <option value="6027104" data-belong="acss">6027104</option>
-                                    <option value="6027201" data-belong="suex">6027201</option>
-                                    <option value="6027301" data-belong="hoff">6027301</option>
-                                    <option value="6027401" data-belong="tawe">6027401</option>
-                                    <option value="6027402" data-belong="trexlo">6027402</option>
-                                    <option value="6027501" data-belong="trexfo">6027501</option>
-                                    <option value="6027502" data-belong="elect">6027502</option>
-                                    <option value="6028601" data-belong="wama">6028601</option>
-                                    <option value="6027602" data-belong="owp">6027602</option>
-                                    <option value="6027603" data-belong="wowe">6027603</option>
-                                    <option value="6027604" data-belong="wewe">6027604</option>
-                                    <option value="6027605" data-belong="entr">6027605</option>
-                                    <option value="6027606" data-belong="char">6027606</option>
-                                    <option value="6027607" data-belong="hokeex">6027607</option>
-                                  </select>
+                                    <option value="FUNERAL EXPENSES" data-belong="fuex">FUNERAL EXPENSES</option> -->
+                                          <option value="6025101" data-belong="fuexfe">6025101</option>
+                                          <option value="6025102" data-belong="fuexot">6025102</option>
+                                          <option value="6025201" data-belong="pocos">6025201</option>
+                                          <option value="6025202" data-belong="teex">6025202</option>
+                                          <option value="6025203" data-belong="inacex">6025203</option>
+                                          <option value="6025301" data-belong="moveli">6025301</option>
+                                          <option value="6025302" data-belong="reod">6025302</option>
+                                          <option value="6025303" data-belong="lipeot">6025303</option>
+                                          <option value="6025401" data-belong="mihoex">6025401</option>
+                                          <option value="6025501" data-belong="mute">6025501</option>
+                                          <option value="6025502" data-belong="muin">6025502</option>
+                                          <option value="6021602" data-belong=""> 6021602</option>
+                                          <option value="6025601" data-belong="ofex">6025601</option>
+                                          <!-- <option value="OUTREACHES" data-belong="">OUTREACHES </option>
+                                    <option value="REVIVALS" data-belong="" >REVIVALS</option> -->
+                                          <option value="6025801" data-belong="futial">6025801</option>
+                                          <option value="6025802" data-belong="rediex">6025802</option>
+                                          <option value="6025803" data-belong="stip">6025803</option>
+                                          <option value="6025804" data-belong="saaw">6025804</option>
+                                          <option value="6025805" data-belong="coia">6025805</option>
+                                          <option value="6025901" data-belong="prin">6025901</option>
+                                          <option value="6025902" data-belong="proaf">6025902</option>
+                                          <option value="6025903" data-belong="poais">6025903</option>
+                                          <option value="6025904" data-belong="poess">6025904</option>
+                                          <option value="6025905" data-belong="pognia">6025905</option>
+                                          <option value="6025906" data-belong="poii">6025906</option>
+                                          <option value="6025907" data-belong="prot">6025907</option>
+                                          <option value="6025908" data-belong="praad">6025908</option>
+                                          <option value="6025909" data-belong="prce">6025909</option>
+                                          <option value="6025910" data-belong="prphe">6025910</option>
+                                          <option value="6025911" data-belong="princ">6025911</option>
+                                          <option value="6026001" data-belong="leprex">6026001</option>
+                                          <option value="6026101" data-belong="decm">6026101</option>
+                                          <option value="6026102" data-belong="princo">6026102</option>
+                                          <option value="6026103" data-belong="tpex">6026103</option>
+                                          <option value="6026104" data-belong="prma">6026104</option>
+                                          <option value="6026204" data-belong="fama">6026204</option>
+                                          <option value="6026301" data-belong="pure">6026301</option>
+                                          <option value="6026401" data-belong="mifuco">6026401</option>
+                                          <option value="6026402" data-belong="otstco">6026402</option>
+                                          <option value="6026501" data-belong="rera">6026501</option>
+                                          <option value="6026601" data-belong=""> 6026601</option>
+                                          <option value="6026602" data-belong="replm">6026602</option>
+                                          <option value="6026603" data-belong="recaca">6026603 </option>
+                                          <option value="6026604" data-belong="reguh">6026604</option>
+                                          <option value="6026605" data-belong="reel">6026605</option>
+                                          <option value="6026606" data-belong="remuin">6026606</option>
+                                          <option value="6026607" data-belong="rmv">6026607</option>
+                                          <option value="6026608" data-belong="rebu">6026608</option>
+                                          <option value="6026609" data-belong="refu">6026609</option>
+                                          <option value="6026610" data-belong="relect">6026610</option>
+                                          <option value="6026611" data-belong="rege">6026611</option>
+                                          <option value="6026612" data-belong="limaex">6026612</option>
+                                          <option value="6026613" data-belong="cema">6026613</option>
+                                          <option value="6026701" data-belong="clsa">6026701</option>
+                                          <option value="6026801" data-belong="seeq">6026801</option>
+                                          <option value="6026802" data-belong="seex">6026802</option>
+                                          <option value="6026901" data-belong="clex">6026901</option>
+                                          <option value="6026902" data-belong="shex">6026902</option>
+                                          <option value="6027101" data-belong="canc">6027101</option>
+                                          <option value="6027102" data-belong="insu">6027102</option>
+                                          <option value="6027103" data-belong="mmis">6027103</option>
+                                          <option value="6027104" data-belong="acss">6027104</option>
+                                          <option value="6027201" data-belong="suex">6027201</option>
+                                          <option value="6027301" data-belong="hoff">6027301</option>
+                                          <option value="6027401" data-belong="tawe">6027401</option>
+                                          <option value="6027402" data-belong="trexlo">6027402</option>
+                                          <option value="6027501" data-belong="trexfo">6027501</option>
+                                          <option value="6027502" data-belong="elect">6027502</option>
+                                          <option value="6028601" data-belong="wama">6028601</option>
+                                          <option value="6027602" data-belong="owp">6027602</option>
+                                          <option value="6027603" data-belong="wowe">6027603</option>
+                                          <option value="6027604" data-belong="wewe">6027604</option>
+                                          <option value="6027605" data-belong="entr">6027605</option>
+                                          <option value="6027606" data-belong="char">6027606</option>
+                                          <option value="6027607" data-belong="hokeex">6027607</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-2 mt-3">
+                                      <input type="submit"
+                                        class="remove-item btn btn-sm btn-primary mt-3 remove-social-media" name="save"
+                                        value="View Balance">
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
+                          </div>
+                          </form>
+                        </div>
+
+
+
+
+                        <div class="alert alert-info">
+                          <div class="panel container-item">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <h5 style="color: #495057 !important; text-align: center;">Utilization To Date</h5>
+                                  <input type="number" value="150000" id="db_amount" class="form-control total" name="amount"
+                                    maxlength="64" aria-required="true" placeholder="0.00" />
+                                </div>
                               </div>
-                              <div class="col-md-2 mt-3">
-                                <input type="submit" class="remove-item btn btn-sm btn-primary mt-3 remove-social-media" name="save" value="View Balance" >
+
+                              <div class="col-md-4">
+                                <h5> Amount Requested</h5>
+                                <div class="form-group">
+                                  <input onkeyup="runCalculations()" type="number" id="customer_amount" class="form-control total" name="amount"
+                                    aria-required="true" placeholder="0.00" />
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <table id="tab_logic" class="mb-4">
+                                  <tfoot>
+                                    <tr>
+                                      <h5> Remaining balance</h5>
+                                      <th class="text-center" style="width: 230px;">
+                                        <input type="number" id="remainder_amount" name="amount" placeholder="" class="form-control" />
+                                      </th>
+                                    </tr>
+                                  </tfoot>
+                                </table>
                               </div>
                             </div>
                           </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-
-
-
-
-                <div class="alert alert-info">
-                    <div class="panel container-item">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <h5 style="color: #495057 !important; text-align: center;">Available balance</h5>
-                        <input type="number" id="customer-last_name" class="form-control total"
-                          name="amount" maxlength="64" aria-required="true" placeholder="0.00"/>
-                      </div>
-                    </div>
-
-                  <!-- <div class="col-md-4"> 
-                    <h5>Code</h5>
-                    
-                    <div class="form-group">
-                      <select class="form-control sub selectFilter"  name="subject" data-target="minor">
-                        <option value="Select One"> Select One</option>
-                        <option value="5011001" data-belong="tiof">5011001</option>
-                        <option value="5011002" data-belong="otof">5011002</option>
-                        <option value="5011201" data-belong="otre">5011201</option>
-                        <option value="5011301" data-belong="dona">5011301</option>
-                        <option value="5011401" data-belong="igdo">5011401</option>
-                        <option value="5011402" data-belong="otco">5011402</option>
-                        <option value="5011501" data-belong="auvi">5011501</option>
-                        <option value="5011502" data-belong="casa">5011502</option>
-                        <option value="5011503" data-belong="cgs">5011503</option>
-                        <option value="5011504" data-belong="muinsa">5011504</option>
-                        <option value="PICTURE ROLLS" data-ref="piro" data-belong="inc">PICTURE ROLLS</option>
-                        <option value="WATCH AND PRAY"  data-ref="waap" data-belong="inc">WATCH AND PRAY</option>
-                        <option value="DIESEL" data-ref="diesel" data-belong="inc">DIESEL</option>
-                        <option value="KEROSINE" data-ref="kero" data-belong="inc">KEROSINE</option>
-                        <option value="LUBRICANTS" data-ref="lubr" data-belong="inc">LUBRICANTS</option>
-                        <option value="PMS" data-ref="pms" data-belong="inc">PMS</option>
-                        <option value="LIVE STOCK SALES" data-ref="listsa" data-belong="inc">LIVE STOCK SALES</option>
-                        <option value="FARM PRODUCE SALES" data-ref="faprsa" data-belong="inc">FARM PRODUCE SALES</option>
-                        <option value="KITCHEN SALES" data-ref="kisa" data-belong="inc">KITCHEN SALES</option>
-                        <option value="OTHERS (SPECIFIC CONTRIBUTION)" data-ref="otsc" data-belong="inc">OTHERS (SPECIFIC CONTRIBUTION)</option>
-                        <option value="MISSIONARY FUND- DISTRICT" data-ref="mifudi" data-belong="inc">MISSIONARY FUND- DISTRICT</option>
-                        <option value="MISSIONARY FUND- BRANCH"  data-ref="mifubr" data-belong="inc">MISSIONARY FUND- BRANCH</option>
-                        <option value="1130703" data-belong="infomi">1130703</option>
-                        <option value="1130701"  data-belong="inre">1130701</option>
-                        <option value="1130702" data-belong="indi"> 1130702</option>
-                        <option value="1130704" data-belong="inot">1130704</option>
-                        <option value="1130201" data-belong="stlo">1130201 </option>
-                        <option value="1130204" data-belong="loot" >1130204</option>
-                        <option value="LAND" data-belong="land" data-belong="capex">LAND</option>
-                        <option value="FREEHOLD LAND" data-ref="frla" data-belong="capex">FREEHOLD LAND</option>
-                        <option value="LEASEHOLD LAND" data-ref="lela" data-belong="capex">LEASEHOLD LAND</option>
-                        <option value="BUILDINGS" data-ref="build" data-belong="capex">BUILDINGS</option>
-                        <option value="CHURCH FURNITURE & FITTINGS" data-ref="chfufi" data-belong="capex">CHURCH FURNITURE & FITTINGS</option>
-                        <option value="OFFICE FURNITURE & FITTINGS" data-ref="offufi" data-belong="capex">OFFICE FURNITURE & FITTINGS</option>
-                        <option value="MOTOR CARS" data-ref="moca" data-belong="capex">MOTOR CARS</option>
-                        <option value="BUSES" data-ref="buses" data-belong="capex">BUSES</option>
-                        <option value="MOTOR LORRIES" data-ref="molo" data-belong="capex">MOTOR LORRIES</option>
-                        <option value="MOTOR CRANE" data-ref="mocr" data-belong="capex">MOTOR CRANE</option>
-                        <option value="TRACTORS" data-ref="trac" data-belong="capex">TRACTORS</option>
-                        <option value="FISH PONDS" data-ref="fipo" data-belong="capex">FISH PONDS</option>
-                        <option value="FISH HATCHERY" data-ref="fiha" data-belong="capex">FISH HATCHERY</option>
-                        <option value="GENERATORS" data-ref="gener" data-belong="capex">GENERATORS</option>
-                        <option value="PLANT & MACHINERY" data-ref="plma" data-belong="capex">PLANT & MACHINERY</option>
-                        <option value="AIRCONDITIONERS" data-ref="aircon" data-belong="capex">AIRCONDITIONERS</option>
-                        <option value="INVERTERS" data-ref="inver" data-belong="capex">INVERTERS</option>
-                        <option value="FRIDGES" data-ref="frid" data-belong="capex">FRIDGES</option>
-                        <option value="DESKTOPS" data-ref="desk" data-belong="capex">DESKTOPS</option>
-                        <option value="LAPTOPS" data-ref="lapt" data-belong="capex">LAPTOPS</option>
-                        <option value="PRINTERS" data-ref="print" data-belong="capex">PRINTERS</option>
-                        <option value="COMPUTER SOFTWARES" data-ref="comso" data-belong="capex">COMPUTER SOFTWARES</option>
-                        <option value="MUSICAL INSTRUMENTS-WORSHIP" data-ref="muinwo" data-belong="capex">MUSICAL INSTRUMENTS-WORSHIP</option>
-                        <option value="ELECTRONICS GADGETS" data-ref="elga" data-belong="capex">ELECTRONICS GADGETS</option>
-                        <option value="ICT EQUIPMENT-MISSION" data-ref="iceqmi" data-belong="capex">ICT EQUIPMENT-MISSION</option>
-                        <option value="INVESTMENT - PROPERTY" data-ref="inpr" data-belong="capex">INVESTMENT - PROPERTY</option>
-                        <option value="SPECIAL DAYS PROGRAMMES" data-ref="spdapr" data-belong="pex">SPECIAL DAYS PROGRAMMES</option>
-                        <option value="AVS PROGRAM EXPENSES " data-ref="avprex" data-belong="pex">AVS PROGRAM EXPENSES </option>
-                        <option value="REVIVAL& A.V.S RETREAT" data-ref="rear" data-belong="pex">REVIVAL& A.V.S RETREAT</option>
-                        <option value="BOARD MEETINGS - MAIN" data-ref="bomema" data-belong="pex">BOARD MEETINGS - MAIN</option>
-                        <option value="BOARD MEETINGS-MCMC" data-ref="bomemc" data-belong="pex">BOARD MEETINGS-MCMC</option>
-                        <option value="BOARD MEETINGS- MCOC" data-ref="bome-mc" data-belong="pex">BOARD MEETINGS- MCOC</option>
-                        <option value="BOARD MEETINGS- FIC" data-ref="bomefi" data-belong="pex">BOARD MEETINGS- FIC</option>
-                        <option value="CAMP MEETING -GENERAL EXPENSES" data-ref="camegeex" data-belong="pex">CAMP MEETING -GENERAL EXPENSES</option>
-                        <option value="HOME MISSION CAMP MEETINGS" data-ref="homicame" data-belong="pex">HOME MISSION CAMP MEETINGS</option>
-                        <option value="OTHER C/MEETING EXP" data-ref="otcmex" data-belong="pex">OTHER C/MEETING EXP</option>
-                        <option value="WELFARE PACKAGE FOR CAMP MEETING" data-ref="wepafo" data-belong="pex">WELFARE PACKAGE FOR CAMP MEETING</option>
-                        <option value="CHRISTMAS DECORATION"  data-ref="chde" data-belong="pex">CHRISTMAS DECORATION</option>
-                        <option value="FOREIGN LEADERS TRAINING " data-ref="foletr" data-belong="pex">FOREIGN LEADERS TRAINING </option>
-                        <option value="EMPOWERMENT EXPENSES" data-ref="emex" data-belong="pex">EMPOWERMENT EXPENSES</option>
-                        <option value="CONCERT EXPENSES" data-ref="coex" data-belong="pex">CONCERT EXPENSES</option>
-                        <option value="OUTREACHES" data-ref="outr" data-belong="pex">OUTREACHES</option>
-                        <option value="REVIVALS" data-ref="reviv" data-belong="pex">REVIVALS</option>
-                        <option value="YDD - CAPACITY BUILDING PROGRAMME" data-ref="yddcap" data-belong="pex">YDD - CAPACITY BUILDING PROGRAMME</option>
-                        <option value="YOUNG PROFESSIONAL PROGRAM EXPENSES" data-ref="yppe" data-belong="pex">YOUNG PROFESSIONAL PROGRAM EXPENSES</option>
-                        <option value="YOUTH LEADERS CAPACITY BUILDING" data-ref="ylcb" data-belong="pex">YOUTH LEADERS CAPACITY BUILDING</option>
-                        <option value="INTERNATIONAL YOUTH CAMP- IYC" data-ref="iyc" data-belong="pex">INTERNATIONAL YOUTH CAMP- IYC</option>
-                        <option value="NCWC - NATIONAL CENTRAL WORKING COMMITTEE "  data-ref="ncwc" data-belong="pex">NCWC - NATIONAL CENTRAL WORKING COMMITTEE </option>
-                        <option value="AFCF - APOSTOLIC FAITH CAMPUS FELLOWSHIP " data-ref="afcf" data-belong="pex">AFCF - APOSTOLIC FAITH CAMPUS FELLOWSHIP </option>
-                        <option value="OTHER YOUTH PROGRAMS"  data-ref="oyp" data-belong="pex">OTHER YOUTH PROGRAMS</option>
-                        <option value="PURCHASE OF MUSICAL INSTRUMENTS" data-ref="pomi" data-belong="ore"> PURCHASE OF MUSICAL INSTRUMENTS</option>
-                        <option value="FUEL & LUBRICANTS  (DIESEL)" data-ref="fuludi" data-belong="ore">FUEL & LUBRICANTS  (DIESEL)</option>
-                        <option value="FUEL & LUBRICANTS  (PMS)" data-ref="fulupm" data-belong="ore">FUEL & LUBRICANTS  (PMS) </option>
-                        <option value="FUEL & LUBRICANTS  (LUBRICANTS)" data-ref="fululu" data-belong="ore" >FUEL & LUBRICANTS  (LUBRICANTS)</option>
-                        <option value="FUEL & LUBRICANTS  (KEROSINE)" data-ref="fuluke" data-belong="ore">FUEL & LUBRICANTS  (KEROSINE)</option>
-                        <option value="PRINTING OF CALENDARS" data-ref="proc" data-belong="ore">PRINTING OF CALENDARS</option>
-                        <option value="PRINTING OF CGS" data-ref="procg" data-belong="ore">PRINTING OF CGS</option>
-                        <option value="PRODUCTION OF AUDIO VISUALS" data-ref="proavi" data-belong="ore">PRODUCTION OF AUDIO VISUALS</option>
-                        <option value="KIOSK EXPENSES" data-ref="kiex" data-belong="ore">KIOSK EXPENSES</option>
-                        <option value="FARM EXPENSES" data-ref="faex" data-belong="ore">FARM EXPENSES</option>
-                        <option value="HOTEL & SUSTENANCE EXPENSES" data-ref="hosuex" data-belong="ore">HOTEL & SUSTENANCE EXPENSES</option>
-                        <option value="ADVERTS & PUBLICITY EXPENSES" data-ref="adpuex" data-belong="ore">ADVERTS & PUBLICITY EXPENSES</option>
-                        <option value="TREASURY MONITORING EXPENSES" data-ref="trmoex" data-belong="ore">TREASURY MONITORING EXPENSES</option>
-                        <option value="EXTERNAL AUDIT EXPENSES" data-ref="exauex" data-belong="ore">EXTERNAL AUDIT EXPENSES</option>
-                        <option value="INTERNAL AUDIT EXPENSES" data-ref="inauex" data-belong="ore">INTERNAL AUDIT EXPENSES</option>
-                        <option value="NEWSPAPERS AND PERIODICALS" data-ref="neap" data-belong="ore">NEWSPAPERS AND PERIODICALS</option>
-                        <option value="BOOKS & JOURNALS" data-ref="bojo" data-belong="ore">BOOKS & JOURNALS</option>
-                        <option value="STATIONERIES" data-ref="stat" data-belong="ore">STATIONERIES</option>
-                        <option value="CORPORATE SOCIAL RESPONSIBILITY" data-ref="cosore" data-belong="ore">CORPORATE SOCIAL RESPONSIBILITY</option>
-                        <option value="DELEGATES EXPENSES" data-ref="deex" data-belong="ore">DELEGATES EXPENSES</option>
-                        <option value="US DELEGATES EXPENSES" data-ref="usdeex" data-belong="ore">US DELEGATES EXPENSES</option>
-                        <option value="IGBESA CONTRIBUTION" data-ref="igco" data-belong="ore">IGBESA CONTRIB UTION</option>
-                        <option value="CRAWFORD/AFSS CONTRIBUTION" data-ref="crco" data-belong="ore">CRAWFORD/AFSS CONTRIBUTION</option>
-                        <option value="CHILDREN EDUCATION" data-ref="ched" data-belong="ore">CHILDREN EDUCATION</option>
-                        <option value="FARM EXPENSES" data-ref="" data-belong="ore">FARM EXPENSES</option>
-                        <option value="FEEDING OF WORKERS" data-ref="feofwo" data-belong="ore">FEEDING OF WORKERS</option>
-                        <option value="CANTEEN WEEKLY MAINT" data-ref="cawema" data-belong="ore">CANTEEN WEEKLY MAINT</option>
-                        <option value="KITCHEN EXPENSES" data-ref="kitex" data-belong="ore">KITCHEN EXPENSES</option>
-                        <option value="CAFETARIA EXPENSES" data-ref="caex" data-belong="ore">CAFETARIA EXPENSES</option>
-                        <option value="KITCHEN GAS" data-ref="kiga" data-belong="ore">KITCHEN GAS </option>
-                        <option value="COT / BANK CHARGES" data-ref="cobc" data-belong="ore"> COT / BANK CHARGES</option>
-                        <option value="FOREIGN EXCHANGE DIFFERENTIAL" data-ref="foexdi" data-belong="ore">FOREIGN EXCHANGE DIFFERENTIAL</option>
-                        <option value="INTEREST ON LOANS" data-ref="inol" data-belong="ore">INTEREST ON LOANS </option>
-                        <option value="FIRST AID EXPENSES" data-ref="fiae" data-belong="ore" >FIRST AID EXPENSES</option>
-                        <option value="FOREIGN CHURCH RUNNING COST" data-ref="fcrc" data-belong="ore">FOREIGN CHURCH RUNNING COST</option>
-                        <option value="FOREIGN MISSION CHILDREN EDUCATION SUPPORT" data-ref="fmces" data-belong="ore">FOREIGN MISSION CHILDREN EDUCATION SUPPORT</option>
-                        <option value="FOREIGN MISSION  FAMILY HOME SUPPORT" data-ref="fmfhs" data-belong="ore">FOREIGN MISSION  FAMILY HOME SUPPORT</option>
-                        <option value="FOREIGN MISSION STIPENDS" data-ref="foms" data-belong="ore">FOREIGN MISSION STIPENDS</option>
-                        <option value="FOREIGN LEADERS TRAINING" data-ref="" data-belong="ore">FOREIGN LEADERS TRAINING </option>
-                        <option value="FOREIGN MISSION VISITS/TRIPS " data-ref="fomivt" data-belong="ore">FOREIGN MISSION VISITS/TRIPS </option>
-                        <option value="FOREIGN MISSIONS CAMP MEETINGS" data-ref="fomicm" data-belong="ore">FOREIGN MISSIONS CAMP MEETINGS</option>
-                        <option value="FOREIGN MISSIONS-OTHER EXPENSES " data-ref="fomioe" data-belong="ore">FOREIGN MISSIONS-OTHER EXPENSES </option>
-                        <option value="FOREIGN MISSION PROJECTS = MISSIONS" data-ref="fomipm" data-belong="ore">FOREIGN MISSION PROJECTS = MISSIONS</option>
-                        <option value="FRSC EXPENSES" data-ref="frex" data-belong="ore">FRSC EXPENSES</option>
-                        <option value="FUEL & LUBRICANTS  (DIESEL)" data-ref="" data-belong="ore">FUEL & LUBRICANTS  (DIESEL)</option>
-                        <option value="FUEL & LUBRICANTS (PMS)" data-ref="" data-belong="ore">FUEL & LUBRICANTS (PMS)</option>
-                        <option value="FUEL & LUBRICANTS (LUBRICANTS) " data-ref="" data-belong="ore">FUEL & LUBRICANTS (LUBRICANTS) </option>
-                        <option value="FUEL & LUBRICANTS  (KEROSINE)" data-ref="fuluke" data-belong="ore">FUEL & LUBRICANTS  (KEROSINE)</option>
-                        <option value="FUNERAL EXPENSES" data-ref="fuex" data-belong="ore">FUNERAL EXPENSES</option>
-                        <option value="FUNERAL EXP-FEEDING" data-ref="fuexfe" data-belong="ore">FUNERAL EXP-FEEDING</option>
-                        <option value="FUNERAL EXP-OTHERS" data-ref="fuexot" data-belong="ore">FUNERAL EXP-OTHERS</option>
-                        <option value=" POSTAGE & COURIER S" data-ref="pocos" data-belong="ore"> POSTAGE & COURIER S</option>
-                        <option value="TELEPHONE EXPENSES" data-ref="teex" data-belong="ore">TELEPHONE EXPENSES</option>
-                        <option value="INTERNET & ACCESORIES EXPS" data-ref="inacex" data-belong="ore">INTERNET & ACCESORIES EXPS</option>
-                        <option value="MOTOR VEHICLE LICENCING & DOCUMENT RENEWALS" data-ref="moveli" data-belong="ore">MOTOR VEHICLE LICENCING & DOCUMENT RENEWALS</option>
-                        <option value="RENEWAL OF DRIVING LICENCES" data-ref="reod" data-belong="ore">RENEWAL OF DRIVING LICENCES</option>
-                        <option value="LICENCES & PERMITS - OTHERS" data-ref="lipeot" data-belong="ore">LICENCES & PERMITS - OTHERS</option>
-                        <option value="MISSION HOUSE EXPENSES" data-ref="mihoex" data-belong="ore">MISSION HOUSE EXPENSES</option>
-                        <option value="MUSIC TEST EXPENSES" data-ref="mute" data-belong="ore">MUSIC TEST EXPENSES</option>
-                        <option value="MUSICAL INSTRUMENTS" data-ref="muin" data-belong="ore">MUSICAL INSTRUMENTS</option>
-                        <option value="STATIONERIES" data-ref="" data-belong="ore"> STATIONERIES</option>
-                        <option value="OFFICE EXP" data-ref="ofex" data-belong="ore">OFFICE EXP</option>
-                        <option value="OUTREACHES" data-ref="" data-belong="ore">OUTREACHES </option>
-                        <option value="REVIVALS" data-ref="" data-belong="ore" >REVIVALS</option>
-                        <option value="FULL TIME ALLOWANCES" data-ref="futial" data-belong="ore">FULL TIME ALLOWANCES</option>
-                        <option value="RETIREMENT/DISENGAGEMENT EXP" data-ref="rediex" data-belong="ore">RETIREMENT/DISENGAGEMENT EXP</option>
-                        <option value="STIPENDS" data-ref="stip" data-belong="ore">STIPENDS</option>
-                        <option value="SALARIES AND WAGES" data-ref="saaw" data-belong="ore">SALARIES AND WAGES</option>
-                        <option value="CORPERS & IT ALLOWCES" data-ref="coia" data-belong="ore">CORPERS & IT ALLOWCES</option>
-                        <option value="PRINTING" data-ref="prin" data-belong="ore">PRINTING</option>
-                        <option value="PRINTING OF APOSTOLIC FAITH MAGAZINE " data-ref="proaf" data-belong="ore">PRINTING OF APOSTOLIC FAITH MAGAZINE </option>
-                        <option value="PRINTING OF ADULT/INTERMEDIATE SUNDAY SCHOOL BOOKS" data-ref="poais" data-belong="ore">PRINTING OF ADULT/INTERMEDIATE SUNDAY SCHOOL BOOKS</option>
-                        <option value="PRINTING OF ELEMENTARY SUNDAY SCHOOL BOOKS" data-ref="poess" data-belong="ore">PRINTING OF ELEMENTARY SUNDAY SCHOOL BOOKS</option>
-                        <option value="PRINTING OF GOSPEL NEWS IN AFRICA  " data-ref="pognia" data-belong="ore">PRINTING OF GOSPEL NEWS IN AFRICA  </option>
-                        <option value="PRINTING OF IMOLE IRETI  " data-ref="poii" data-belong="ore">PRINTING OF IMOLE IRETI  </option>
-                        <option value="PRINTING OF TRACTS" data-ref="prot" data-belong="ore">PRINTING OF TRACTS</option>
-                        <option value="PRINTING- ART AND DESIGN " data-ref="praad" data-belong="ore">PRINTING- ART AND DESIGN </option>
-                        <option value="PRINTING - CORE EXPENSES " data-ref="prce" data-belong="ore">PRINTING - CORE EXPENSES </option>
-                        <option value="PRINTING- PHOTOGRAPHY EXPENSES " data-ref="prphe" data-belong="ore">PRINTING- PHOTOGRAPHY EXPENSES </option>
-                        <option value="PRINTING- INVITATION CARDS & SURVENAIR " data-ref="princ" data-belong="ore">PRINTING- INVITATION CARDS & SURVENAIR </option>
-                        <option value="LEGAL & PROFESSIONAL EXPENSES" data-ref="leprex" data-belong="ore">LEGAL & PROFESSIONAL EXPENSES</option>
-                        <option value="DESIGN & CONSTRUCTION MANAGEMENT COST" data-ref="decm" data-belong="ore">DESIGN & CONSTRUCTION MANAGEMENT COST</option>
-                        <option value="PROJECT INSPECTION COST" data-ref="princo" data-belong="ore">PROJECT INSPECTION COST</option>
-                        <option value="TOWN PLANNING EXPENSES" data-ref="tpex" data-belong="ore">TOWN PLANNING EXPENSES</option>
-                        <option value="PROJECT MANAGEMENT" data-ref="prma" data-belong="ore">PROJECT MANAGEMENT</option>
-                        <option value="FACILITY MANAGEMENT" data-ref="fama" data-belong="ore">FACILITY MANAGEMENT</option>
-                        <option value="PUBLIC RELATION & COMM" data-ref="pure" data-belong="ore">PUBLIC RELATION & COMM</option>
-                        <option value="MISSIONARY FUND CONT" data-ref="mifuco" data-belong="ore">MISSIONARY FUND CONT</option>
-                        <option value="OTHER STATE CONT." data-ref="otstco" data-belong="ore">OTHER STATE CONT.</option>
-                        <option value="RENT & RATES" data-ref="rera" data-belong="ore">RENT & RATES</option>
-                        <option value="REPAIRS-GENERATORS" data-ref="" data-belong="ore"> REPAIRS-GENERATORS</option>
-                        <option value="REPAIRS-PLANT & MACHINERY" data-ref="replm" data-belong="ore">REPAIRS-PLANT & MACHINERY</option>
-                        <option value="REPAIRS - CAMPGROUND CABINS" data-ref="recaca" data-belong="ore">REPAIRS - CAMPGROUND CABINS </option>
-                        <option value="REPAIRS - GUEST HOUSES" data-ref="reguh" data-belong="ore" >REPAIRS - GUEST HOUSES</option>
-                        <option value="REPAIRS - ELECTRICALS" data-ref="reel" data-belong="ore">REPAIRS - ELECTRICALS</option>
-                        <option value="REPAIRS-MUSICAL INSTRUMENTS" data-ref="remuin" data-belong="ore">REPAIRS-MUSICAL INSTRUMENTS</option>
-                        <option value="R & M - MOTOR VECHICLES" data-ref="rmv" data-belong="ore">R & M - MOTOR VECHICLES</option>
-                        <option value="REPAIRS-BUILDINGS" data-ref="rebu" data-belong="ore">REPAIRS-BUILDINGS</option>
-                        <option value="REPAIRS-FURN. & FITT." data-ref="refu" data-belong="ore">REPAIRS-FURN. & FITT.</option>
-                        <option value="REPAIRS-ELECTRONICS" data-ref="relect" data-belong="ore">REPAIRS-ELECTRONICS</option>
-                        <option value="REPAIRS-GENERAL" data-ref="rege" data-belong="ore">REPAIRS-GENERAL</option>
-                        <option value="LIBRARY MAINTENANCE EXPENSES" data-ref="limaex" data-belong="ore">LIBRARY MAINTENANCE EXPENSES</option>
-                        <option value="CEMETERY MAINTENANCE" data-ref="cema" data-belong="ore">CEMETERY MAINTENANCE</option>
-                        <option value="CLEANING & SANITATION" data-ref="clsa" data-belong="ore">CLEANING & SANITATION</option>
-                        <option value="SECURITY EQUIPMENT" data-ref="seeq" data-belong="ore">SECURITY EQUIPMENT</option>
-                        <option value="SECURITY EXPENSES" data-ref="seex" data-belong="ore">SECURITY EXPENSES</option>
-                        <option value="CLEARING EXPENSES" data-ref="clex" data-belong="ore">CLEARING EXPENSES</option>
-                        <option value="SHIPPING EXPENSES" data-ref="shex" data-belong="ore">SHIPPING EXPENSES</option>
-                        <option value="C.A.N CONTRIBUTION" data-ref="canc" data-belong="ore">C.A.N CONTRIBUTION</option>
-                        <option value="INTERNET SUBSCRIPTIONS" data-ref="insu" data-belong="ore">INTERNET SUBSCRIPTIONS</option>
-                        <option value="MTN MIFI INTERNET SERVICES" data-ref="mmis" data-belong="ore">MTN MIFI INTERNET SERVICES</option>
-                        <option value="ACCOUNTING SOFTWARE & SUBSCRIPTIONS " data-ref="acss" data-belong="ore">ACCOUNTING SOFTWARE & SUBSCRIPTIONS </option>
-                        <option value="SUNDRY EXPENSES" data-ref="suex" data-belong="ore">SUNDRY EXPENSES</option>
-                        <option value="HONORARIUM FOR FACILITATORS" data-ref="hoff" data-belong="ore">HONORARIUM FOR FACILITATORS</option>
-                        <option value="TRAINING AND WORKSHOP EXPENSES" data-ref="tawe" data-belong="ore">TRAINING AND WORKSHOP EXPENSES</option>
-                        <option value="TRAVELING EXPENSES - LOCAL" data-ref="trexlo" data-belong="ore">TRAVELING EXPENSES - LOCAL</option>
-                        <option value="TRAVELING EXPENSES - FOREIGN" data-ref="trexfo" data-belong="ore">TRAVELING EXPENSES - FOREIGN</option>
-                        <option value="ELECTRICITY" data-ref="elect" data-belong="ore">ELECTRICITY</option>
-                        <option value="WASTE MANAGEMENT" data-ref="wama" data-belong="ore">WASTE MANAGEMENT</option>
-                        <option value="OTHER WELFARE PACKAGES" data-ref="owp" data-belong="ore">OTHER WELFARE PACKAGES</option>
-                        <option value="WORKERS WELFARE" data-ref="wowe" data-belong="ore">WORKERS WELFARE</option>
-                        <option value="WELFARE - WEDDINGS" data-ref="wewe" data-belong="ore">WELFARE - WEDDINGS</option>
-                        <option value="ENTERTAINMENT" data-ref="entr" data-belong="ore">ENTERTAINMENT</option>
-                        <option value="CHARITY" data-ref="char" data-belong="ore">CHARITY</option>
-                        <option value="HOUSE KEEPING EXPENSES" data-ref="hokeex" data-belong="ore">HOUSE KEEPING EXPENSES</option>
-                      </select>
-                  </div>
-                  </div> -->
-                    <div class="col-md-4">
-                  <h5> Amount Requested</h5>
-                      <div class="form-group">
-                        <input type="number" id="customer-last_name" class="form-control total"
-                          name="amount" aria-required="true" placeholder="0.00"/>
-                      </div>
-                  </div>
-                    <div class="col-md-4">
-                    <table id="tab_logic" class="mb-4">
-                    <tfoot>
-                      <tr >
-                         <h5> Remaining balance</h5>
-                             <th class="text-center" style="width: 230px;">
-                               <input type="number" name="amount" placeholder="" class="form-control"/>
-                             </th>
-                       </tr>
-                    </tfoot>
-                  </table>
-                  </div>
-                    </div>
-              </div>
-            </div>
-                  
-                  <div>
-                    <a class="btn btn-sm btn-primary mt-3" href="view_request.html" type="submit">View</a>
-                  </div>
-              </div>
-                          
                         </div>
-                          </div>
-  
-  
+
+                        <div>
+                          <a class="btn btn-sm btn-primary mt-3" href="view_request.html" type="submit">View</a>
+                        </div>
                       </div>
+
+                    </div>
                   </div>
+
+
+                </div>
               </div>
             </div>
           </div>
-					</div>
+        </div>
+      </div>
 
-				</div>
+    </div>
 
 
 
 
-			</div>
-			<!-- content-wrapper ends -->
-			
-		</div>
-		<!-- main-panel ends -->
-		<script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/selectFilter.min.js"></script>
-		<script src="../thirdparties/bootstrap/bootstrap.min.js"></script>
+  </div>
+  <!-- content-wrapper ends -->
+
+  </div>
+  <!-- main-panel ends -->
+
+  <script>
+    const runCalculations = () => {
+      let db_amount_inp = document.getElementById('db_amount') 
+      let customer_amount_inp = document.getElementById('customer_amount') 
+      let remainder_amount_inp = document.getElementById('remainder_amount') 
+      let db_amount = db_amount_inp.value 
+      let customer_amount = customer_amount_inp.value 
+      let remainder_amount = db_amount - customer_amount
+      if (customer_amount) {
+        remainder_amount_inp.value = remainder_amount
+      } else {
+        remainder_amount_inp.value = null
+      }
+    }
+  </script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/selectFilter.min.js"></script>
+  <script src="../thirdparties/bootstrap/bootstrap.min.js"></script>
 </body>
+
 </html>
