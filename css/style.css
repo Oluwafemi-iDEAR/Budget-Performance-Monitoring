@@ -77,6 +77,10 @@ hr.divider {
   margin-top: 15px !important;
   margin-bottom: 25px !important;
 }
+.space-50{
+  margin-top: 5px !important;
+  margin-bottom: 15px !important;
+}
 
 .card {
     position: relative;
@@ -154,7 +158,7 @@ a.animated-button.thar-three:before {
     outline-offset: -10px;
     -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
     transition: outline-offset .15s ease-in-out, background-color .15s linear;
-    padding: 55px 0px 85px 35%;
+    padding: 5px 0px 15px 35%;
     text-align: center !important;
     margin: 0;
     width: 100%;
@@ -185,7 +189,34 @@ a.animated-button.thar-three:before {
     text-align: center;
 }
 /*************************upload files ends*************************/
+/* **********************Pie chart******************************* */
+/* ---------table--------- */
+.pe{
+  background-color: #3366cc;
+}
+.ce{
+  background-color: #ff9900;
+}
+.oe{
+  background-color: #dc3912;
+}
+.si{
+  background-color: #109618;
+}
+#donutchart{
+  background-color: #88bff2 !important;
+}
+#chart {
+    width: 600px;
+    height: 300px;
+    font-family: Arial;
+    background-color: transparent;
+}
 
+#donutchart {
+    position: relative;
+}
+/* **************************pie chart ends******************** */
 /*************************Login page****************************/
     :root {
   --input-padding-x: 1.5rem;
@@ -486,6 +517,42 @@ article {
 
 /*----------------------bpm2 ends--------------------------*/
 /********************BPM***********************************/
+.button {
+  border: none;
+  border-radius: 0.1px !important;
+  color: white;
+  padding-left: 35px !important;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px !important;
+  font-weight: 500;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  height: 53px;
+  margin: 10px 0;
+	padding:15px;
+	background-color: #F1F2F3;
+	display: block !important;
+	 -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+
+}
+.button2 {
+  background-color: white !important; 
+  color: black; 
+}
+
+.button2:hover {
+  background-color: #88bff2 !important;
+  color: white;
+}
+.button .active{
+     background-color: #88bff2 !important;
+    color: white !important;
+}
 /*************************Header Navbar*********************/
 
 
@@ -567,10 +634,10 @@ article {
   float: right;
   margin-left: 5px;
 }
-
+/* 
 .active:after {
   content: "\2212";
-}
+} */
 
 .content {
   padding: 0 15px;
@@ -1024,3 +1091,6 @@ a.about-item-edit {
 .nav-pills-custom .nav-link.active::before {
   opacity: 1;
 }
+
+
+

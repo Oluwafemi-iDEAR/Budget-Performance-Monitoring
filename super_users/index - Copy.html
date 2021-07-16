@@ -7,7 +7,9 @@
     <title>Activity Log</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
+    
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/mang.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
       <script>
@@ -88,7 +90,7 @@ this.parentNode.insertBefore(section, this);
   </div>
   
   <!-- Left-aligned links (default) -->
-  <a href="#"><strong>YDD</strong></a>
+  <a href="#"><strong>WECA</strong></a>
   <!-- <a href="#contact">Contact</a> -->
   
   <!-- Right-aligned links -->
@@ -104,54 +106,87 @@ this.parentNode.insertBefore(section, this);
   	<div class="space-200"></div>
 	<div class="main-panel">
 			<div class="container">
-
-
 				<div class="row">
 					<div class="col-md-3 grid-margin stretch-card mb-3">
-						<div class="card">
-							<div class="profile-card">
-
-								<div class="profile-header">
-
-									<div class="cover-image">
-										<img src="../images/unnamed.png" class="img img-fluid">
-									</div>
-									<div class="user-image">
-										<img src="../images/avatar.png" class="img ">
-									</div>
-								</div>
-
-								<div class="profile-content">
-									<div class="profile-name">Oluwafemi Ifesanmi</div>
-									<div class="profile-designation">User<a href="../profile.html" class="about-item-edit">Edit</a></div>
-									<ul class="profile-info-list">
-										<a href="index.html" class="profile-info-list-item active"><i class="mdi mdi-eye"></i>Home</a>
-                    <li class="mb-1">
-                      <button style="margin: 10px 0; width: 220px; padding:15px;"
-                                            class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
-                                            data-bs-toggle="collapse" data-bs-target="#budget-collapse"
-                                            aria-expanded="false">
-                                            Create Budget
-                                        </button>
-                      <div class="collapse" id="budget-collapse"><hr class="divider">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                          <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded">Special Interventions</a></li>
-                          <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital Expenditure</a></li>
-                          <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program Expenditure</a></li>
-                          <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operational Expenditure</a></li>
-                        </ul><hr class="divider">
-                      </div>
-                    </li>
-                    
-										<a href="request.html" class="profile-info-list-item"><i class="mdi mdi-bookmark-check"></i>Make A Request</a>
-										<a href="reports.html" class="profile-info-list-item"><i class="mdi mdi-movie"></i>Utilization Reports</a>
-										<a href="requests_status.html" class="profile-info-list-item"><i class="mdi mdi-account"></i>Requests Status</a>
-                   
-      
-                  </ul>
-								</div>
-							</div>
-						</div>
+                <nav>
+                    <ul class="mcd-menu card">
+                      <li>
+                        <a href="index.html" class="active">
+                          <i class="fa fa-dashboard"></i>
+                          <strong>Dashboard</strong>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa fa-comments-o"></i>
+                          <strong>Utilization Reports</strong>
+                        </a>
+                        <ul>
+                          <li><a href="#"><i class="fa fa-globe"></i>Family Development</a></li>
+                          <li><a href="#"><i class="fa fa-group"></i>Youth Development</a></li>
+                          <li><a href="#"><i class="fa fa-globe"></i>DS Office</a></li>
+                          <li><a href="#"><i class="fa fa-group"></i>Corporate Planning and Investment</a></li>
+                          <li><a href="#"><i class="fa fa-globe"></i>Treasury</a></li>
+                          <li><a href="#"><i class="fa fa-group"></i>Infrastructure</a></li>
+                          <li><a href="#"><i class="fa fa-globe"></i>Adminstration</a></li>
+                          <li><a href="#"><i class="fa fa-group"></i>Francophone</a></li>
+                          <li><a href="#"><i class="fa fa-globe"></i>Missions</a></li>
+                          <li><a href="#"><i class="fa fa-group"></i>Worship</a></li>
+                          <li><a href="#"><i class="fa fa-globe"></i>Anthony </a></li>
+                          <li><a href="#"><i class="fa fa-group"></i>Publishing</a></li>
+                        </ul>
+                      </li><div class="space-50"></div>
+                      <li>
+                        <a href="">
+                          <i class="fa fa-comments-o"></i>
+                          <strong>Create Budget</strong>
+                        </a>
+                        <ul>
+                          <li><a href="#"><i class="fa fa-globe"></i>Treasury</a></li>
+                          <li>
+                            <a href="#"><i class="fa fa-group"></i>Anthony Operations</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i class="fa fa-comments-o"></i>
+                          <strong>Transactions</strong>
+                          <small>(Approval)</small>
+                        </a>
+                        <ul>
+                          <li><a href="#"><i class="fa fa-globe"></i>Periods</a></li>
+                          <li>
+                            <a href="#"><i class="fa fa-group"></i>Approvals</a>
+                          </li>
+                        </ul>
+                      </li><div class="space-50"></div>
+                      
+                      <li>
+                        <a href="">
+                          <i class="fa fa-comments-o"></i>
+                          <strong>WECA Reports</strong>
+                        </a>
+                        <ul>
+                          <li><a href="wecareports_bt.html"><i class="fa fa-globe"></i>Budget Template</a></li>
+                          <li><a href="wecareports_ctd.html"><i class="fa fa-group"></i>Cost to Date</a></li>
+                          <li><a href="wecareports_ur.html"><i class="fa fa-globe"></i>Utilization Reports</a></li>
+                          <li><a href="wecareports_rar.html"><i class="fa fa-group"></i>Revenue Actualisation Report</a></li>
+                          <li><a href="wecareports_ieur.html"><i class="fa fa-group"></i>Income & Expenditure Utilization Report</a></li>
+                        </ul>
+                      </li><div class="space-50"></div>
+                      <li>
+                        <a href="">
+                          <i class="fa fa-comments-o"></i>
+                          <strong>Admin Access</strong>
+                        </a>
+                        <ul>
+                          <li><a href="#"><i class="fa fa-globe"></i>Users</a></li>
+                          <li><a href="#"><i class="fa fa-group"></i>Periods</a></li>
+                        </ul>
+                      </li><div class="space-50"></div>
+                    </ul>
+                  </nav>
 					</div>
 
 					<div class="col-md-9 grid-margin stretch-card">

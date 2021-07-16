@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
+
+</head>
+<body>
+  <fieldset class="wrapper-types__investment">
+  
+    <legend class="sr-only">Investment 1</legend>
+  
+    <div class="form-item form-item--required form-item--invamt">
+      <label class="form-item__label" for="wrappers[0]">Investment amount</label>
+      <div class="form-item__input-labelled">
+        <span class="form-item__input-label">&pound;</span>
+        <input class="form-item__input " type="number" name="wrappers[0]" id="wrappers[0]" min="0" value="15000" required>
+      </div>
+    </div>
+    <div class="form-item form-item--charges-wrap">
+      <span class="form-item__label">Charges</span>
+      <div class="form-item form-item--charges">
+        <label class="form-item__input-label-expand" for="percentage1">&#37;</label>
+        <div class="form-item__input-expand">
+          <input class="form-item__input percentage" type="number" name="percentage" id="percentage1">
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-item form-item--charges-wrap">
+      <span class="wrapper-types__percentage">= £<span class="wrapper-types__percentage-value"></span></span>
+    </div>
+    <div class="form-item form-item--action-btns">
+      <a href="#" class="button button--icon button--delete" title="Remove investment"></a>
+      <a href="#" class="button button--icon button--add" title="Add investment"></a>
+    </div>
+  </fieldset>
+  <fieldset class="wrapper-types__investment">
+  
+    <legend class="sr-only">Investment 2</legend>
+  
+    <div class="form-item form-item--required form-item--invamt">
+      <label class="form-item__label" for="wrappers[1]">Investment amount</label>
+      <div class="form-item__input-labelled">
+        <span class="form-item__input-label">&pound;</span>
+        <input class="form-item__input " type="number" name="wrappers[1]" id="wrappers[1]" min="0" value="13005.02" required>
+      </div>
+    </div>
+    <div class="form-item form-item--charges-wrap">
+      <span class="form-item__label">Charges</span>
+  
+      <div class="form-item form-item--charges">
+        <label class="form-item__input-label-expand" for="percentage2">&#37;</label>
+        <div class="form-item__input-expand">
+          <input class="form-item__input percentage" type="number" name="percentage" id="percentage2">
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-item form-item--charges-wrap">
+      <span class="wrapper-types__percentage">= £<span class="wrapper-types__percentage-value"></span></span>
+    </div>
+    <div class="form-item form-item--action-btns">
+      <a href="#" class="button button--icon button--delete" title="Remove investment"></a>
+      <a href="#" class="button button--icon button--add" title="Add investment"></a>
+    </div>
+  
+  </fieldset>
+</body>
+<script>
+  function percentageCal() {
+
+var $price = $(".form-item--invamt .form-item__input").on("input", calculatePerc),
+  $percentage = $(".form-item__input-expand .percentage").on("input", calculatePrice),
+  $currency = $(".form-item__input-expand .currency").on("focus", removePercent),
+  $none = $(".form-item--charges .no-charge").on("focus", removePercent),
+  $increase = $(".wrapper-types__percentage-value"),
+  $increaseWrap = $(".wrapper-types__percentage");
+
+$($percentage).add($currency).keypress(function(event) {
+  if (event.which != 8 && event.which != 0 && (event.which < 48 || event.which > 57)) {
+    return false;
+  }
+});
+
+function calculatePrice() {
+  var percentage = parseFloat($(this).val());
+  var price = parseFloat($price.val());
+  var calcPrice = parseFloat((price * percentage / 100).toFixed(2));
+  var newPrice = price + calcPrice;
+
+  $increase.text(newPrice);
+  $increaseWrap.fadeIn();
+  if (isNaN(newPrice)) {
+    $increaseWrap.hide();
+  }
+}
+
+function calculatePerc() {
+  var percentage = $percentage.val();
+  var price = parseFloat($(this).val());
+  var calcPerc = parseFloat((price * percentage / 100).toFixed(2));
+  var newPrice = price + calcPerc;
+  $increase.text(newPrice);
+}
+
+function removePercent() {
+  $increaseWrap.fadeOut();
+}
+}
+percentageCal();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</html>

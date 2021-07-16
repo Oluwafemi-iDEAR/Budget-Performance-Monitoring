@@ -5,55 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity Log</title>
+    <title>WECA Budget</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
     <script>
-        function myFunction() {
-            // Declare variables
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
-
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-
-        // Sortable Code
-        var fixHelperModified = function (e, tr) {
-            var $originals = tr.children();
-            var $helper = tr.clone();
-
-            $helper.children().each(function (index) {
-                $(this).width($originals.eq(index).width())
-            });
-
-            return $helper;
-        };
-
-        $(".table-sortable tbody").sortable({
-            helper: fixHelperModified
-        }).disableSelection();
-
-        $(".table-sortable thead").disableSelection();
-
-
-
-        $("#add_row").trigger("click");
+       tr:nth-child(2) {
+  counter-reset: rowNumber;
+}
+table tr {
+  counter-increment: rowNumber;
+}
+table tr td:first-child::before {
+  content: counter(rowNumber);
+  min-width: 1em;
+  margin-right: 0.5em;
+}
     </script>
 
 </head>
@@ -70,7 +38,7 @@
             </div>
 
             <!-- Left-aligned links (default) -->
-            <a href="#"><strong>YDD</strong></a>
+            <a href="#"><strong>WECA</strong></a>
             <!-- <a href="#contact">Contact</a> -->
 
             <!-- Right-aligned links -->
@@ -114,7 +82,7 @@
                                             class="mdi mdi-eye"></i>Home</a>
                                     <li class="mb-1">
                                         <button style="margin: 10px 0; width: 220px; padding:15px;"
-                                            class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                            class="btn btn-toggle align-items-center btn-default collapsed profile-info-list-item"
                                             data-bs-toggle="collapse" data-bs-target="#budget-collapse"
                                             aria-expanded="false">
                                             Create Budget
@@ -127,7 +95,7 @@
                                                         Interventions</a></li>
                                                 <li><a href="budget_ce.html"
                                                         class="link-dark profile-info-list-item rounded">
-                                                        Capital Expenditure
+                                                        APITAL/lXPENDITURE
                                                 <li><a href="budget_pe.html"
                                                         class="link-dark profile-info-list-item rounded">Program
                                                         Expenditure</a></li>
@@ -139,11 +107,11 @@
                                     </li>
                                     <a href="request.html" class="profile-info-list-item"><i
                                             class="mdi mdi-bookmark-check"></i>Make A Request</a>
-                                    <a href="reports.html" class="profile-info-list-item active"><i
+                                    <a href="reports.html" class="profile-info-list-item"><i
                                             class="mdi mdi-movie"></i>Utilization Reports</a>
-                                    <a href="requests_status.html" class="profile-info-list-item "><i
+                                    <a href="requests_status.html" class="profile-info-list-item active"><i
                                             class="mdi mdi-account"></i>Requests Status</a>
-                                        </ul>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -168,10 +136,19 @@
                                                             <th> S/N</th>
                                                             <th> Budgetline</th>
                                                             <th> Code</th>
-                                                            <th> Approved Budget</th>
-                                                            <th> Cost to Date</th>
-                                                            <th> Variance</th>
-                                                            <th> Utilization Rate</th>
+                                                            <th> Family Development</th>
+                                                            <th> Youth Development</th>
+                                                            <th> DS Office</th>
+                                                            <th> Corporate Planning and Investment</th>
+                                                            <th> Treasury</th>
+                                                            <th> Infrastructure</th>
+                                                            <th> Adminstration</th>
+                                                            <th> Francophone</th>
+                                                            <th> Missions</th>
+                                                            <th> Worship</th>
+                                                            <th> Anthony</th>
+                                                            <th> Publishing</th>
+                                                            <th> WECA</th>
 
                                                         </tr>
                                                     </thead>
@@ -198,278 +175,502 @@
                                             <div class="table-responsive miner">
                                                 <table id="example"
                                                     class="table table-striped table-bordered dt-responsive nowrap"
-                                                    cellspacing="0" width="100%">  
+                                                    cellspacing="0" width="100%">
                                                     <thead>
                                                         <tr>
-                                                            <th> S/N</th>
+                                                            <th>No</th>
                                                             <th> Budgetline</th>
                                                             <th> Code</th>
-                                                            <th> Approved Budget</th>
-                                                            <th> Cost to Date</th>
-                                                            <th> Variance</th>
-                                                            <th> Utilization Rate</th>
+                                                            <th> Family Development</th>
+                                                            <th> Youth Development</th>
+                                                            <th> DS Office</th>
+                                                            <th> Corporate Planning and Investment</th>
+                                                            <th> Treasury</th>
+                                                            <th> Infrastructure</th>
+                                                            <th> Adminstration</th>
+                                                            <th> Francophone</th>
+                                                            <th> Missions</th>
+                                                            <th> Worship</th>
+                                                            <th> Anthony</th>
+                                                            <th> Publishing</th>
+                                                            <th> WECA</th>
 
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>${i + 1}</td>
-                                                        <td>LAND</td>
-                                                        
-                                                                <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
-                                                                <td>40%</td>
-                                                            </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>FREEHOLD LAND</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>LEASEHOLD LAND</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>BUILDINGS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>CHURCH FURNITURE & FITTINGS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>OFFICE FURNITURE & FITTINGS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>MOTOR CARS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>BUSES</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>MOTOR LORRIES</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>MOTOR CRANE</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>TRACTORS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>FISH PONDS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>FISH HATCHERY</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>GENERATORS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>PLANT & MACHINERY</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>AIRCONDITIONERS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>INVERTERS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>FRIDGES</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>DESKTOPS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>LAPTOPS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>PRINTERS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>COMPUTER SOFTWARES</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>MUSICAL INSTRUMENTS-WORSHIP</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>ELECTRONICS GADGETS</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>ICT EQUIPMENT-MISSION</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                       <tr>
-                                                          <td>${i + 1}</td>
+                                                          <td></td>
                                                       <td>INVESTMENT - PROPERTY</td>
                                                       
                                                                 <td>JO-00095</td>
-                                                                <td>100</td>
-                                                                <td><a href="requests_status.html">40</a></td>
-                                                                <td>60</td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
+                                                                <td><a href="#">40</a></td>
                                                                 <td>40%</td>
                                                             </tr>
                                                     </tbody>
@@ -513,7 +714,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -522,7 +723,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -531,7 +732,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -540,7 +741,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -549,7 +750,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -558,7 +759,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -567,7 +768,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -576,7 +777,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -585,7 +786,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -632,7 +833,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -641,7 +842,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -650,7 +851,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -659,7 +860,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -668,7 +869,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -677,7 +878,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -686,7 +887,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -695,7 +896,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
@@ -704,7 +905,7 @@
                                                             <td></td>
                                                             <td>JO-00095</td>
                                                             <td>100</td>
-                                                            <td><a href="requests_status.html">40</a></td>
+                                                            <td><a href="#">40</a></td>
                                                             <td>60</td>
                                                             <td>40%</td>
                                                         </tr>
