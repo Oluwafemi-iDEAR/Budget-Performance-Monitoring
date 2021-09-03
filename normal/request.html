@@ -116,19 +116,14 @@
                                             aria-expanded="false">
                                             Create Budget
                                         </button>
-                    <div class="collapse" id="budget-collapse">
-                      <hr class="divider">
+                    <div class="collapse" id="budget-collapse"><hr class="divider">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded">Special
-                            Interventions</a></li>
-                        <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital
-                            Expenditure</a></li>
-                        <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program
-                            Expenditure</a></li>
-                        <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operational Expenditure</a>
-                        </li>
-                      </ul>
-                      <hr class="divider">
+                        <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded active">Special Interventions</a></li>
+                        <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital Expenditure</a></li>
+                        <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program Expenditure</a></li>
+                        <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operational Expenditure</a></li>
+                        <li><a href="budget_sum.html" class="link-dark profile-info-list-item rounded"> Budget Summary</a></li>
+                      </ul><hr class="divider">
                     </div>
                   </li>
                   <a href="#" class="profile-info-list-item active"><i class="mdi mdi-bookmark-check"></i>Make A
@@ -152,86 +147,6 @@
                 <div class="card-body">
                   <div class="row clearfix">
                     <div class="col-md-12 mb-4">
-
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group mb-4">
-                            <label for="project_name">Date</label>
-                            <input readonly type="date" name="moment" placeholder="" class="form-control" />
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group mb-4">
-                            <label for="project_name">Directorate</label>
-                            <input readonly type="text" name="moment" placeholder="Directors Office"
-                              class="form-control" />
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="row mb-4">
-                        <div class="col-md-6">
-                          <div class="form-group mb-4">
-                            <label class="control-label" for="period">Description</label>
-                            <div class="controls">
-                              <textarea class="form-control" rows="6" name="description"></textarea>
-                            </div> <!-- /controls -->
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="control-group">
-                            <label class="control-label" for="period">Drop or Click to add Invoice</label>
-                            <div class="controls">
-                              <form method="post" action="#" id="#">
-                                <div class="form-group files color mb-2">
-                                  <input type="file" class="form-control" multiple="">
-                                </div>
-                                <div class="form-group files color mb-2">
-                                  <input type="file" class="form-control" multiple="">
-                                </div>
-                                <div class="form-group files color mb-2">
-                                  <input type="file" class="form-control" multiple="">
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div class="col-md-4">
-            <div class="form-group mb-4">
-              <label for="directorate">Directorate</label>
-              <select name="prod_acc" id="prod_acc" class="form-control">
-                <option value="Select One"> Select One</option>
-                                    <option
-                         value="FDD DIRECTORATE BUDGET" >FDD DIRECTORATE BUDGET</option>
-                                    <option
-                         value="YDD DIRECTORATE BUDGET" >YDD DIRECTORATE BUDGET</option>
-                                    <option
-                         value="2021 DS OFFICE BUDGET" >2021 DS OFFICE BUDGET</option>
-                                    <option
-                         value="CPID DIRECTORATE BUDGET" >CPID DIRECTORATE BUDGET</option>
-                                    <option
-                         value="TREASURY DIRECTORATE BUDGET" >TREASURY DIRECTORATE BUDGET</option>
-                         <option
-                        value="INFRA DIRECTORATE BUDGET" >INFRA DIRECTORATE BUDGET</option>
-                                  <option
-                        value="2021 ADMIN DIRECTORATE BUDGET" >2021 ADMIN DIRECTORATE BUDGET</option>
-                                  <option
-                        value="FRANC DIRECTORATE BUDGET" >FRANC DIRECTORATE BUDGET</option>
-                                  <option
-                        value="MISSION  DIRECTORATE BUDGET" >MISSION  DIRECTORATE BUDGET</option>
-                                  <option
-                        value=" WORSHIP DIRECTORATE BUDGET" > WORSHIP DIRECTORATE BUDGET</option>
-                        <option
-                        value=" ANTHONY CHURCH BUDGET" > ANTHONY CHURCH BUDGET</option>
-                                  <option
-                        value="  PUBLISHING DIRECTORATE BUDGET" >  PUBLISHING DIRECTORATE BUDGET</option>
-                                </select>
-            </div>
-          </div> -->
-                      <h5 class="card-header font-weight-light">
-                        <i class="fa fa-list" aria-hidden="true"></i> Edit Details
-                      </h5>
                       <div class="card-body">
                         <div class="margin-t-md mb-4">
                           <div class="customer-form">
@@ -872,7 +787,7 @@
 
 
 
-                        <div class="alert alert-info">
+                        <div class="alert alert-info container-fluid">
                           <div class="panel container-item">
                             <div class="row">
                               <div class="col-md-4">
@@ -906,11 +821,89 @@
                           </div>
                         </div>
 
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group mb-4">
+                            <label for="project_name">Date</label>
+                            <input readonly type="date" name="moment" placeholder="" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group mb-4">
+                            <label for="project_name">Directorate</label>
+                            <input readonly type="text" name="moment" placeholder="Directors Office"
+                              class="form-control" />
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="row mb-4">
+                        <div class="col-md-6">
+                          <div class="form-group mb-4">
+                            <label class="control-label" for="period">Description</label>
+                            <div class="controls">
+                              <textarea class="form-control" rows="6" name="description"></textarea>
+                            </div> <!-- /controls -->
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="control-group">
+                            <label class="control-label" for="period">Drop or Click to add Invoice</label>
+                            <div class="controls">
+                              <form method="post" action="#" id="#">
+                                <div class="form-group files color mb-2">
+                                  <input type="file" class="form-control" multiple="">
+                                </div>
+                                <div class="form-group files color mb-2">
+                                  <input type="file" class="form-control" multiple="">
+                                </div>
+                                <div class="form-group files color mb-2">
+                                  <input type="file" class="form-control" multiple="">
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-4">
+            <div class="form-group mb-4">
+              <label for="directorate">Directorate</label>
+              <select name="prod_acc" id="prod_acc" class="form-control">
+                <option value="Select One"> Select One</option>
+                                    <option
+                         value="FDD DIRECTORATE BUDGET" >FDD DIRECTORATE BUDGET</option>
+                                    <option
+                         value="YDD DIRECTORATE BUDGET" >YDD DIRECTORATE BUDGET</option>
+                                    <option
+                         value="2021 DS OFFICE BUDGET" >2021 DS OFFICE BUDGET</option>
+                                    <option
+                         value="CPID DIRECTORATE BUDGET" >CPID DIRECTORATE BUDGET</option>
+                                    <option
+                         value="TREASURY DIRECTORATE BUDGET" >TREASURY DIRECTORATE BUDGET</option>
+                         <option
+                        value="INFRA DIRECTORATE BUDGET" >INFRA DIRECTORATE BUDGET</option>
+                                  <option
+                        value="2021 ADMIN DIRECTORATE BUDGET" >2021 ADMIN DIRECTORATE BUDGET</option>
+                                  <option
+                        value="FRANC DIRECTORATE BUDGET" >FRANC DIRECTORATE BUDGET</option>
+                                  <option
+                        value="MISSION  DIRECTORATE BUDGET" >MISSION  DIRECTORATE BUDGET</option>
+                                  <option
+                        value=" WORSHIP DIRECTORATE BUDGET" > WORSHIP DIRECTORATE BUDGET</option>
+                        <option
+                        value=" ANTHONY CHURCH BUDGET" > ANTHONY CHURCH BUDGET</option>
+                                  <option
+                        value="  PUBLISHING DIRECTORATE BUDGET" >  PUBLISHING DIRECTORATE BUDGET</option>
+                                </select>
+            </div>
+          </div> -->
+                     
+
                         <div>
                           <a class="btn btn-sm btn-primary mt-3" href="view_request.html" type="submit">View</a>
                         </div>
-                      </div>
-
                     </div>
                   </div>
 
@@ -957,6 +950,7 @@
   </script>
   <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
   <script src="../js/jquery.min.js"></script>
+  <script src="../js/accounting.js"></script>
   <script src="../js/selectFilter.min.js"></script>
   <script src="../thirdparties/bootstrap/bootstrap.min.js"></script>
 </body>

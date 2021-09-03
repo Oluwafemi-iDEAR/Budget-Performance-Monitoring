@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/mang.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style></style>
+    <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        // Sortable Code
+        var fixHelperModified = function (e, tr) {
+            var $originals = tr.children();
+            var $helper = tr.clone();
+
+            $helper.children().each(function (index) {
+                $(this).width($originals.eq(index).width())
+            });
+
+            return $helper;
+        };
+
+        $(".table-sortable tbody").sortable({
+            helper: fixHelperModified
+        }).disableSelection();
+
+        $(".table-sortable thead").disableSelection();
+
+
+
+        $("#add_row").trigger("click");
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="topnav wow fadeIn" data-wow-duration="9s">
+
+            <!-- Centered link -->
+            <div class="topnav-centered">
+                <a href="#home" class="active"><img src="../images/Jesus-Light-of-the-World.png" height="50" width="100"
+                        class="d-none d-md-block"></a>
+            </div>
+
+            <!-- Left-aligned links (default) -->
+            <a href="#"><strong>WECA</strong></a>
+            <!-- <a href="#contact">Contact</a> -->
+
+            <!-- Right-aligned links -->
+            <div class="topnav-right">
+                <!-- <a href="#search">Search</a> -->
+                <a href="#about"><strong>2021</strong></a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="space-200"></div>
+	<div class="main-panel">
+			<div class="container">
+				<div class="row">
+                <div class="col-md-3 grid-margin stretch-card mb-3">
+                    <div class="card" style=" border-radius: 21px 0 0 21px;">
+                        <div class="profile-card">
+
+								<div class="profile-header">
+
+        <div class="cover-image" style=" border-radius: 21px 0 0 21px;">
+          <img src="../images/unnamed.png" class="img img-fluid">
+      </div>
+									<div class="user-image">
+										<img src="../images/avatar.png" class="img ">
+									</div>
+								</div>
+
+								<div class="profile-content">
+									<div class="profile-name">Oluwafemi Ifesanmi</div>
+									<div class="profile-designation">User<a href="../profile.html" class="about-item-edit">Edit</a></div>
+									<ul class="profile-info-list">
+										<a href="index.html" class="profile-info-list-item active"><i class="fa fa-dashboard"></i>Dashboard</a>
+                    
+                    <li class="">
+                      <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                            class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                            data-bs-toggle="collapse" data-bs-target="#wr-collapse"
+                                            aria-expanded="false">
+                                            WECA Reports
+                                        </button>
+                      <div class="collapse" id="wr-collapse"><hr class="divider">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                          <li><a href="wecareports_bt.html" class="link-dark profile-info-list-item rounded">Budget Template</a></li>
+                          <li><a href="wecareports_ctd.html" class="link-dark profile-info-list-item rounded">Cost to Date</a></li>
+                          <li><a href="wecareports_ur.html" class="link-dark profile-info-list-item rounded">Utilization Reports</a></li>
+                          <li><a href="wecareports_rar.html" class="link-dark profile-info-list-item rounded">Revenue Actualisation Report</a></li>
+                          <li><a href="wecareports_ieur.html" class="link-dark profile-info-list-item rounded">Income & Expenditure Utilization Report</a></li>
+                        </ul><hr class="divider">
+                      </div>
+                    </li>
+                    <li class="">
+                      <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                            class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                            data-bs-toggle="collapse" data-bs-target="#ur-collapse"
+                                            aria-expanded="false">
+                                            Utilization Reports
+                                        </button>
+                      <div class="collapse" id="ur-collapse"><hr class="divider">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Family Development</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Youth Development</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">DS Office</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Corporate Planning and Investment</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Treasury</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Infrastructure</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Adminstration</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Francophone</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Missions</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Worship</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Anthony </a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Publishing</a></li>
+                        </ul><hr class="divider">
+                      </div>
+                    </li>
+                    <li class="">
+                      <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                            class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                            data-bs-toggle="collapse" data-bs-target="#budget-collapse"
+                                            aria-expanded="false">
+                                            Create Budget
+                                        </button>
+                      <div class="collapse" id="budget-collapse"><hr class="divider">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Treasury</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Anthony Operations</a></li>
+                        </ul><hr class="divider">
+                      </div>
+                    </li>
+                    <li class="">
+                      <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                            class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                            data-bs-toggle="collapse" data-bs-target="#ta-collapse"
+                                            aria-expanded="false">
+                                            Transactions Approval
+                                        </button>
+                      <div class="collapse" id="ta-collapse"><hr class="divider">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Pendings</a></li>
+                          <li><a href="#" class="link-dark profile-info-list-item rounded">Approved</a></li>
+                        </ul><hr class="divider">
+                      </div>
+                    </li>
+                    <li class="">
+                      <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                            class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                            data-bs-toggle="collapse" data-bs-target="#aa-collapse"
+                                            aria-expanded="false">
+                                            Admin Access
+                                        </button>
+                      <div class="collapse" id="aa-collapse"><hr class="divider">
+                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="create_users.html" class="link-dark profile-info-list-item rounded">Create Users</a></li>
+                          <li><a href="view_users.html" class="link-dark profile-info-list-item rounded">View Users</a></li>
+                        </ul><hr class="divider">
+                      </div>
+                    </li>
+      
+                  </ul>
+								</div>
+							</div>
+                    </div>
+                </div>
+
+                <div class="col-md-9 grid-margin stretch-card mb-3">
+                    <div class="card myCard" style=" border-radius: 0 21px 21px 0;">
+                        <div class="col">
+                        <div class="card-header font-weight-dark text-center text-dark"><h5>
+                            <strong>Budget Template</strong></h5>
+                       </div>
+                            <div class=" card-body">
+                                <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 col-md-12">
+                                        <div class="table-responsive mt-10 mb-3">
+                                            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0MujbpICDdR9bloKzY7Xags5e-Rm2bMyu7tE0I4qmCyYS1mYK1SGg1_HoCNDCsg/pubhtml?widget=true&amp;headers=true" width="850px" height="470px"></iframe>
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-primary">Download <i class="fa fa-download"></i></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content-wrapper ends -->
+
+    </div>
+    <!-- main-panel ends -->
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/r20210621/r20190131/show_ads_impl_fy2019.js"
+        id="google_shimpl"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/selectFilter.min.js"></script>
+    <script src="../thirdparties/bootstrap/bootstrap.min.js"></script>
+
+    <script>
+        const tableData = [
+            {
+                budget_line: 'INTERVENTIONS FOREIGN MISSION',
+                code: '12324',
+               approved_budget: Math.round(Math.random() * 100),
+                cost_to_date: Math.round(Math.random() * 10),
+            },
+            {
+                budget_line: 'INTERVENTIONS FOREIGN MISSION',
+                code: '12324',
+               approved_budget: Math.round(Math.random() * 100),
+                cost_to_date: Math.round(Math.random() * 10),
+            },
+            {
+                budget_line: 'INTERVENTIONS FOREIGN MISSION',
+                code: '12324',
+               approved_budget: Math.round(Math.random() * 100),
+                cost_to_date: Math.round(Math.random() * 10),
+            },
+            {
+                budget_line: 'INTERVENTIONS FOREIGN MISSION',
+                code: '12324',
+               approved_budget: Math.round(Math.random() * 100),
+                cost_to_date: Math.round(Math.random() * 10),
+            },
+            {
+                budget_line: 'INTERVENTIONS FOREIGN MISSION',
+                code: '12324',
+               approved_budget: Math.round(Math.random() * 100),
+                cost_to_date: Math.round(Math.random() * 10),
+            },
+            {
+                budget_line: 'INTERVENTIONS FOREIGN MISSION',
+                code: '12324',
+               approved_budget: Math.round(Math.random() * 100),
+                cost_to_date: Math.round(Math.random() * 10),
+            },
+            {
+                budget_line: 'INTERVENTIONS FOREIGN MISSION',
+                code: '12324',
+               approved_budget: Math.round(Math.random() * 100),
+                cost_to_date: Math.round(Math.random() * 10),
+            },
+            {
+                budget_line: 'INTERVENTIONS FOREIGN MISSION',
+                code: '12324',
+               approved_budget: Math.round(Math.random() * 100),
+                cost_to_date: Math.round(Math.random() * 10),
+            },
+        ]
+
+        const tableData_ = tableData.map(data => {
+            return {
+                ...data,
+                variance: data.approved_budget - data.cost_to_date,
+                utilization_rate:  ((data.cost_to_date * 100)/data.approved_budget).toFixed(2)
+            }
+        })
+        const tableBody = document.getElementById('table-body')
+        tableData_.forEach((data, i) => {
+            tableBody.insertAdjacentHTML(
+                'beforeend',
+                `<tr>
+                    <td>${i + 1}</td>
+                    <td>${data.budget_line}</td>
+                    <td>${data.code}</td>
+                    <td>${data.approved_budget}</td>
+                    <td><a href="#">${data.cost_to_date}</a></td>
+                    <td>${data.variance}</td>
+                    <td>${data.utilization_rate}%</td>
+                </tr>`
+            )
+        });
+        
+
+        // research other array functions like filter, find, some, any, fill, for, forEach...
+    </script>
+</body>
+
+</html>

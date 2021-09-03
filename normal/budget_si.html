@@ -91,9 +91,9 @@
 
 								<div class="profile-header">
 
-									<div class="cover-image">
-										<img src="../images/unnamed.png" class="img img-fluid">
-									</div>
+        <div class="cover-image" style=" border-radius: 21px 0 0 21px;">
+          <img src="../images/unnamed.png" class="img img-fluid">
+      </div>
 									<div class="user-image">
 										<img src="../images/avatar.png" class="img ">
 									</div>
@@ -118,6 +118,7 @@
                           <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital Expenditure</a></li>
                           <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program Expenditure</a></li>
                           <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operational Expenditure</a></li>
+                          <li><a href="budget_sum.html" class="link-dark profile-info-list-item rounded"> Budget Summary</a></li>
                         </ul><hr class="divider">
                       </div>
                     </li>
@@ -159,7 +160,7 @@
                                     <input type="text" name="budgetline" placeholder="" class="form-control"/>
                                   </td>
                                   <td data-name="desc">
-                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
                                   </td>
                                   <td data-name="del">
       
@@ -176,7 +177,7 @@
                                     <input type="text" name="budgetline" placeholder="" class="form-control"/>
                                   </td>
                                   <td data-name="desc">
-                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
                                   </td>
                                   <td data-name="del">
       
@@ -193,7 +194,7 @@
                                     <input type="text" name="budgetline" placeholder="" class="form-control"/>
                                   </td>
                                   <td data-name="desc">
-                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
                                   </td>
                                   <td data-name="del">
       
@@ -210,7 +211,7 @@
                                     <input type="text" name="budgetline" placeholder="" class="form-control"/>
                                   </td>
                                   <td data-name="desc">
-                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
                                   </td>
                                   <td data-name="del">
       
@@ -227,7 +228,7 @@
                                     <input type="text" name="budgetline" placeholder="" class="form-control"/>
                                   </td>
                                   <td data-name="desc">
-                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
                                   </td>
                                   <td data-name="del">
       
@@ -244,7 +245,7 @@
                                     <input type="text" name="budgetline" placeholder="" class="form-control"/>
                                   </td>
                                   <td data-name="desc">
-                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
                                   </td>
                                   <td data-name="del">
       
@@ -261,7 +262,7 @@
                                     <input type="text" name="budgetline" placeholder="" class="form-control"/>
                                   </td>
                                   <td data-name="desc">
-                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
                                   </td>
                                   <td data-name="del">
       
@@ -278,12 +279,11 @@
                                     <input type="text" name="budgetline" placeholder="" class="form-control"/>
                                   </td>
                                   <td data-name="desc">
-                                    <input type="number" name="amount" placeholder="" class="form-control"/>
+                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
                                   </td>
                                   <td data-name="del">
-      
-                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
-                                    </td>
+                                    <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                  </td>
                                 </form>
                                 </tr>
                               </tbody>
@@ -298,7 +298,7 @@
                                   <th class="text-center"></th>
                                     <th class="text-center"></th>
                                       <th class="text-center" style="width: 230px;">
-                                        <input type="number" name="amount" placeholder="" class="form-control"/>
+                                        <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
                                       </th>
                                 </tr>
                              </tfoot>
@@ -561,8 +561,7 @@
                                             <div class="col-md-4">
                                               <div class="form-group">
                                                 <h5 style="color: #495057 !important; text-align: center;">Amount</h5>
-                                                <input type="number" id="customer-last_name" class="form-control total"
-                                                  name="amount" maxlength="64" aria-required="true" placeholder="0.00"/>
+                                                <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
                                               </div>
                                             </div>
                                           </div>
@@ -575,9 +574,9 @@
                                   </div>
                                 </form>
                               </div>
-                                <div>
+                                <!-- <div>
                                   <input type="submit" class="remove-item btn btn-sm btn-primary mt-3 remove-social-media" name="save" value="Continue" >
-                                </div>
+                                </div> -->
                             </div>
                         </div>
   
@@ -599,99 +598,31 @@
 			
 		</div>
 		<!-- main-panel ends -->
-    <script type="text/javascript">
-      Vue.filter("currencyDisplay", {
-          // model -> view
-          read: function (val) {
-              if (val > 0) {
-                  val = accounting.toFixed(val, 2);
-                  return accounting.formatMoney(val, "", 2, ",");
-              }
-          },
-          // view -> model
-          write: function (val, oldVal) {
-              val = accounting.toFixed(val, 2);
-              return accounting.unformat(val);
-          }
-      });
+    <script>
+      //pick all elements with class of customer_amount
+     const customers_amounts = document.querySelectorAll('.customer_amount');
 
-      Vue.directive("sortable", {
-          twoWay: true,
-          deep: true,
-          bind: function () {
-              var that = this;
+     customers_amounts.forEach((customer_amount) =>{
 
-              var options = {
-                  draggable: Object.keys(this.modifiers)[0]
-              };
+        //look for the customer_amount that was blurred..
+        customer_amount.addEventListener('blur', function(){
+              
+          let customer_amount_value = parseFloat(this.value).toLocaleString()
+          setTimeout(() => {
+               this.value = customer_amount_value;
+              //  alert(customer_amount_value)
+          }, 100);
 
-              this.sortable = Sortable.create(this.el, options);
-              console.log("sortable bound!");
+        })
 
-              this.sortable.option("onUpdate", function (e) {
-                  that.value.splice(e.newIndex, 0, that.value.splice(e.oldIndex, 1)[0]);
-              });
 
-              this.onUpdate = function (value) {
-                  that.value = value;
-              };
-          },
-          update: function (value) {
-              this.onUpdate(value);
-          }
-      });
-
-      var vm = new Vue({
-          el: "#app",
-          data: {
-              rows: [
-                  //initial data
-                  { account_name: 0, desc: "", cr: 0, dr: 0 },
-              ],
-
-          },
-          computed: {
-              total_cr: function () {
-                  var t = 0;
-                  $.each(this.rows, function (i, e) {
-                      t += accounting.unformat(e.cr);
-                  });
-                  return t;
-              },
-              total_dr: function () {
-                  var t = 0;
-                  $.each(this.rows, function (i, e) {
-                      t += accounting.unformat(e.dr);
-                  });
-                  return t;
-              },
-          },
-
-          methods: {
-              addRow: function (index) {
-                  try {
-                      this.rows.splice(index + 1, 0, {});
-                  } catch (e) {
-                      console.log(e);
-                  }
-              },
-              removeRow: function (index) {
-                  this.rows.splice(index, 1);
-              },
-
-          }
-      });
-
+     })
   </script>
   
 		<script src="../thirdparties/bootstrap/bootstrap.min.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery-1.7.2.min.js"></script>
-    <script src='../js/accounting.js'></script>
-    <script src='../js/Sortable.min.js'></script>
-    <script src='../js/vue.min.js'></script>
-
     <script src="../js/selectFilter.min.js"></script>
 </body>
 </html>

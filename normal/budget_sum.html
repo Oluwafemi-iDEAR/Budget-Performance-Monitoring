@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="topnav wow fadeIn" data-wow-duration="9s">
+
+            <!-- Centered link -->
+            <div class="topnav-centered">
+                <a href="#home" class="active"><img src="../images/Jesus-Light-of-the-World.png" height="50" width="100"
+                        class="d-none d-md-block"></a>
+            </div>
+
+            <!-- Left-aligned links (default) -->
+            <a href="#"><strong>YDD</strong></a>
+            <!-- <a href="#contact">Contact</a> -->
+
+            <!-- Right-aligned links -->
+            <div class="topnav-right">
+                <!-- <a href="#search">Search</a> -->
+                <a href="#about"><strong>2021</strong></a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="space-200"></div>
+    <div class="main-panel">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-md-3 grid-margin stretch-card mb-3">
+                    <div class="card" style=" border-radius: 21px 0 0 21px;">
+                        <div class="profile-card">
+
+                            <div class="profile-header">
+
+                                <div class="cover-image">
+                                    <img src="../images/unnamed.png" class="img img-fluid"
+                                        style=" border-radius: 21px 0 0 0;">
+                                </div>
+                                <div class="user-image">
+                                    <img src="../images/avatar.png" class="img ">
+                                </div>
+                            </div>
+
+                            <div class="profile-content">
+                                <div class="profile-name">Oluwafemi Ifesanmi</div>
+                                <div class="profile-designation">User<a href="../profile.html"
+                                        class="about-item-edit">Edit</a></div>
+                                <!-- 	<p class="profile-description">Just a few notice to what the MOD can do on the application consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p> -->
+                                <ul class="profile-info-list">
+                                    <a href="index.html" class="profile-info-list-item"><i
+                                            class="mdi mdi-eye"></i>Home</a>
+                                    <li class="mb-1">
+                                        <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                            class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                            data-bs-toggle="collapse" data-bs-target="#budget-collapse"
+                                            aria-expanded="false">
+                                            Create Budget
+                                        </button>
+                                        <div class="collapse" id="budget-collapse"><hr class="divider">
+                                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                              <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded active">Special Interventions</a></li>
+                                              <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital Expenditure</a></li>
+                                              <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program Expenditure</a></li>
+                                              <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operational Expenditure</a></li>
+                                              <li><a href="budget_sum.html" class="link-dark profile-info-list-item rounded"> Budget Summary</a></li>
+                                            </ul><hr class="divider">
+                                          </div>
+                                    </li>
+                                    <a href="request.html" class="profile-info-list-item"><i
+                                            class="mdi mdi-bookmark-check"></i>Make A Request</a>
+                                    <a href="reports.html" class="profile-info-list-item active"><i
+                                            class="mdi mdi-movie"></i>Utilization Reports</a>
+                                    <a href="requests_status.html" class="profile-info-list-item "><i
+                                            class="mdi mdi-account"></i>Requests Status</a>
+                                        </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9 grid-margin stretch-card">
+                    <div class="card myCard" style=" border-radius: 0 21px 21px 0;">
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 col-md-12">
+                                    <div class="container mt-10">
+
+                                        <button class="collapsible" style=" border-radius: 0 31px 3px 30px;">SPECIAL
+                                            INTERVENTIONS</button>
+                                        <div class="content bg-dark">
+                                            <div class="col-md-12 table-responsive miner mb-4">
+                                                <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                                                  <thead>
+                                                    <tr >
+                                                      <th class="text-center">Above The line</th>
+                                                      <th class="text-center">Budget Line</th>
+                                                        <th class="text-center">Amount</th>
+                                                          <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;"></th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                               <table id="tab_logic" class="mb-4">
+                                                 <tfoot>
+                                                   <tr >
+                                                      <th class="text-center">Total</th>
+                                                      <th class="text-center"></th>
+                                                      <th class="text-center"></th>
+                                                      <th class="text-center"></th>
+                                                        <th class="text-center"></th>
+                                                          <th class="text-center" style="width: 230px;">
+                                                            <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                          </th>
+                                                    </tr>
+                                                 </tfoot>
+                                               </table>
+                                        </div>
+                                        <br>
+                                        <button class="collapsible" style=" border-radius: 0 31px 3px 30px;">CAPITAL
+                                            EXPENDITURE</button>
+                                        <div class="content bg-dark">
+                                            <div class="col-md-12 table-responsive miner mb-4">
+                                                <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                                                  <thead>
+                                                    <tr >
+                                                      <th class="text-center">Above The line</th>
+                                                      <th class="text-center">Budget Line</th>
+                                                        <th class="text-center">Amount</th>
+                                                          <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;"></th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                               <table id="tab_logic" class="mb-4">
+                                                 <tfoot>
+                                                   <tr >
+                                                      <th class="text-center">Total</th>
+                                                      <th class="text-center"></th>
+                                                      <th class="text-center"></th>
+                                                      <th class="text-center"></th>
+                                                        <th class="text-center"></th>
+                                                          <th class="text-center" style="width: 230px;">
+                                                            <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                          </th>
+                                                    </tr>
+                                                 </tfoot>
+                                               </table>
+                                        </div>
+                                        <br>
+                                        <button class="collapsible" style=" border-radius: 0 31px 3px 30px;">PROGRAMME
+                                            EXPENDITURE</button>
+                                        <div class="content bg-dark">
+                                            <div class="col-md-12 table-responsive miner mb-4">
+                                                <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                                                  <thead>
+                                                    <tr >
+                                                      <th class="text-center">Above The line</th>
+                                                      <th class="text-center">Budget Line</th>
+                                                        <th class="text-center">Amount</th>
+                                                          <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;"></th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                               <table id="tab_logic" class="mb-4">
+                                                 <tfoot>
+                                                   <tr >
+                                                      <th class="text-center">Total</th>
+                                                      <th class="text-center"></th>
+                                                      <th class="text-center"></th>
+                                                      <th class="text-center"></th>
+                                                        <th class="text-center"></th>
+                                                          <th class="text-center" style="width: 230px;">
+                                                            <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                          </th>
+                                                    </tr>
+                                                 </tfoot>
+                                               </table>
+                                        </div>
+                                        <br>
+                                        <button class="collapsible" style=" border-radius: 0 31px 3px 30px;">OPERATIONS
+                                            (RECURRENT) EXP</button>
+                                        <div class="content bg-dark">
+                                            <div class="col-md-12 table-responsive miner mb-4">
+                                                <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                                                  <thead>
+                                                    <tr >
+                                                      <th class="text-center">Above The line</th>
+                                                      <th class="text-center">Budget Line</th>
+                                                        <th class="text-center">Amount</th>
+                                                          <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;"></th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                    <tr id='addr0' data-id="0" class="hidden">
+                                                    <form class="" action="" method="post">
+                                                      <td data-name="desc">
+                                                        <input type="text" name="abovetheline " placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input type="text" name="budgetline" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="desc">
+                                                        <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                      </td>
+                                                      <td data-name="del">
+                          
+                                                          <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
+                                                        </td>
+                                                    </form>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                               <table id="tab_logic" class="mb-4">
+                                                 <tfoot>
+                                                   <tr >
+                                                      <th class="text-center">Total</th>
+                                                      <th class="text-center"></th>
+                                                      <th class="text-center"></th>
+                                                      <th class="text-center"></th>
+                                                        <th class="text-center"></th>
+                                                          <th class="text-center" style="width: 230px;">
+                                                            <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" name="amount" placeholder="" class="form-control"/>
+                                                          </th>
+                                                    </tr>
+                                                 </tfoot>
+                                               </table>
+                                        </div>
+                                        <br>
+                                        <!-- <div class="table-responsive">
+                                            <table id="example"
+                                                class="table table-striped table-borderless dt-responsive nowrap"
+                                                cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Total Budgetline</th>
+                                                        <th> Approved Budget</th>
+                                                        <th> Cost to Date</th>
+                                                        <th> Variance</th>
+                                                        <th> Utilization Rate</th>
+
+                                                    </tr>
+                                                </thead>
+                                        <tfoot class="col-span">
+                                            <tr>
+                                                <td>
+                                                    <strong>FINAL TOTAL</strong>
+                                                </td>
+                                                <td>₦900.00</td>
+                                                <td>₦360.00</td>
+                                                <td>₦540.00</td>
+                                                <td>40%</td>
+                                            </tr>
+                                        </tfoot>
+                                        </table>
+                                        </div> -->
+                                        <button class="btn btn-sm btn-primary">Download <i class="fa fa-download"></i></button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content-wrapper ends -->
+
+    </div>
+    <!-- main-panel ends -->
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/r20210621/r20190131/show_ads_impl_fy2019.js"
+        id="google_shimpl"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/selectFilter.min.js"></script>
+    <script src="../thirdparties/bootstrap/bootstrap.min.js"></script>
+
+</body>
+
+</html>

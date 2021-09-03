@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
+      <script>
+    wow = new WOW(
+ {
+   animateClass: 'animated',
+   offset:       100,
+   callback:     function(box) {
+     console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+   }
+ }
+);
+wow.init();
+document.getElementById('moar').onclick = function() {
+ var section = document.createElement('section');
+ section.className = 'section--purple wow fadeInDown';
+ this.parentNode.insertBefore(section, this);
+};
+</script>
+  
+    <style>
+#container {
+  width: 500px;
+  margin: auto;
+}
+
+</style>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="hero">
+   <div class="container">
+     <div class="topnav wow fadeIn" data-wow-duration="9s">
+
+ <!-- Centered link -->
+ <div class="topnav-centered">
+   <a href="#home" class="active"><img src="../images/Jesus-Light-of-the-World.png" height="50" width="100" class="d-none d-md-block"></a>
+ </div>
+ 
+ <!-- Left-aligned links (default) -->
+ <a href="#"><strong>YDD</strong></a>
+ <!-- <a href="#contact">Contact</a> -->
+ 
+ <!-- Right-aligned links -->
+ <div class="topnav-right">
+   <!-- <a href="#search">Search</a> -->
+   <a href="#about"><strong>2021</strong></a>
+ </div>
+ 
+</div>
+
+   </div>
+
+    <div class="space-200"></div>
+  <div class="main-panel">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-3 grid-margin stretch-card mb-3">
+                 <div class="card" style=" border-radius: 21px 0 0 21px;">
+                           <div class="profile-card">
+   
+                                   <div class="profile-header">
+   
+                                       <div class="cover-image" style=" border-radius: 21px 0 0 21px;">
+                                           <img src="../images/unnamed.png" class="img img-fluid">
+                                       </div>
+                                       <div class="user-image">
+                                           <img src="../images/avatar.png" class="img ">
+                                       </div>
+                                   </div>
+   
+                                   <div class="profile-content">
+                                       <div class="profile-name">Oluwafemi Ifesanmi</div>
+                                       <div class="profile-designation">User<a href="../profile.html" class="about-item-edit">Edit</a></div>
+                                       <ul class="profile-info-list">
+                                           <a href="index.html" class="profile-info-list-item active"><i class="fa fa-dashboard"></i>Dashboard</a>
+                       
+                       <li class="">
+                         <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                               class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                               data-bs-toggle="collapse" data-bs-target="#wr-collapse"
+                                               aria-expanded="false">
+                                               WECA Reports
+                                           </button>
+                         <div class="collapse" id="wr-collapse"><hr class="divider">
+                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                             <li><a href="wecareports_bt.html" class="link-dark profile-info-list-item rounded">Budget Template</a></li>
+                             <li><a href="wecareports_ctd.html" class="link-dark profile-info-list-item rounded">Cost to Date</a></li>
+                             <li><a href="wecareports_ur.html" class="link-dark profile-info-list-item rounded">Utilization Reports</a></li>
+                             <li><a href="wecareports_rar.html" class="link-dark profile-info-list-item rounded">Revenue Actualisation Report</a></li>
+                             <li><a href="wecareports_ieur.html" class="link-dark profile-info-list-item rounded">Income & Expenditure Utilization Report</a></li>
+                           </ul><hr class="divider">
+                         </div>
+                       </li>
+                       <li class="">
+                         <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                               class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                               data-bs-toggle="collapse" data-bs-target="#bs-collapse"
+                                               aria-expanded="false">
+                                               Budget Submission
+                                           </button>
+                         <div class="collapse" id="bs-collapse"><hr class="divider">
+                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Family Development</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Youth Development</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">DS Office</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Corporate Planning and Investment</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Treasury</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Infrastructure</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Adminstration</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Francophone</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Missions</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Worship</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Anthony </a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Publishing</a></li>
+                           </ul><hr class="divider">
+                         </div>
+                       </li>
+                       <li class="">
+                         <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                               class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                               data-bs-toggle="collapse" data-bs-target="#ur-collapse"
+                                               aria-expanded="false">
+                                               Utilization Reports
+                                           </button>
+                         <div class="collapse" id="ur-collapse"><hr class="divider">
+                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Family Development</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Youth Development</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">DS Office</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Corporate Planning and Investment</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Treasury</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Infrastructure</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Adminstration</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Francophone</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Missions</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Worship</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Anthony </a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Publishing</a></li>
+                           </ul><hr class="divider">
+                         </div>
+                       </li>
+                       <li class="">
+                         <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                               class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                               data-bs-toggle="collapse" data-bs-target="#budget-collapse"
+                                               aria-expanded="false">
+                                               Create Budget
+                                           </button>
+                         <div class="collapse" id="budget-collapse"><hr class="divider">
+                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Treasury</a></li>
+                             <li><a href="#" class="link-dark profile-info-list-item rounded">Anthony Operations</a></li>
+                           </ul><hr class="divider">
+                         </div>
+                       </li>
+                       <li class="">
+                         <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                               class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                               data-bs-toggle="collapse" data-bs-target="#ta-collapse"
+                                               aria-expanded="false">
+                                               Transactions Approval
+                                           </button>
+                         <div class="collapse" id="ta-collapse"><hr class="divider">
+                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                             <li><a href="pending_status.html" class="link-dark profile-info-list-item rounded">Pending</a></li>
+                             <li><a href="approved_status.html" class="link-dark profile-info-list-item rounded">Approved</a></li>
+                           </ul><hr class="divider">
+                         </div>
+                       </li>
+                       <li class="">
+                         <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                               class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                               data-bs-toggle="collapse" data-bs-target="#aa-collapse"
+                                               aria-expanded="false">
+                                               Admin Access
+                                           </button>
+                         <div class="collapse" id="aa-collapse"><hr class="divider">
+                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                               <li><a href="create_users.html" class="link-dark profile-info-list-item rounded">Create User</a></li>
+                             <li><a href="view_users.html" class="link-dark profile-info-list-item rounded">View Users</a></li>
+                           </ul><hr class="divider">
+                         </div>
+                       </li>
+         
+                     </ul>
+                                   </div>
+                               </div>
+                       </div>
+              </div>
+
+              <div class="col-md-9 grid-margin stretch-card">
+                 
+           <div class="card">
+             <div class="col p-4">
+             <div class="card myForm">
+                 <h5 class="card-header font-weight-light"><i class="fa fa-file" aria-hidden="true"></i> Create Users</h5>
+                 <div class="card-body">
+
+                  <div class="stepwizard">
+                     <div class="stepwizard-row setup-panel">
+                         <div class="stepwizard-step">
+                             <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                             <p>Step 1</p>
+                         </div>
+                         <div class="stepwizard-step">
+                             <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                             <p>Step 2</p>
+                         </div>
+                         <div class="stepwizard-step">
+                             <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                             <p>Step 3</p>
+                         </div>
+                     </div>
+                 </div>
+                 <form role="form">
+                     <div class="row setup-content" id="step-1">
+                         <div class="col-xs-12">
+                             <div class="col-md-9 m-auto mt-4">
+                                 <h3> Step 1</h3>
+                                   <form>
+                                      <div class="form-group">
+                                         <label>Firstname</label>
+                                         <input type="text" class="form-control mb-3" name="firstname" placeholder="Firstname">
+                                      </div>
+                                      <div class="form-group">
+                                         <label>Lastname</label>
+                                         <input type="text" class="form-control mb-3" name="lastname" placeholder="Lastname">
+                                      </div>
+                                      <div class="form-group">
+                                         <label>User ID</label>
+                                         <input type="text" class="form-control mb-3" name="id" placeholder="User Id">
+                                      </div>
+                                      <div class="form-group">
+                                         <label>Email</label>
+                                         <input type="email" class="form-control mb-3" name="email" placeholder="Email">
+                                      </div>
+                                      <div class="form-group">
+                                         <label>Phone</label>
+                                         <input type="text" class="form-control mb-3" name="phone" placeholder="Phone number">
+                                      </div>
+                                   </form>
+                                 <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row setup-content" id="step-2">
+                         <div class="col-xs-12">
+                             <div class="col-md-9 m-auto mt-4">
+                                 <h3> Step 2</h3>
+                                    <div class="login-form col-md-9 m-auto mb-3">
+                                       <form>
+                                       <div class="form-group row mt-3">
+                                          <div class="col-sm-12">
+                                          <select class="form-control" name ="directorate" onchange="yesnoCheck(this);">
+                                          <option value="">Choose User Type</option>
+                                          <option value="Admin">Admin</option>
+                                          <option value="Super User">Super User</option>
+                                          <option value="other">Normal User</option>
+                                      </select>
+                                          </div>
+                                       </div>
+                                      
+                                      <div id="ifYes" style="display: none;">
+                                          <div class="form-group">
+                                         <h5 style=" color: #495057 !important; text-align: center;">Directorate</h5>
+                                         <select class="form-control" name ="directorate" data-target="sub">
+                                           <option value="Select One"> Select Directorate</option>
+                                           <option value="FDD" data-belong="ore">FDD</option>
+                                           <option value="YDD" data-belong="ore">YDD</option>
+                                           <option value="DS" data-belong="ore">DS</option>
+                                           <option value="CIPD" data-belong="ore">CIPD</option>
+                                           <option value="Directors Office" data-belong="ore">Directors Office</option>
+                                           <option value="Mission" data-belong="ore">Mission</option>
+                                           <option value="Worship" data-belong="ore">Worship</option>
+                                           <option value="Anthony Budget" data-belong="ore">Anthony Budget</option>
+                                           <option value="Infrastructure" data-belong="ore">Infrastructure</option>
+                                           <option value="Publishing" data-belong="ore">Publishing</option>
+                                           <option value="Treasury" data-belong="ore">Treasury</option>
+                                         </select>
+                                       </div></div>
+                                       </form>
+                                    </div>
+                                 <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row setup-content" id="step-3">
+                         <div class="col-xs-12">
+                             <div class="col-md-12">
+                                 <h3> Step 3</h3>
+                                 <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
+                             </div>
+                         </div>
+                     </div>
+                 </form>
+
+                 </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script>
+   $(document).ready(function () {
+
+var navListItems = $('div.setup-panel div a'),
+        allWells = $('.setup-content'),
+        allNextBtn = $('.nextBtn');
+
+allWells.hide();
+
+navListItems.click(function (e) {
+    e.preventDefault();
+    var $target = $($(this).attr('href')),
+            $item = $(this);
+
+    if (!$item.hasClass('disabled')) {
+        navListItems.removeClass('btn-primary').addClass('btn-default');
+        $item.addClass('btn-primary');
+        allWells.hide();
+        $target.show();
+        $target.find('input:eq(0)').focus();
+    }
+});
+
+allNextBtn.click(function(){
+    var curStep = $(this).closest(".setup-content"),
+        curStepBtn = curStep.attr("id"),
+        nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+        curInputs = curStep.find("input[type='text'],input[type='url']"),
+        isValid = true;
+
+    $(".form-group").removeClass("has-error");
+    for(var i=0; i<curInputs.length; i++){
+        if (!curInputs[i].validity.valid){
+            isValid = false;
+            $(curInputs[i]).closest(".form-group").addClass("has-error");
+        }
+    }
+
+    if (isValid)
+        nextStepWizard.removeAttr('disabled').trigger('click');
+});
+
+$('div.setup-panel div a.btn-primary').trigger('click');
+});
+</script>
+
+
+<script>
+   function yesnoCheck(that) {
+    if (that.value == "other") {
+        document.getElementById("ifYes").style.display = "block";
+    } else {
+        document.getElementById("ifYes").style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
