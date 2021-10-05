@@ -108,14 +108,15 @@ this.parentNode.insertBefore(section, this);
 
 				<div class="row">
 					<div class="col-md-3 grid-margin stretch-card mb-3">
-						<div class="card">
-							<div class="profile-card">
+						<div class="card" style=" border-radius: 21px 0 0 21px;">
+                        <div class="profile-card">
 
 								<div class="profile-header">
 
-        <div class="cover-image" style=" border-radius: 21px 0 0 21px;">
-          <img src="../images/unnamed.png" class="img img-fluid">
-      </div>
+        <div class="cover-image">
+                                    <img src="../images/unnamed.png" class="img img-fluid"
+                                        style=" border-radius: 21px 0 0 0;">
+                                </div>
 									<div class="user-image">
 										<img src="../images/avatar.png" class="img ">
 									</div>
@@ -127,9 +128,12 @@ this.parentNode.insertBefore(section, this);
 									<ul class="profile-info-list">
 										<a href="index.html" class="profile-info-list-item active"><i class="mdi mdi-eye"></i>Home</a>
                     <li class="mb-1">
-                      <button style="margin: 10px 0; width: 220px; padding:15px;" class="btn btn-toggle align-items-center rounded collapsed profile-info-list-item" data-bs-toggle="collapse" data-bs-target="#budget-collapse" aria-expanded="false">
-                        Create Budget
-                      </button>
+                      <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                            class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                            data-bs-toggle="collapse" data-bs-target="#budget-collapse"
+                                            aria-expanded="false">
+                                            Create Budget
+                                        </button>
                       <div class="collapse" id="budget-collapse"><hr class="divider">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                           <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded">Special Interventions</a></li>
@@ -246,7 +250,14 @@ this.parentNode.insertBefore(section, this);
                                                 <td class="text-left"></td>
                                             </tr>
                                             <tr>
-                                                <td class="text-center text-dark" colspan="2">For Official Use</td>
+                                                <th rowspan="2" class="text-center text-dark">Attachment</th>
+                                                <td class="text-right">First:</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">Second:</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-center text-dark" colspan="2">For Official Use</th>
                                             </tr>
                                             <tr>
                                                 <th rowspan="2" class="text-center text-dark">Directorate Director</th>

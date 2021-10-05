@@ -87,14 +87,15 @@
 
 				<div class="row">
 					<div class="col-md-3 grid-margin stretch-card mb-3">
-						<div class="card">
-							<div class="profile-card">
+						<div class="card" style=" border-radius: 21px 0 0 21px;">
+                        <div class="profile-card">
 
 								<div class="profile-header">
 
-        <div class="cover-image" style=" border-radius: 21px 0 0 21px;">
-          <img src="../images/unnamed.png" class="img img-fluid">
-      </div>
+        <div class="cover-image">
+                                    <img src="../images/unnamed.png" class="img img-fluid"
+                                        style=" border-radius: 21px 0 0 0;">
+                                </div>
 									<div class="user-image">
 										<img src="../images/avatar.png" class="img ">
 									</div>
@@ -105,24 +106,60 @@
 									<div class="profile-designation">User<a href="../profile.html" class="about-item-edit">Edit</a></div>
 								<!-- 	<p class="profile-description">Just a few notice to what the MOD can do on the application consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p> -->
 									<ul class="profile-info-list">
-										<a href="index.html" class="profile-info-list-item"><i class="mdi mdi-eye"></i>Home</a><li class="mb-1">
-                      <button style="margin: 10px 0; width: 220px; padding:15px;" class="btn btn-toggle align-items-center rounded collapsed profile-info-list-item" data-bs-toggle="collapse" data-bs-target="#budget-collapse" aria-expanded="false">
-                        Create Budget
-                      </button>
-                      <div class="collapse" id="budget-collapse"><hr class="divider">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                          <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded">Special Interventions</a></li>
-                          <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital Expenditure</a></li>
-                          <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program Expenditure</a></li>
-                          <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operational Expenditure</a></li>
-                          <li><a href="budget_sum.html" class="link-dark profile-info-list-item rounded">Budget Summary</a></li>
-                        </ul><hr class="divider">
-                      </div>
-                    </li>
-										<a href="request.html" class="profile-info-list-item"><i class="mdi mdi-bookmark-check"></i>Make A Request</a>
-										<a href="reports.html" class="profile-info-list-item"><i class="mdi mdi-movie"></i>Utilization Reports</a>
-										<a href="requests_status.html" class="profile-info-list-item active"><i class="mdi mdi-account"></i>Requests Status</a>
-									</ul>
+                              <a href="index.html" class="profile-info-list-item active"><i
+                                      class="mdi mdi-eye"></i>Home</a>
+                              <li class="mb-1">
+                                  <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                      class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                      data-bs-toggle="collapse" data-bs-target="#budget-collapse"
+                                      aria-expanded="false">
+                                      Create Budget
+                                  </button>
+                                  <div class="collapse" id="budget-collapse"><hr class="divider">
+                                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded">Special Interventions</a></li>
+                                        <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital Expenditure</a></li>
+                                        <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program Expenditure</a></li>
+                                        <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operational Expenditure</a></li>
+                                        <li><a href="budget_sum.html" class="link-dark profile-info-list-item rounded"> Budget Summary</a></li>
+                                      </ul><hr class="divider">
+                                    </div>
+                              </li>
+                              <li class="mb-1">
+                                  <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                      class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                      data-bs-toggle="collapse" data-bs-target="#budget-collapse1"
+                                      aria-expanded="false">
+                                      Make A Request
+                                  </button>
+                                  <div class="collapse" id="budget-collapse1"><hr class="divider">
+                                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="request.html" class="link-dark profile-info-list-item rounded">Normal Request</a></li>
+                                        <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Retirement</a></li>
+                                      </ul><hr class="divider">
+                                    </div>
+                              </li>
+                              <a href="advance.html" class="profile-info-list-item"><i
+                                      class="mdi mdi-movie"></i>Make an Advance</a>
+                              <a href="reports.html" class="profile-info-list-item"><i
+                                      class="mdi mdi-movie"></i>Utilization Reports</a>
+                              <a href="requests_status.html" class="profile-info-list-item "><i
+                                      class="mdi mdi-account"></i>Requests Status</a>
+                                <li class="mb-1">
+                                    <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                        class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                        data-bs-toggle="collapse" data-bs-target="#budget-collapse2"
+                                        aria-expanded="false">
+                                        Advance Status
+                                    </button>
+                                    <div class="collapse" id="budget-collapse2"><hr class="divider">
+                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                          <li><a href="advance_pending.html" class="link-dark profile-info-list-item rounded">Pending Advance</a></li>
+                                          <li><a href="advance_retired.html" class="link-dark profile-info-list-item rounded">Retired Advance</a></li>
+                                        </ul><hr class="divider">
+                                      </div>
+                                </li>
+                                  </ul>
 								</div>
 							</div>
 						</div>

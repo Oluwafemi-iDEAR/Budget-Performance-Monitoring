@@ -7,55 +7,9 @@
     <title>Activity Log</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../css/mang.css"> -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <style></style>
     <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
-    <script>
-        function myFunction() {
-            // Declare variables
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
-
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-
-        // Sortable Code
-        var fixHelperModified = function (e, tr) {
-            var $originals = tr.children();
-            var $helper = tr.clone();
-
-            $helper.children().each(function (index) {
-                $(this).width($originals.eq(index).width())
-            });
-
-            return $helper;
-        };
-
-        $(".table-sortable tbody").sortable({
-            helper: fixHelperModified
-        }).disableSelection();
-
-        $(".table-sortable thead").disableSelection();
-
-
-
-        $("#add_row").trigger("click");
-    </script>
 
 </head>
 <body>
@@ -90,9 +44,10 @@
 
 								<div class="profile-header">
 
-        <div class="cover-image" style=" border-radius: 21px 0 0 21px;">
-          <img src="../images/unnamed.png" class="img img-fluid">
-      </div>
+        <div class="cover-image">
+                                    <img src="../images/unnamed.png" class="img img-fluid"
+                                        style=" border-radius: 21px 0 0 0;">
+                                </div>
 									<div class="user-image">
 										<img src="../images/avatar.png" class="img ">
 									</div>
@@ -207,18 +162,18 @@
                             </div>
                             <div class="panel-body">
                                 <div class="row">
-                                    <?php require "process/forms.php"; ?>
+                                    <!-- <?php require "process/forms.php"; ?>
                                     <div class="col-md-3">
-                                        <div class="profile-img">
+                                        <div class="profile-img form-group">
                                             <img src="../images/avatar.png" height="80" alt="">
                                             <div class="file btn btn-lg btn-primary">
                                                 Change Photo
-                                                <input type="file" name="file">
+                                                <input type="file" class="form-control-file name="file">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
-                                    <div class=" col-md-9 col-lg-9 ">
+                                    <div class="col-md-12 col-md-offset-6 mx-auto">
                                         <table class="table table-user-information">
                                             <tbody>
                                                 <tr>
@@ -287,7 +242,8 @@
                         </div>
                     </form>
                 </div>
-
+            </div>
+            </div>
     </div>
     <!-- main-panel ends -->
 
