@@ -144,21 +144,7 @@ this.parentNode.insertBefore(section, this);
                                         <li><a href="budget_sum.html" class="link-dark profile-info-list-item rounded"> Budget Summary</a></li>
                                       </ul><hr class="divider">
                                     </div>
-                              </li>
-                              <li class="mb-1">
-                                  <button style="margin: 10px 0; width: 220px; padding:15px;"
-                                      class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
-                                      data-bs-toggle="collapse" data-bs-target="#budget-collapse1"
-                                      aria-expanded="false">
-                                      Make A Request
-                                  </button>
-                                  <div class="collapse" id="budget-collapse1"><hr class="divider">
-                                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="request.html" class="link-dark profile-info-list-item rounded">Normal Request</a></li>
-                                        <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Retirement</a></li>
-                                      </ul><hr class="divider">
-                                    </div>
-                              </li>
+                              </li><a href="request.html" class="profile-info-list-item"><i class="mdi mdi-bookmark-check"></i>Make A Request</a>
                               <a href="advance.html" class="profile-info-list-item"><i
                                       class="mdi mdi-movie"></i>Make an Advance</a>
                               <a href="reports.html" class="profile-info-list-item"><i
@@ -174,7 +160,8 @@ this.parentNode.insertBefore(section, this);
                                     </button>
                                     <div class="collapse" id="budget-collapse2"><hr class="divider">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                          <li><a href="advance_pending.html" class="link-dark profile-info-list-item rounded">Pending Advance</a></li>
+                                          <li><a href="payment_status.html" class="link-dark profile-info-list-item rounded">Payment Status</a></li>
+                                          <li><a href="advance_pending.html" class="link-dark profile-info-list-item rounded">Unretired Advance</a></li>
                                           <li><a href="advance_retired.html" class="link-dark profile-info-list-item rounded">Retired Advance</a></li>
                                         </ul><hr class="divider">
                                       </div>
@@ -289,7 +276,7 @@ this.parentNode.insertBefore(section, this);
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([
+        let data = google.visualization.arrayToDataTable([
           ['Budgetline', 'Percentage'],
           ['Program Expenditure',     25],
           ['Operational Expenditure',      25],
@@ -297,13 +284,13 @@ this.parentNode.insertBefore(section, this);
           ['Special Interventions',    25]
         ]);
 
-        var options = {
+        let options = {
           title: 'High Level Cost Report',
           is3D: true,
           backgroundColor: "transparent"
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
         chart.draw(data, options);
       }
     </script>
