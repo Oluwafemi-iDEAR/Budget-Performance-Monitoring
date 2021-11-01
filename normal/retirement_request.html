@@ -131,8 +131,20 @@
                                       class="mdi mdi-movie"></i>Make an Advance</a>
                               <a href="reports.html" class="profile-info-list-item"><i
                                       class="mdi mdi-movie"></i>Utilization Reports</a>
-                              <a href="requests_status.html" class="profile-info-list-item "><i
-                                      class="mdi mdi-account"></i>Requests Status</a>
+                              <li class="mb-1">
+                                    <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                        class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                        data-bs-toggle="collapse" data-bs-target="#budget-collapse3"
+                                        aria-expanded="false">
+                                        Requests Status
+                                    </button>
+                                    <div class="collapse" id="budget-collapse3"><hr class="divider">
+                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                          <li><a href="requests_status.html" class="link-dark profile-info-list-item rounded">Normal Status</a></li>
+                                          <li><a href="requests_status.html" class="link-dark profile-info-list-item rounded">Retirement Status</a></li>
+                                        </ul><hr class="divider">
+                                      </div>
+                                </li>
                                 <li class="mb-1">
                                     <button style="margin: 10px 0; width: 220px; padding:15px;"
                                         class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
@@ -165,17 +177,24 @@
                       <div class="col-md-6 mt-3 px-4">
                           <h4>Advance No. 003716</h4>
                       </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <h5 style="color: #495057 !important; text-align: center;">Amount To be Retired</h5>
+                          <input type="number" value="1000000" id="db_amount" class="form-control total" name="amount"
+                            maxlength="64" aria-required="true" placeholder="0.00" />
+                        </div>
+                      </div>
                     </div>
                       <hr/>
                 <div class="card-body">
                   <div class="row clearfix">
                     <div class="col-md-12 mb-4">
-                      <div class="card-body">
+                      <div class="">
                         <div class="margin-t-md mb-4">
                           <div class="customer-form">
                             <form action="" method="post" role="form" autocomplete="off">
                               <div id="main-container" class="row">
-                                <div class="panel card container-item">
+                                <div class="panel container-item">
                                   <div class="row mt-3 mb-4">
                                     <div class="col-md-4">
                                       <div class="form-group">
@@ -588,7 +607,7 @@
                                     </div>
                                     <div class="col-md-4">
                                       <div class="form-group">
-                                        <h5 style=" color: #495057 !important; text-align: center;"> Code </h5>
+                                        <h5 style=" color: #495057 !important; text-align: center;">Budget Code </h5>
                                         <select class="form-control minor selectFilter" name="subject">
                                           <option value="Select One"> 6026104</option>
                                           <option value="5011001" data-belong="tiof">5011001</option>
@@ -813,23 +832,30 @@
                               <div class="col-md-4">
                                 <div class="form-group">
                                   <h5 style="color: #495057 !important; text-align: center;">Utilization To Date</h5>
-                                  <input type="number" value="1000000" id="db_amount" class="form-control total" name="amount"
+                                  <input type="number" value="1500000" id="db_amount" class="form-control total" name="amount"
                                     maxlength="64" aria-required="true" placeholder="0.00" />
                                 </div>
                               </div>
 
                               <div class="col-md-4">
-                                <h5>Retired Amount </h5>
+                                <h5 style="color: #495057 !important; text-align: center;"> Amount Spent</h5>
                                 <div class="form-group">
                                   <input onblur="formatNumber()" onkeyup="runCalculations()" type="text" id="customer_amount" class="form-control total" name="amount"
                                     aria-required="true" placeholder="0.00" />
                                 </div>
                               </div>
+                              
+                              <!-- <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="project_name">Retired Amount</label>
+                                  <input onblur="formatNum()" onkeyup="runCalc()" id="retired_amount" type="text" name="amount" placeholder="" class="form-control">
+                             </div>
+                            </div> -->
                               <div class="col-md-4">
                                 <table id="tab_logic" class="mb-4">
                                   <tfoot>
                                     <tr>
-                                      <h5> Remaining balance</h5>
+                                      <h5 style="color: #495057 !important; text-align: center;">Budget balance</h5>
                                       <th class="text-center" style="width: 230px;">
                                         <input type="number" id="remainder_amount" name="amount" placeholder="" class="form-control" />
                                       </th>
@@ -838,23 +864,39 @@
                                 </table>
                               </div>
                             </div>
-                            <div class="row m-auto mb-3">
-                              <div class="col-md-6">
+                            <div class="row mb-3">
+                               <!-- <div class="col-md-4">
+                                   <div class="form-group">
+                                     <label for="project_name">Retired Amount</label>
+                                     <input onblur="formatNum()" onkeyup="runCalc()" id="retired_amount" type="text" name="amount" placeholder="" class="form-control">
+                                </div>
+                               </div> -->
+                              <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label for="project_name">Return / (Refund) Amount</label>
+                                    <input type="number" id="remaining_balance" name="amount" placeholder="" class="form-control">
+                               </div>
+                              </div>
+                              <div class="col-md-4">
                                <div class="form-group">
-                                <label for="project_name">Action</label>
+                                <label for="project_name">Return / (Refund)</label>
                                   <select class="form-control">
                                   <option value="">Select One</option>
-                                  <option value="retire">Retire</option>
+                                  <option value="retire">Return</option>
                                   <option value="refund">Refund</option>
                               </select>
                                   </div>
                                </div>
-                              <div class="col-md-6">
-                                  <div class="form-group">
-                                    <label for="project_name">Amount</label>
-                                    <input type="text" name="amount" placeholder="" class="form-control">
-                               </div>
-                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                 <label for="project_name">Preferred Mode of Payment </label>
+                                   <select class="form-control">
+                                   <option value="">Select One</option>
+                                   <option value="bank">Bank</option>
+                                   <option value="cash">Cash</option>
+                               </select>
+                                   </div>
+                                </div>
                             </div>
                           </div>
                         </div>
@@ -862,6 +904,16 @@
                       </div>
 
                       <div class="row">
+                        <!-- <div class="col-md-4">
+                          <div class="form-group">
+                           <label for="project_name">Mode of Payment </label>
+                             <select class="form-control">
+                             <option value="">Select One</option>
+                             <option value="bank">Bank</option>
+                             <option value="cash">Cash</option>
+                         </select>
+                             </div>
+                          </div> -->
                         <div class="col-md-6">
                           <div class="form-group mb-4">
                             <label for="project_name">Date</label>
@@ -931,15 +983,7 @@
 
   </div>
   <!-- main-panel ends -->
-  <script>
-    function yesnoCheck(that) {
-     if (that.value == "other") {
-         document.getElementById("ifYes").style.display = "block";
-     } else {
-         document.getElementById("ifYes").style.display = "none";
-     }
- }
- </script>
+
   <script>
     const formatNumber = () => {
       let customer_amount_value = parseFloat(document.getElementById('customer_amount').value).toLocaleString()
@@ -959,6 +1003,28 @@
         remainder_amount_inp.value = remainder_amount
       } else {
         remainder_amount_inp.value = null
+      }
+    }
+  </script>
+  
+  <script>
+    const formatNum = () => {
+      let retired_amount_value = parseFloat(document.getElementById('retired_amount').value).toLocaleString()
+      setTimeout(() => {
+       document.getElementById('retired_amount').value=retired_amount_value;
+    }, 100);
+    }
+    const runCalc = () => {
+      let db_amount_inp = document.getElementById('db_amount') 
+      let retired_amount_inp = document.getElementById('retired_amount') 
+      let remaining_balance_inp = document.getElementById('remaining_balance') 
+      let db_amount = db_amount_inp.value 
+      let retired_amount = retired_amount_inp.value 
+      let remaining_balance = db_amount - retired_amount
+      if (customer_amount) {
+        remaining_balance_inp.value = remaining_balance
+      } else {
+        remaining_balance_inp.value = null
       }
     }
   </script>

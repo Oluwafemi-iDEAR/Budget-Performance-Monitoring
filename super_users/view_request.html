@@ -148,8 +148,20 @@ this.parentNode.insertBefore(section, this);
                                       class="mdi mdi-movie"></i>Make an Advance</a>
                               <a href="reports.html" class="profile-info-list-item"><i
                                       class="mdi mdi-movie"></i>Utilization Reports</a>
-                              <a href="requests_status.html" class="profile-info-list-item "><i
-                                      class="mdi mdi-account"></i>Requests Status</a>
+                              <li class="mb-1">
+                                    <button style="margin: 10px 0; width: 220px; padding:15px;"
+                                        class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                                        data-bs-toggle="collapse" data-bs-target="#budget-collapse3"
+                                        aria-expanded="false">
+                                        Requests Status
+                                    </button>
+                                    <div class="collapse" id="budget-collapse3"><hr class="divider">
+                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                          <li><a href="requests_status.html" class="link-dark profile-info-list-item rounded">Normal Status</a></li>
+                                          <li><a href="requests_status.html" class="link-dark profile-info-list-item rounded">Retirement Status</a></li>
+                                        </ul><hr class="divider">
+                                      </div>
+                                </li>
                                 <li class="mb-1">
                                     <button style="margin: 10px 0; width: 220px; padding:15px;"
                                         class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
