@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -995,18 +994,13 @@
     }
     const runCalculations = () => {
       let db_amount_inp = document.getElementById('db_amount') 
-      let initial_amount_inp = document.getElementById('initial_amount') 
       let customer_amount_inp = document.getElementById('customer_amount') 
       let remainder_amount_inp = document.getElementById('remainder_amount') 
-      let remaining_balance_inp = document.getElementById('remaining_balance') 
       let db_amount = db_amount_inp.value 
       let customer_amount = customer_amount_inp.value 
       let remainder_amount = db_amount - customer_amount
-      let other_balance = initial_amount_inp.value - customer_amount
-
       if (customer_amount) {
         remainder_amount_inp.value = remainder_amount
-        remaining_balance_inp.value = other_balance
       } else {
         remainder_amount_inp.value = null
       }
