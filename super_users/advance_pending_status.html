@@ -9,51 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
-      <script>
-      function myFunction() {
-        // Declare variables
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-      
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-      }
-
-        // Sortable Code
-    var fixHelperModified = function(e, tr) {
-        var $originals = tr.children();
-        var $helper = tr.clone();
-    
-        $helper.children().each(function(index) {
-            $(this).width($originals.eq(index).width())
-        });
-        
-        return $helper;
-    };
-  
-    $(".table-sortable tbody").sortable({
-        helper: fixHelperModified      
-    }).disableSelection();
-
-    $(".table-sortable thead").disableSelection();
-
-
-
-    $("#add_row").trigger("click");
-      </script>
+     
     
 </head>
 <body>
@@ -245,7 +201,6 @@
                     <div class="container">
                         <div class="row clearfix">
                           <div class="table-responsive">
-                          <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                             <table id="example"
                             class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
                             width="100%">

@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity Log</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
-      <script>
-      function myFunction() {
-        // Declare variables
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-      
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Log</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../thirdparties/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link href="../images/Jesus-Light-of-the-World.png" rel="icon" type="image/png">
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
           }
         }
       }
+    }
 
-        // Sortable Code
-    var fixHelperModified = function(e, tr) {
-        var $originals = tr.children();
-        var $helper = tr.clone();
-    
-        $helper.children().each(function(index) {
-            $(this).width($originals.eq(index).width())
-        });
-        
-        return $helper;
+    // Sortable Code
+    var fixHelperModified = function (e, tr) {
+      var $originals = tr.children();
+      var $helper = tr.clone();
+
+      $helper.children().each(function (index) {
+        $(this).width($originals.eq(index).width())
+      });
+
+      return $helper;
     };
-  
+
     $(".table-sortable tbody").sortable({
-        helper: fixHelperModified      
+      helper: fixHelperModified
     }).disableSelection();
 
     $(".table-sortable thead").disableSelection();
@@ -53,342 +54,379 @@
 
 
     $("#add_row").trigger("click");
-      </script>
-    
-</head>
-<body>
-    <div class="container">
-      <div class="topnav wow fadeIn" data-wow-duration="9s">
+  </script>
 
-  <!-- Centered link -->
-  <div class="topnav-centered">
-    <a href="#home" class="active"><img src="../images/Jesus-Light-of-the-World.png" height="50" width="100" class="d-none d-md-block"></a>
-  </div>
-  
-  <!-- Left-aligned links (default) -->
-  <a href="#"><strong>YDD</strong></a>
-  <!-- <a href="#contact">Contact</a> -->
-  
-  <!-- Right-aligned links -->
-  <div class="topnav-right">
-    <!-- <a href="#search">Search</a> -->
-    <a href="#about"><strong>2021</strong></a>
-  </div>
-  
-</div>
+</head>
+
+<body>
+  <div class="container">
+    <div class="topnav wow fadeIn" data-wow-duration="9s">
+
+      <!-- Centered link -->
+      <div class="topnav-centered">
+        <a href="#home" class="active"><img src="../images/Jesus-Light-of-the-World.png" height="50" width="100"
+            class="d-none d-md-block"></a>
+      </div>
+
+      <!-- Left-aligned links (default) -->
+      <a href="#"><strong>YDD</strong></a>
+      <!-- <a href="#contact">Contact</a> -->
+
+      <!-- Right-aligned links -->
+      <div class="topnav-right">
+        <!-- <a href="#search">Search</a> -->
+        <a href="#about"><strong>2021</strong></a>
+      </div>
 
     </div>
 
-  	<div class="space-200"></div>
-	<div class="main-panel">
-			<div class="container">
+  </div>
+
+  <div class="space-200"></div>
+  <div class="main-panel">
+    <div class="container">
 
 
-				<div class="row">
-					<div class="col-md-3 grid-margin stretch-card mb-3">
-						<div class="card" style=" border-radius: 21px 0 0 21px;">
-                        <div class="profile-card">
+      <div class="row">
+        <div class="col-md-3 grid-margin stretch-card mb-3">
+          <div class="card" style=" border-radius: 21px 0 0 21px;">
+            <div class="profile-card">
 
-								<div class="profile-header">
+              <div class="profile-header">
 
-        <div class="cover-image">
-                                    <img src="../images/unnamed.png" class="img img-fluid"
-                                        style=" border-radius: 21px 0 0 0;">
-                                </div>
-									<div class="user-image">
-										<img src="../images/avatar.png" class="img ">
-									</div>
-								</div>
-
-								<div class="profile-content">
-                  <div class="profile-name">Oluwafemi Ifesanmi</div>
-                  <div class="profile-designation">User<a href="../profile.html" class="about-item-edit">Edit</a></div>
-                <!--  <p class="profile-description">Just a few notice to what the MOD can do on the application consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p> -->
-<ul class="profile-info-list">
-                              <a href="index.html" class="profile-info-list-item"><i
-                                      class="mdi mdi-eye"></i>Home</a>
-                              <li class="mb-1">
-                                  <button style="margin: 10px 0; width: 220px; padding:15px;"
-                                      class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
-                                      data-bs-toggle="collapse" data-bs-target="#budget-collapse"
-                                      aria-expanded="false">
-                                      Create Budget
-                                  </button>
-                                  <div class="collapse" id="budget-collapse"><hr class="divider">
-                                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded active">Special Interventions</a></li>
-                                        <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital Expenditure</a></li>
-                                        <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program Expenditure</a></li>
-                                        <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operational Expenditure</a></li>
-                                        <li><a href="budget_sum.html" class="link-dark profile-info-list-item rounded"> Budget Summary</a></li>
-                                      </ul><hr class="divider">
-                                    </div>
-                              </li><a href="request.html" class="profile-info-list-item"><i class="mdi mdi-bookmark-check"></i>Make A Request</a>
-                              <a href="advance.html" class="profile-info-list-item"><i
-                                      class="mdi mdi-movie"></i>Make an Advance</a>
-                              <a href="reports.html" class="profile-info-list-item"><i
-                                      class="mdi mdi-movie"></i>Utilization Reports</a>
-                              <li class="mb-1">
-                                    <button style="margin: 10px 0; width: 220px; padding:15px;"
-                                        class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
-                                        data-bs-toggle="collapse" data-bs-target="#budget-collapse3"
-                                        aria-expanded="false">
-                                        Requests Status
-                                    </button>
-                                    <div class="collapse" id="budget-collapse3"><hr class="divider">
-                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                          <li><a href="requests_status.html" class="link-dark profile-info-list-item rounded">Normal Status</a></li>
-                                          <li><a href="requests_status.html" class="link-dark profile-info-list-item rounded">Retirement Status</a></li>
-                                        </ul><hr class="divider">
-                                      </div>
-                                </li>
-                                <li class="mb-1">
-                                    <button style="margin: 10px 0; width: 220px; padding:15px;"
-                                        class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
-                                        data-bs-toggle="collapse" data-bs-target="#budget-collapse2"
-                                        aria-expanded="false">
-                                        Advance Status
-                                    </button>
-                                    <div class="collapse" id="budget-collapse2"><hr class="divider">
-                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                          <li><a href="payment_status.html" class="link-dark profile-info-list-item rounded">Payment Status</a></li>
-                                          <li><a href="advance_pending.html" class="link-dark profile-info-list-item rounded">Unretired Advance</a></li>
-                                          <li><a href="advance_retired.html" class="link-dark profile-info-list-item rounded">Retired Advance</a></li>
-                                        </ul><hr class="divider">
-                                      </div>
-                                </li>
-                                  </ul>
+                <div class="cover-image">
+                  <img src="../images/unnamed.png" class="img img-fluid" style=" border-radius: 21px 0 0 0;">
                 </div>
-							</div>
-						</div>
-					</div>
+                <div class="user-image">
+                  <img src="../images/avatar.png" class="img ">
+                </div>
+              </div>
 
-					<div class="col-md-9 grid-margin stretch-card">
-						
-            <div class="card">
-              <div class="col p-4">
+              <div class="profile-content">
+                <div class="profile-name">Oluwafemi Ifesanmi</div>
+                <div class="profile-designation">User<a href="../profile.html" class="about-item-edit">Edit</a></div>
+                <!--  <p class="profile-description">Just a few notice to what the MOD can do on the application consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p> -->
+                <ul class="profile-info-list">
+                  <a href="index.html" class="profile-info-list-item"><i class="mdi mdi-eye"></i>Home</a>
+                  <li class="mb-1">
+                    <button style="margin: 10px 0; width: 220px; padding:15px;"
+                      class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                      data-bs-toggle="collapse" data-bs-target="#budget-collapse" aria-expanded="false">
+                      Create Budget
+                    </button>
+                    <div class="collapse" id="budget-collapse">
+                      <hr class="divider">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="budget_si.html" class="link-dark profile-info-list-item rounded active">Special
+                            Interventions</a></li>
+                        <li><a href="budget_ce.html" class="link-dark profile-info-list-item rounded">Capital
+                            Expenditure</a></li>
+                        <li><a href="budget_pe.html" class="link-dark profile-info-list-item rounded">Program
+                            Expenditure</a></li>
+                        <li><a href="budget_oe.html" class="link-dark profile-info-list-item rounded">Operational
+                            Expenditure</a></li>
+                        <li><a href="budget_sum.html" class="link-dark profile-info-list-item rounded"> Budget
+                            Summary</a></li>
+                      </ul>
+                      <hr class="divider">
+                    </div>
+                  </li><a href="request.html" class="profile-info-list-item"><i class="mdi mdi-bookmark-check"></i>Make
+                    A Request</a>
+                  <a href="advance.html" class="profile-info-list-item"><i class="mdi mdi-movie"></i>Make an Advance</a>
+                  <a href="reports.html" class="profile-info-list-item"><i class="mdi mdi-movie"></i>Utilization
+                    Reports</a>
+                  <li class="mb-1">
+                    <button style="margin: 10px 0; width: 220px; padding:15px;"
+                      class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                      data-bs-toggle="collapse" data-bs-target="#budget-collapse3" aria-expanded="false">
+                      Requests Status
+                    </button>
+                    <div class="collapse" id="budget-collapse3">
+                      <hr class="divider">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="requests_status.html" class="link-dark profile-info-list-item rounded">Normal
+                            Status</a></li>
+                        <li><a href="requests_status.html" class="link-dark profile-info-list-item rounded">Retirement
+                            Status</a></li>
+                      </ul>
+                      <hr class="divider">
+                    </div>
+                  </li>
+                  <li class="mb-1">
+                    <button style="margin: 10px 0; width: 220px; padding:15px;"
+                      class="btn button button2 btn-toggle align-items-center collapsed profile-info-list-item"
+                      data-bs-toggle="collapse" data-bs-target="#budget-collapse2" aria-expanded="false">
+                      Advance Status
+                    </button>
+                    <div class="collapse" id="budget-collapse2">
+                      <hr class="divider">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="payment_status.html" class="link-dark profile-info-list-item rounded">Payment
+                            Status</a></li>
+                        <li><a href="advance_pending.html" class="link-dark profile-info-list-item rounded">Unretired
+                            Advance</a></li>
+                        <li><a href="advance_retired.html" class="link-dark profile-info-list-item rounded">Retired
+                            Advance</a></li>
+                      </ul>
+                      <hr class="divider">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-9 grid-margin stretch-card">
+
+          <div class="card">
+            <div class="col p-4">
               <div class="card myForm">
-                  <h5 class="card-header font-weight-light">Operational Expenditure</h5>
-                  <div class="card-body">
-                        <div class="row clearfix">
-                          <div class="col-md-12 table-responsive miner mb-4">
-                            <table class="table table-bordered table-hover table-sortable" id="tab_logic">
-                              <thead>
-                                <tr >
-                                  <th class="text-center">Above The line</th>
-                                  <th class="text-center">Budget Line</th>
-                                  <th class="text-center">Code</th>
-                                    <th class="text-center">Amount</th>
-                                      <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;"></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr id='addr0' data-id="0" class="hidden">
-                                <form class="" action="" method="post">
-                                  <td data-name="desc">
-                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="code" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
-                                  </td>
-                                  <td data-name="del">
-      
-                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
-                                    </td>
-                                </form>
-                                </tr>
-                                <tr id='addr0' data-id="0" class="hidden">
-                                <form class="" action="" method="post">
-                                  <td data-name="desc">
-                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="code" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
-                                  </td>
-                                  <td data-name="del">
-      
-                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
-                                    </td>
-                                </form>
-                                </tr>
-                                <tr id='addr0' data-id="0" class="hidden">
-                                <form class="" action="" method="post">
-                                  <td data-name="desc">
-                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="code" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
-                                  </td>
-                                  <td data-name="del">
-      
-                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
-                                    </td>
-                                </form>
-                                </tr>
-                                <tr id='addr0' data-id="0" class="hidden">
-                                <form class="" action="" method="post">
-                                  <td data-name="desc">
-                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="code" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
-                                  </td>
-                                  <td data-name="del">
-      
-                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
-                                    </td>
-                                </form>
-                                <tr id='addr0' data-id="0" class="hidden">
-                                <form class="" action="" method="post">
-                                  <td data-name="desc">
-                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="code" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
-                                  </td>
-                                  <td data-name="del">
-      
-                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
-                                    </td>
-                                </form>
-                                </tr>
-                                <tr id='addr0' data-id="0" class="hidden">
-                                <form class="" action="" method="post">
-                                  <td data-name="desc">
-                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="code" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
-                                  </td>
-                                  <td data-name="del">
-      
-                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
-                                    </td>
-                                </form>
-                                </tr>
-                                <tr id='addr0' data-id="0" class="hidden">
-                                <form class="" action="" method="post">
-                                  <td data-name="desc">
-                                    <input type="text" name="abovetheline " placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="budgetline" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" name="code" placeholder="" class="form-control"/>
-                                  </td>
-                                  <td data-name="desc">
-                                    <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
-                                  </td>
-                                  <td data-name="del">
-      
-                                      <a class='btn btn-danger glyphicon glyphicon-remove row-remove' href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span class="glyphicon glyphicon-remove">x</span></a>
-                                    </td>
-                                </form>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                         <table id="tab_logic" class="mb-4">
-                           <tfoot>
-                             <tr >
-                                <th class="text-center">Total</th>
-                                <th class="text-center"></th>
-                                <th class="text-center"></th>
-                                <th class="text-center"></th>
-                                  <th class="text-center"></th>
-                                    <th class="text-center" style="width: 230px;">
-                                      <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
-                                    </th>
-                              </tr>
-                           </tfoot>
-                         </table>
-  
-                        <h5 class="card-header font-weight-light">
-                          <i class="fa fa-list" aria-hidden="true"></i> Edit Details
-                        </h5>
-                        <div class="card-body">
-                            <div class="margin-t-md">
-                              <div class="customer-form">
-                                <form action="" method="post" role="form" autocomplete="off">
-                                  <div id="main-container" class="row">
-                                    <div class="panel card container-item">
-                                          <div class="row mt-3">
-                                            <div class="col-md-3">
-                                              <div class="form-group">
-                                                <h5 style=" color: #495057 !important; text-align: center;">Directorate</h5>
-                                                <select class="form-control major selectFilter" name ="directorate" data-target="sub">
-                                                  <option value="Select One"> YDD</option>
-                                                  <option value="FDD" data-belong="ore">FDD</option>
-                                                  <option value="YDD" data-belong="ore">YDD</option>
-                                                  <option value="DS" data-belong="ore">DS</option>
-                                                  <option value="CIPD" data-belong="ore">CIPD</option>
-                                                  <option value="Directors Office" data-belong="ore">Directors Office</option>
-                                                  <option value="Mission" data-belong="ore">Mission</option>
-                                                  <option value="Worship" data-belong="ore">Worship</option>
-                                                  <option value="Anthony Budget" data-belong="ore">Anthony Budget</option>
-                                                  <option value="Infrastructure" data-belong="ore">Infrastructure</option>
-                                                  <option value="Publishing" data-belong="ore">Publishing</option>
-                                                  <option value="Treasury" data-belong="ore">Treasury</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                          
-                                            <div class="col-md-3">
-                                              <div class="form-group">
-                                                <h5 style=" color: #495057 !important;  text-align: center; ">  Budget Line</h5>
-                                                <select class="form-control sub selectFilter"  name="subject" data-target="minor">
-                                                  <option value="Select One"> Select One</option>
-                                          <option value="PURCHASE OF MUSICAL INSTRUMENTS" data-ref="pomi"
+                <h5 class="card-header font-weight-light">Operational Expenditure</h5>
+                <div class="card-body">
+                  <div class="row clearfix">
+                    <div class="col-md-12 table-responsive miner mb-4">
+                      <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                        <thead>
+                          <tr>
+                            <th class="text-center">Above The line</th>
+                            <th class="text-center">Budget Line</th>
+                            <th class="text-center">Code</th>
+                            <th class="text-center">Amount</th>
+                            <th class="text-center"
+                              style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr id='addr0' data-id="0" class="hidden">
+                            <form class="" action="" method="post">
+                              <td data-name="desc">
+                                <input type="text" name="abovetheline " placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="budgetline" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="code" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" id="" name="amount" placeholder=""
+                                  class="form-control customer_amount" />
+                              </td>
+                              <td data-name="del">
+
+                                <a class='btn btn-danger glyphicon glyphicon-remove row-remove'
+                                  href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span
+                                    class="glyphicon glyphicon-remove">x</span></a>
+                              </td>
+                            </form>
+                          </tr>
+                          <tr id='addr0' data-id="0" class="hidden">
+                            <form class="" action="" method="post">
+                              <td data-name="desc">
+                                <input type="text" name="abovetheline " placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="budgetline" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="code" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" id="" name="amount" placeholder=""
+                                  class="form-control customer_amount" />
+                              </td>
+                              <td data-name="del">
+
+                                <a class='btn btn-danger glyphicon glyphicon-remove row-remove'
+                                  href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span
+                                    class="glyphicon glyphicon-remove">x</span></a>
+                              </td>
+                            </form>
+                          </tr>
+                          <tr id='addr0' data-id="0" class="hidden">
+                            <form class="" action="" method="post">
+                              <td data-name="desc">
+                                <input type="text" name="abovetheline " placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="budgetline" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="code" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" id="" name="amount" placeholder=""
+                                  class="form-control customer_amount" />
+                              </td>
+                              <td data-name="del">
+
+                                <a class='btn btn-danger glyphicon glyphicon-remove row-remove'
+                                  href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span
+                                    class="glyphicon glyphicon-remove">x</span></a>
+                              </td>
+                            </form>
+                          </tr>
+                          <tr id='addr0' data-id="0" class="hidden">
+                            <form class="" action="" method="post">
+                              <td data-name="desc">
+                                <input type="text" name="abovetheline " placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="budgetline" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="code" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" id="" name="amount" placeholder=""
+                                  class="form-control customer_amount" />
+                              </td>
+                              <td data-name="del">
+
+                                <a class='btn btn-danger glyphicon glyphicon-remove row-remove'
+                                  href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span
+                                    class="glyphicon glyphicon-remove">x</span></a>
+                              </td>
+                            </form>
+                          <tr id='addr0' data-id="0" class="hidden">
+                            <form class="" action="" method="post">
+                              <td data-name="desc">
+                                <input type="text" name="abovetheline " placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="budgetline" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="code" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" id="" name="amount" placeholder=""
+                                  class="form-control customer_amount" />
+                              </td>
+                              <td data-name="del">
+
+                                <a class='btn btn-danger glyphicon glyphicon-remove row-remove'
+                                  href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span
+                                    class="glyphicon glyphicon-remove">x</span></a>
+                              </td>
+                            </form>
+                          </tr>
+                          <tr id='addr0' data-id="0" class="hidden">
+                            <form class="" action="" method="post">
+                              <td data-name="desc">
+                                <input type="text" name="abovetheline " placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="budgetline" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="code" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" id="" name="amount" placeholder=""
+                                  class="form-control customer_amount" />
+                              </td>
+                              <td data-name="del">
+
+                                <a class='btn btn-danger glyphicon glyphicon-remove row-remove'
+                                  href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span
+                                    class="glyphicon glyphicon-remove">x</span></a>
+                              </td>
+                            </form>
+                          </tr>
+                          <tr id='addr0' data-id="0" class="hidden">
+                            <form class="" action="" method="post">
+                              <td data-name="desc">
+                                <input type="text" name="abovetheline " placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="budgetline" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" name="code" placeholder="" class="form-control" />
+                              </td>
+                              <td data-name="desc">
+                                <input type="text" id="" name="amount" placeholder=""
+                                  class="form-control customer_amount" />
+                              </td>
+                              <td data-name="del">
+
+                                <a class='btn btn-danger glyphicon glyphicon-remove row-remove'
+                                  href="../../resources/templates/back/delete_project_expenses.php?id={$row['id']}"><span
+                                    class="glyphicon glyphicon-remove">x</span></a>
+                              </td>
+                            </form>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <table id="tab_logic" class="mb-4">
+                      <tfoot>
+                        <tr>
+                          <th class="text-center">Total</th>
+                          <th class="text-center"></th>
+                          <th class="text-center"></th>
+                          <th class="text-center"></th>
+                          <th class="text-center"></th>
+                          <th class="text-center" style="width: 230px;">
+                            <input type="text" id="" name="amount" placeholder=""
+                              class="form-control customer_amount" />
+                          </th>
+                        </tr>
+                      </tfoot>
+                    </table>
+
+                    <h5 class="card-header font-weight-light">
+                      <i class="fa fa-list" aria-hidden="true"></i> Edit Details
+                    </h5>
+                    <div class="card-body">
+                      <div class="margin-t-md">
+                        <div class="customer-form">
+                          <form action="" method="post" role="form" autocomplete="off">
+                            <div id="main-container" class="row">
+                              <div class="panel card container-item">
+                                <div class="row mt-3">
+                                  <div class="col-md-3">
+                                    <div class="form-group">
+                                      <h5 style=" color: #495057 !important; text-align: center;">Directorate</h5>
+                                      <select class="form-control major selectFilter" name="directorate"
+                                        data-target="sub">
+                                        <option value="Select One"> YDD</option>
+                                        <option value="FDD" data-belong="ore">FDD</option>
+                                        <option value="YDD" data-belong="ore">YDD</option>
+                                        <option value="DS" data-belong="ore">DS</option>
+                                        <option value="CIPD" data-belong="ore">CIPD</option>
+                                        <option value="Directors Office" data-belong="ore">Directors Office</option>
+                                        <option value="Mission" data-belong="ore">Mission</option>
+                                        <option value="Worship" data-belong="ore">Worship</option>
+                                        <option value="Anthony Budget" data-belong="ore">Anthony Budget</option>
+                                        <option value="Infrastructure" data-belong="ore">Infrastructure</option>
+                                        <option value="Publishing" data-belong="ore">Publishing</option>
+                                        <option value="Treasury" data-belong="ore">Treasury</option>
+                                      </select>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-md-3">
+                                    <div class="form-group">
+                                      <h5 style=" color: #495057 !important;  text-align: center; "> Budget Line</h5>
+                                      <select class="form-control sub selectFilter" name="subject" data-target="minor">
+                                        <option value="Select One"> Select One</option>
+                                        <option value="PURCHASE OF MUSICAL INSTRUMENTS" data-ref="pomi"
                                           data-belong="ore"> PURCHASE OF MUSICAL INSTRUMENTS</option>
                                         <option value="PRINTING OF CALENDARS" data-ref="proc" data-belong="ore">
                                           PRINTING OF CALENDARS</option>
                                         <option value="PRINTING OF CGS" data-ref="procg" data-belong="ore">PRINTING OF
                                           CGS</option>
-                                        <option value="PRODUCTION OF AUDIO VISUALS" data-ref="proavi"
-                                          data-belong="ore">PRODUCTION OF AUDIO VISUALS</option>
+                                        <option value="PRODUCTION OF AUDIO VISUALS" data-ref="proavi" data-belong="ore">
+                                          PRODUCTION OF AUDIO VISUALS</option>
                                         <option value="KIOSK EXPENSES" data-ref="kiex" data-belong="ore">KIOSK
                                           EXPENSES</option>
                                         <option value="FARM EXPENSES" data-ref="faex" data-belong="ore">FARM EXPENSES
                                         </option>
-                                        <option value="HOTEL & SUSTENANCE EXPENSES" data-ref="hosuex"
-                                          data-belong="ore">HOTEL & SUSTENANCE EXPENSES</option>
+                                        <option value="HOTEL & SUSTENANCE EXPENSES" data-ref="hosuex" data-belong="ore">
+                                          HOTEL & SUSTENANCE EXPENSES</option>
                                         <option value="ADVERTS & PUBLICITY EXPENSES" data-ref="adpuex"
                                           data-belong="ore">ADVERTS & PUBLICITY EXPENSES</option>
                                         <option value="TREASURY MONITORING EXPENSES" data-ref="trmoex"
@@ -453,8 +491,8 @@
                                           data-belong="ore">FOREIGN MISSION PROJECTS = MISSIONS</option>
                                         <option value="FRSC EXPENSES" data-ref="frex" data-belong="ore">FRSC EXPENSES
                                         </option>
-                                        <option value="FUEL & LUBRICANTS  (DIESEL)" data-ref="fuludi"
-                                          data-belong="ore">FUEL & LUBRICANTS (DIESEL)</option>
+                                        <option value="FUEL & LUBRICANTS  (DIESEL)" data-ref="fuludi" data-belong="ore">
+                                          FUEL & LUBRICANTS (DIESEL)</option>
                                         <option value="FUEL & LUBRICANTS  (PMS)" data-ref="fulupm" data-belong="ore">
                                           FUEL & LUBRICANTS (PMS) </option>
                                         <option value="FUEL & LUBRICANTS  (LUBRICANTS)" data-ref="fululu"
@@ -470,14 +508,14 @@
                                           POSTAGE & COURIER S</option>
                                         <option value="TELEPHONE EXPENSES" data-ref="teex" data-belong="ore">TELEPHONE
                                           EXPENSES</option>
-                                        <option value="INTERNET & ACCESORIES EXPS" data-ref="inacex"
-                                          data-belong="ore">INTERNET & ACCESORIES EXPS</option>
+                                        <option value="INTERNET & ACCESORIES EXPS" data-ref="inacex" data-belong="ore">
+                                          INTERNET & ACCESORIES EXPS</option>
                                         <option value="MOTOR VEHICLE LICENCING & DOCUMENT RENEWALS" data-ref="moveli"
                                           data-belong="ore">MOTOR VEHICLE LICENCING & DOCUMENT RENEWALS</option>
                                         <option value="RENEWAL OF DRIVING LICENCES" data-ref="reod" data-belong="ore">
                                           RENEWAL OF DRIVING LICENCES</option>
-                                        <option value="LICENCES & PERMITS - OTHERS" data-ref="lipeot"
-                                          data-belong="ore">LICENCES & PERMITS - OTHERS</option>
+                                        <option value="LICENCES & PERMITS - OTHERS" data-ref="lipeot" data-belong="ore">
+                                          LICENCES & PERMITS - OTHERS</option>
                                         <option value="MISSION HOUSE EXPENSES" data-ref="mihoex" data-belong="ore">
                                           MISSION HOUSE EXPENSES</option>
                                         <option value="MUSIC TEST EXPENSES" data-ref="mute" data-belong="ore">MUSIC
@@ -529,6 +567,24 @@
                                           PLANNING EXPENSES</option>
                                         <option value="PROJECT MANAGEMENT" data-ref="prma" data-belong="ore">PROJECT
                                           MANAGEMENT</option>
+                                        <option value="Power and Electrical Maintenance Infrastructure" data-ref="pemi"
+                                          data-belong="ore">Power and Electrical Maintenance Infrastructure</option>
+                                        <option value="Water Maintenance Infrastructure" data-ref="wmi"
+                                          data-belong="ore"> Water Maintenance Infrastructure</option>
+                                        <option value="Radio Car Park & Gardens Maintenance Infrastructure"
+                                          data-ref="rcpgmi" data-belong="ore"> Radio Car Park & Gardens Maintenance
+                                          Infrastructure</option>
+                                        <option value="Sanitory Maintenance Infrastructure" data-ref="smi"
+                                          data-belong="ore">Sanitory Maintenance Infrastructure</option>
+                                        <option value="Stores Infrastructure" data-ref="stin" data-belong="ore">Stores
+                                          Infrastructure</option>
+                                        <option value="Design and Pre-Project Services Infrastructure" data-ref="dpsi"
+                                          data-belong="ore"> Design and Pre-Project Services Infrastructure</option>
+                                        <option value="Planning Monitoring & Interventions Infrastructure"
+                                          data-ref="pmii" data-belong="ore"> Planning Monitoring & Interventions
+                                          Infrastructure</option>
+                                        <option value="Project Development Infrastructure" data-ref="pdi"
+                                          data-belong="ore">Project Development Infrastructure </option>
                                         <option value="FACILITY MANAGEMENT" data-ref="fama" data-belong="ore">FACILITY
                                           MANAGEMENT</option>
                                         <option value="PUBLIC RELATION & COMM" data-ref="pure" data-belong="ore">
@@ -543,14 +599,14 @@
                                           REPAIRS-GENERATORS</option>
                                         <option value="REPAIRS-PLANT & MACHINERY" data-ref="replm" data-belong="ore">
                                           REPAIRS-PLANT & MACHINERY</option>
-                                        <option value="REPAIRS - CAMPGROUND CABINS" data-ref="recaca"
-                                          data-belong="ore">REPAIRS - CAMPGROUND CABINS </option>
+                                        <option value="REPAIRS - CAMPGROUND CABINS" data-ref="recaca" data-belong="ore">
+                                          REPAIRS - CAMPGROUND CABINS </option>
                                         <option value="REPAIRS - GUEST HOUSES" data-ref="reguh" data-belong="ore">
                                           REPAIRS - GUEST HOUSES</option>
                                         <option value="REPAIRS - ELECTRICALS" data-ref="reel" data-belong="ore">
                                           REPAIRS - ELECTRICALS</option>
-                                        <option value="REPAIRS-MUSICAL INSTRUMENTS" data-ref="remuin"
-                                          data-belong="ore">REPAIRS-MUSICAL INSTRUMENTS</option>
+                                        <option value="REPAIRS-MUSICAL INSTRUMENTS" data-ref="remuin" data-belong="ore">
+                                          REPAIRS-MUSICAL INSTRUMENTS</option>
                                         <option value="R & M - MOTOR VECHICLES" data-ref="rmv" data-belong="ore">R & M
                                           - MOTOR VECHICLES</option>
                                         <option value="REPAIRS-BUILDINGS" data-ref="rebu" data-belong="ore">
@@ -589,8 +645,8 @@
                                           HONORARIUM FOR FACILITATORS</option>
                                         <option value="TRAINING AND WORKSHOP EXPENSES" data-ref="tawe"
                                           data-belong="ore">TRAINING AND WORKSHOP EXPENSES</option>
-                                        <option value="TRAVELING EXPENSES - LOCAL" data-ref="trexlo"
-                                          data-belong="ore">TRAVELING EXPENSES - LOCAL</option>
+                                        <option value="TRAVELING EXPENSES - LOCAL" data-ref="trexlo" data-belong="ore">
+                                          TRAVELING EXPENSES - LOCAL</option>
                                         <option value="TRAVELING EXPENSES - FOREIGN" data-ref="trexfo"
                                           data-belong="ore">TRAVELING EXPENSES - FOREIGN</option>
                                         <option value="ELECTRICITY" data-ref="elect" data-belong="ore">ELECTRICITY
@@ -608,197 +664,208 @@
                                         <option value="CHARITY" data-ref="char" data-belong="ore">CHARITY</option>
                                         <option value="HOUSE KEEPING EXPENSES" data-ref="hokeex" data-belong="ore">
                                           HOUSE KEEPING EXPENSES</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                              <div class="form-group">
-                                                <h5 style=" color: #495057 !important; text-align: center;"> Code </h5>
-                                                <select class="form-control minor selectFilter" name="subject">
-                                                  <option value="Select One"> Select Code</option>
-                                                  <option value="6011001" data-belong="pomi"> 6011001</option>
-                                                  <option value="6025001" data-belong="fuludi">6025001</option>
-                                                  <option value="6025002" data-belong="fulupm">6025002 </option>
-                                                  <option value="6025003" data-belong="fululu">6025003</option>
-                                                  <option value="6025004" data-belong="fuluke">6025004</option>
-                                                  <option value="6013001" data-belong="proc">6013001</option>
-                                                  <option value="6013002" data-belong="procg">6013002</option>
-                                                  <option value="6013003" data-belong="proavi">6013003</option>
-                                                  <option value="6013004" data-belong="kiex">6013004</option>
-                                                  <option value="60115001" data-belong="faex">60115001</option>
-                                                  <option value="6020002" data-belong="hosuex">6020002</option>
-                                                  <option value="6021201" data-belong="adpuex">6021201</option>
-                                                  <option value="6021301" data-belong="trmoex">6021301</option>
-                                                  <option value="6021302" data-belong="exauex">6021302</option>
-                                                  <option value="6021303" data-belong="inauex">6021303</option>
-                                                  <option value="6021601" data-belong="neap">6021601</option>
-                                                  <option value="6021603" data-belong="bojo">6021603</option>
-                                                  <option value="6021602" data-belong="stat">6021602</option>
-                                                  <option value="6021901" data-belong="cosore">6021901</option>
-                                                  <option value="6022001" data-belong="deex">6022001</option>
-                                                  <option value="6022002" data-belong="usdeex">6022002</option>
-                                                  <option value="6024201" data-belong="igco">6024201</option>
-                                                  <option value="6024202" data-belong="crco">6024202</option>
-                                                  <option value="6024301" data-belong="ched">6024301</option>
-                                                  <option value="6024401" data-belong="">6024401</option>
-                                                  <option value="6024501" data-belong="feofwo">6024501</option>
-                                                  <option value="6024502" data-belong="cawema">6024502</option>
-                                                  <option value="6024503" data-belong="kitex">6024503</option>
-                                                  <option value="6024504" data-belong="caex">6024504</option>
-                                                  <option value="6024505" data-belong="kiga">6024505 </option>
-                                                  <option value="6024601" data-belong="cobc"> 6024601</option>
-                                                  <option value="6024602" data-belong="foexdi">6024602</option>
-                                                  <option value="6024603" data-belong="inol">6024603 </option>
-                                                  <option value="6024701" data-belong="fiae">6024701</option>
-                                                  <option value="6024801" data-belong="fcrc">6024801</option>
-                                                  <option value="6024802" data-belong="fmces">6024802</option>
-                                                  <option value="6024803" data-belong="fmfhs">6024803</option>
-                                                  <option value="6024804" data-belong="foms">6024804</option>
-                                                  <option value="6024806" data-belong="fomivt">6024806</option>
-                                                  <option value="6024807" data-belong="fomicm">6024807</option>
-                                                  <option value="6024808" data-belong="fomioe">6024808</option>
-                                                  <option value="6024809" data-belong="fomipm">6024809</option>
-                                                  <option value="6024901" data-belong="frex">6024901</option>
-                                                  <option value="6025101" data-belong="fuexfe">6025101</option>
-                                                  <option value="6025102" data-belong="fuexot">6025102</option>
-                                                  <option value="6025201" data-belong="pocos">6025201</option>
-                                                  <option value="6025202" data-belong="teex">6025202</option>
-                                                  <option value="6025203" data-belong="inacex">6025203</option>
-                                                  <option value="6025301" data-belong="moveli">6025301</option>
-                                                  <option value="6025302" data-belong="reod">6025302</option>
-                                                  <option value="6025303" data-belong="lipeot">6025303</option>
-                                                  <option value="6025401" data-belong="mihoex">6025401</option>
-                                                  <option value="6025501" data-belong="mute">6025501</option>
-                                                  <option value="6025502" data-belong="muin">6025502</option>
-                                                  <option value="6021602" data-belong=""> 6021602</option>
-                                                  <option value="6025601" data-belong="ofex">6025601</option>
-                                                  <option value="6025801" data-belong="futial">6025801</option>
-                                                  <option value="6025802" data-belong="rediex">6025802</option>
-                                                  <option value="6025803" data-belong="stip">6025803</option>
-                                                  <option value="6025804" data-belong="saaw">6025804</option>
-                                                  <option value="6025805" data-belong="coia">6025805</option>
-                                                  <option value="6025901" data-belong="prin">6025901</option>
-                                                  <option value="6025902" data-belong="proaf">6025902</option>
-                                                  <option value="6025903" data-belong="poais">6025903</option>
-                                                  <option value="6025904" data-belong="poess">6025904</option>
-                                                  <option value="6025905" data-belong="pognia">6025905</option>
-                                                  <option value="6025906" data-belong="poii">6025906</option>
-                                                  <option value="6025907" data-belong="prot">6025907</option>
-                                                  <option value="6025908" data-belong="praad">6025908</option>
-                                                  <option value="6025909" data-belong="prce">6025909</option>
-                                                  <option value="6025910" data-belong="prphe">6025910</option>
-                                                  <option value="6025911" data-belong="princ">6025911</option>
-                                                  <option value="6026001" data-belong="leprex">6026001</option>
-                                                  <option value="6026101" data-belong="decm">6026101</option>
-                                                  <option value="6026102" data-belong="princo">6026102</option>
-                                                  <option value="6026103" data-belong="tpex">6026103</option>
-                                                  <option value="6026104" data-belong="prma">6026104</option>
-                                                  <option value="6026204" data-belong="fama">6026204</option>
-                                                  <option value="6026301" data-belong="pure">6026301</option>
-                                                  <option value="6026401" data-belong="mifuco">6026401</option>
-                                                  <option value="6026402" data-belong="otstco">6026402</option>
-                                                  <option value="6026501" data-belong="rera">6026501</option>
-                                                  <option value="6026601" data-belong="repagene"> 6026601</option>
-                                                  <option value="6026602" data-belong="replm">6026602</option>
-                                                  <option value="6026603" data-belong="recaca">6026603 </option>
-                                                  <option value="6026604" data-belong="reguh">6026604</option>
-                                                  <option value="6026605" data-belong="reel">6026605</option>
-                                                  <option value="6026606" data-belong="remuin">6026606</option>
-                                                  <option value="6026607" data-belong="rmv">6026607</option>
-                                                  <option value="6026608" data-belong="rebu">6026608</option>
-                                                  <option value="6026609" data-belong="refu">6026609</option>
-                                                  <option value="6026610" data-belong="relect">6026610</option>
-                                                  <option value="6026611" data-belong="rege">6026611</option>
-                                                  <option value="6026612" data-belong="limaex">6026612</option>
-                                                  <option value="6026613" data-belong="cema">6026613</option>
-                                                  <option value="6026701" data-belong="clsa">6026701</option>
-                                                  <option value="6026801" data-belong="seeq">6026801</option>
-                                                  <option value="6026802" data-belong="seex">6026802</option>
-                                                  <option value="6026901" data-belong="clex">6026901</option>
-                                                  <option value="6026902" data-belong="shex">6026902</option>
-                                                  <option value="6027101" data-belong="canc">6027101</option>
-                                                  <option value="6027102" data-belong="insu">6027102</option>
-                                                  <option value="6027103" data-belong="mmis">6027103</option>
-                                                  <option value="6027104" data-belong="acss">6027104</option>
-                                                  <option value="6027201" data-belong="suex">6027201</option>
-                                                  <option value="6027301" data-belong="hoff">6027301</option>
-                                                  <option value="6027401" data-belong="tawe">6027401</option>
-                                                  <option value="6027402" data-belong="trexlo">6027402</option>
-                                                  <option value="6027501" data-belong="trexfo">6027501</option>
-                                                  <option value="6027502" data-belong="elect">6027502</option>
-                                                  <option value="6028601" data-belong="wama">6028601</option>
-                                                  <option value="6027602" data-belong="owp">6027602</option>
-                                                  <option value="6027603" data-belong="wowe">6027603</option>
-                                                  <option value="6027604" data-belong="wewe">6027604</option>
-                                                  <option value="6027605" data-belong="entr">6027605</option>
-                                                  <option value="6027606" data-belong="char">6027606</option>
-                                                  <option value="6027607" data-belong="hokeex">6027607</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                              <div class="form-group">
-                                                <h5 style="color: #495057 !important; text-align: center;">Amount</h5>
-                                                <input type="text" id="" name="amount" placeholder="" class="form-control customer_amount"/>
-                                              </div>
-                                            </div>
-                                          </div>
-                                            <div class="col-md-4 mt-4 mb-3">
-                                              <div>
-                                                <input type="submit" class="remove-item btn btn-sm btn-success remove-social-media" name="save" value="Save" >
-                                              </div>
-                                          </div>
-                                        </div>
+                                      </select>
+                                    </div>
                                   </div>
-                                </form>
+                                  <div class="col-md-3">
+                                    <div class="form-group">
+                                      <h5 style=" color: #495057 !important; text-align: center;"> Code </h5>
+                                      <select class="form-control minor selectFilter" name="subject">
+                                        <option value="Select One"> Select Code</option>
+                                        <option value="6011001" data-belong="pomi"> 6011001</option>
+                                        <option value="6025001" data-belong="fuludi">6025001</option>
+                                        <option value="6025002" data-belong="fulupm">6025002 </option>
+                                        <option value="6025003" data-belong="fululu">6025003</option>
+                                        <option value="6025004" data-belong="fuluke">6025004</option>
+                                        <option value="6013001" data-belong="proc">6013001</option>
+                                        <option value="6013002" data-belong="procg">6013002</option>
+                                        <option value="6013003" data-belong="proavi">6013003</option>
+                                        <option value="6013004" data-belong="kiex">6013004</option>
+                                        <option value="60115001" data-belong="faex">60115001</option>
+                                        <option value="6020002" data-belong="hosuex">6020002</option>
+                                        <option value="6021201" data-belong="adpuex">6021201</option>
+                                        <option value="6021301" data-belong="trmoex">6021301</option>
+                                        <option value="6021302" data-belong="exauex">6021302</option>
+                                        <option value="6021303" data-belong="inauex">6021303</option>
+                                        <option value="6021601" data-belong="neap">6021601</option>
+                                        <option value="6021603" data-belong="bojo">6021603</option>
+                                        <option value="6021602" data-belong="stat">6021602</option>
+                                        <option value="6021901" data-belong="cosore">6021901</option>
+                                        <option value="6022001" data-belong="deex">6022001</option>
+                                        <option value="6022002" data-belong="usdeex">6022002</option>
+                                        <option value="6024201" data-belong="igco">6024201</option>
+                                        <option value="6024202" data-belong="crco">6024202</option>
+                                        <option value="6024301" data-belong="ched">6024301</option>
+                                        <option value="6024401" data-belong="">6024401</option>
+                                        <option value="6024501" data-belong="feofwo">6024501</option>
+                                        <option value="6024502" data-belong="cawema">6024502</option>
+                                        <option value="6024503" data-belong="kitex">6024503</option>
+                                        <option value="6024504" data-belong="caex">6024504</option>
+                                        <option value="6024505" data-belong="kiga">6024505 </option>
+                                        <option value="6024601" data-belong="cobc"> 6024601</option>
+                                        <option value="6024602" data-belong="foexdi">6024602</option>
+                                        <option value="6024603" data-belong="inol">6024603 </option>
+                                        <option value="6024701" data-belong="fiae">6024701</option>
+                                        <option value="6024801" data-belong="fcrc">6024801</option>
+                                        <option value="6024802" data-belong="fmces">6024802</option>
+                                        <option value="6024803" data-belong="fmfhs">6024803</option>
+                                        <option value="6024804" data-belong="foms">6024804</option>
+                                        <option value="6024806" data-belong="fomivt">6024806</option>
+                                        <option value="6024807" data-belong="fomicm">6024807</option>
+                                        <option value="6024808" data-belong="fomioe">6024808</option>
+                                        <option value="6024809" data-belong="fomipm">6024809</option>
+                                        <option value="6024901" data-belong="frex">6024901</option>
+                                        <option value="6025101" data-belong="fuexfe">6025101</option>
+                                        <option value="6025102" data-belong="fuexot">6025102</option>
+                                        <option value="6025201" data-belong="pocos">6025201</option>
+                                        <option value="6025202" data-belong="teex">6025202</option>
+                                        <option value="6025203" data-belong="inacex">6025203</option>
+                                        <option value="6025301" data-belong="moveli">6025301</option>
+                                        <option value="6025302" data-belong="reod">6025302</option>
+                                        <option value="6025303" data-belong="lipeot">6025303</option>
+                                        <option value="6025401" data-belong="mihoex">6025401</option>
+                                        <option value="6025501" data-belong="mute">6025501</option>
+                                        <option value="6025502" data-belong="muin">6025502</option>
+                                        <option value="6021602" data-belong=""> 6021602</option>
+                                        <option value="6025601" data-belong="ofex">6025601</option>
+                                        <option value="6025801" data-belong="futial">6025801</option>
+                                        <option value="6025802" data-belong="rediex">6025802</option>
+                                        <option value="6025803" data-belong="stip">6025803</option>
+                                        <option value="6025804" data-belong="saaw">6025804</option>
+                                        <option value="6025805" data-belong="coia">6025805</option>
+                                        <option value="6025901" data-belong="prin">6025901</option>
+                                        <option value="6025902" data-belong="proaf">6025902</option>
+                                        <option value="6025903" data-belong="poais">6025903</option>
+                                        <option value="6025904" data-belong="poess">6025904</option>
+                                        <option value="6025905" data-belong="pognia">6025905</option>
+                                        <option value="6025906" data-belong="poii">6025906</option>
+                                        <option value="6025907" data-belong="prot">6025907</option>
+                                        <option value="6025908" data-belong="praad">6025908</option>
+                                        <option value="6025909" data-belong="prce">6025909</option>
+                                        <option value="6025910" data-belong="prphe">6025910</option>
+                                        <option value="6025911" data-belong="princ">6025911</option>
+                                        <option value="6026001" data-belong="leprex">6026001</option>
+                                        <option value="6026101" data-belong="decm">6026101</option>
+                                        <option value="6026102" data-belong="princo">6026102</option>
+                                        <option value="6026103" data-belong="tpex">6026103</option>
+                                        <option value="6026104" data-belong="prma">6026104</option>
+                                        <option value="6026105" data-belong="pemi">6026105</option>
+                                        <option value="6026106" data-belong="wmi">6026106</option>
+                                        <option value="6026107" data-belong="rcpgmi">6026107</option>
+                                        <option value="6026108" data-belong="smi">6026108</option>
+                                        <option value="6026109" data-belong="stin">6026109</option>
+                                        <option value="6026201" data-belong="dpsi">6026201</option>
+                                        <option value="6026202" data-belong="pmii">6026202</option>
+                                        <option value="6026203" data-belong="pdi">6026203</option>
+                                        <option value="6026204" data-belong="fama">6026204</option>
+                                        <option value="6026301" data-belong="pure">6026301</option>
+                                        <option value="6026401" data-belong="mifuco">6026401</option>
+                                        <option value="6026402" data-belong="otstco">6026402</option>
+                                        <option value="6026501" data-belong="rera">6026501</option>
+                                        <option value="6026601" data-belong="repagene"> 6026601</option>
+                                        <option value="6026602" data-belong="replm">6026602</option>
+                                        <option value="6026603" data-belong="recaca">6026603 </option>
+                                        <option value="6026604" data-belong="reguh">6026604</option>
+                                        <option value="6026605" data-belong="reel">6026605</option>
+                                        <option value="6026606" data-belong="remuin">6026606</option>
+                                        <option value="6026607" data-belong="rmv">6026607</option>
+                                        <option value="6026608" data-belong="rebu">6026608</option>
+                                        <option value="6026609" data-belong="refu">6026609</option>
+                                        <option value="6026610" data-belong="relect">6026610</option>
+                                        <option value="6026611" data-belong="rege">6026611</option>
+                                        <option value="6026612" data-belong="limaex">6026612</option>
+                                        <option value="6026613" data-belong="cema">6026613</option>
+                                        <option value="6026701" data-belong="clsa">6026701</option>
+                                        <option value="6026801" data-belong="seeq">6026801</option>
+                                        <option value="6026802" data-belong="seex">6026802</option>
+                                        <option value="6026901" data-belong="clex">6026901</option>
+                                        <option value="6026902" data-belong="shex">6026902</option>
+                                        <option value="6027101" data-belong="canc">6027101</option>
+                                        <option value="6027102" data-belong="insu">6027102</option>
+                                        <option value="6027103" data-belong="mmis">6027103</option>
+                                        <option value="6027104" data-belong="acss">6027104</option>
+                                        <option value="6027201" data-belong="suex">6027201</option>
+                                        <option value="6027301" data-belong="hoff">6027301</option>
+                                        <option value="6027401" data-belong="tawe">6027401</option>
+                                        <option value="6027402" data-belong="trexlo">6027402</option>
+                                        <option value="6027501" data-belong="trexfo">6027501</option>
+                                        <option value="6027502" data-belong="elect">6027502</option>
+                                        <option value="6028601" data-belong="wama">6028601</option>
+                                        <option value="6027602" data-belong="owp">6027602</option>
+                                        <option value="6027603" data-belong="wowe">6027603</option>
+                                        <option value="6027604" data-belong="wewe">6027604</option>
+                                        <option value="6027605" data-belong="entr">6027605</option>
+                                        <option value="6027606" data-belong="char">6027606</option>
+                                        <option value="6027607" data-belong="hokeex">6027607</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="form-group">
+                                      <h5 style="color: #495057 !important; text-align: center;">Amount</h5>
+                                      <input type="text" id="" name="amount" placeholder=""
+                                        class="form-control customer_amount" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 mt-4 mb-3">
+                                  <div>
+                                    <input type="submit" class="remove-item btn btn-sm btn-success remove-social-media"
+                                      name="save" value="Save">
+                                  </div>
+                                </div>
                               </div>
-                                <!-- <div>
+                            </div>
+                          </form>
+                        </div>
+                        <!-- <div>
                                   <input type="submit" class="remove-item btn btn-sm btn-primary mt-3 remove-social-media" name="save" value="Continue" >
                                 </div> -->
-                            </div>
-                        </div>
-  
-  
                       </div>
+                    </div>
+
+
                   </div>
+                </div>
               </div>
             </div>
           </div>
-					</div>
+        </div>
 
-				</div>
-
-
+      </div>
 
 
-			</div>
-			<!-- content-wrapper ends -->
-			
-		</div>
-		<!-- main-panel ends -->
-    <script>
-      //pick all elements with class of customer_amount
-     const customers_amounts = document.querySelectorAll('.customer_amount');
-
-     customers_amounts.forEach((customer_amount) =>{
-
-        //look for the customer_amount that was blurred..
-        customer_amount.addEventListener('blur', function(){
-              
-          let customer_amount_value = parseFloat(this.value).toLocaleString()
-          setTimeout(() => {
-               this.value = customer_amount_value;
-              //  alert(customer_amount_value)
-          }, 100);
-
-        })
 
 
-     })
+    </div>
+    <!-- content-wrapper ends -->
+
+  </div>
+  <!-- main-panel ends -->
+  <script>
+    //pick all elements with class of customer_amount
+    const customers_amounts = document.querySelectorAll('.customer_amount');
+
+    customers_amounts.forEach((customer_amount) => {
+
+      //look for the customer_amount that was blurred..
+      customer_amount.addEventListener('blur', function () {
+
+        let customer_amount_value = parseFloat(this.value).toLocaleString()
+        setTimeout(() => {
+          this.value = customer_amount_value;
+          //  alert(customer_amount_value)
+        }, 100);
+
+      })
+
+
+    })
   </script>
-<script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/selectFilter.min.js"></script>
-		<script src="../thirdparties/bootstrap/bootstrap.min.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/selectFilter.min.js"></script>
+  <script src="../thirdparties/bootstrap/bootstrap.min.js"></script>
 </body>
+
 </html>
